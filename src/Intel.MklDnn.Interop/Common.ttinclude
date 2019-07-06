@@ -1,0 +1,8 @@
+﻿<#+
+	const int MaxFixedDimensions = 5;
+
+	//IEnumerable<KeyValuePair<string, string>> AllTypesSuffices()
+	//{
+    //    return BasicTypesSuffices();
+	//}
+#>

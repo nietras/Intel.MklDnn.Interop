@@ -1,0 +1,91 @@
+﻿<#@ template language="C#" debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ include file="Common.ttinclude" #>
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace DotNetCross.Memory.Views
+{
+<#
+    const string classNamePrefix = "View";
+    for (int dims = 1; dims <= MaxFixedDimensions; ++dims)
+    {
+        string dimSuffix = dims + "D";
+        string type = classNamePrefix + dimSuffix;
+        IReadOnlyList<int> indeces = Enumerable.Range(0, dims).ToArray();
+        string sameDimArray = "T[" + string.Join("", Enumerable.Repeat(",", dims -1 )) + "]";
+#>
+    [StructLayout(LayoutKind.Sequential)]
+    public readonly struct <#= type #><T>
+    {
+        readonly object _objectOrNull;
+        readonly IntPtr _byteOffsetOrPointer;
+<#
+        for (int dim = 0; dim < dims - 1; ++dim)
+        {
+#>
+        readonly IntPtr _byteStride<#= dim #>;
+<#
+        }
+#>
+        // .NET has for good chosen int as size, would have preferred IntPtr e.g. nint
+        // for length but this would give issues with interoperating with BCL
+<#
+        for (int dim = 0; dim < dims; ++dim)
+        {
+#>
+        readonly int _length<#= dim #>;
+<#
+        }
+#>
+
+        public <#= type #>(<#= sameDimArray #> array)
+        {
+            if (array == null)
+                ThrowHelper.ThrowArgumentNullException(ExceptionArgument.array);
+            if (default(T) == null && array.GetType() != typeof(T[]))
+                ThrowHelper.ThrowArrayTypeMismatchException_ArrayTypeMustBeExactMatch(typeof(T));
+
+            _objectOrNull = array;
+            _byteOffsetOrPointer = ViewHelper.PerTypeValues<T>.ArrayAdjustment<#= dimSuffix #>;
+<#
+            for (int dim = 0; dim < dims; ++dim)
+            {
+#>
+            _length<#= dim #> = array.GetLength(<#= dim #>);
+<#
+            }
+#>
+<#
+            for (int dim = 0; dim < (dims - 1); ++dim)
+            {
+                if (dim == 0)
+                {
+#>
+            _byteStride<#= dims - dim - 2 #> = new IntPtr(_length<#= dims - dim - 1 #>).Multiply(Unsafe.SizeOf<T>());
+<#
+                }
+                else
+                {
+#>
+            _byteStride<#= dims - dim - 2 #> = _byteStride<#= dims - dim - 1 #>.Multiply(_length<#= dims - dim - 1 #>);
+<#
+                }
+            }
+#>
+        }
+    }
+<#
+    }
+#>
+}

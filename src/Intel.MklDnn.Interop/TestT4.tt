@@ -1,0 +1,9 @@
+﻿<#@ output extension=".cs" #>
+<#@ assembly name="System.Xml" #>
+<#
+ string configurationData = "Test"; // Read a data file here.
+#>
+namespace Fabrikam.<#= configurationData #>
+{
+  // More code here.
+}

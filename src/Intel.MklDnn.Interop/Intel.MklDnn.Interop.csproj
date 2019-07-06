@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.0</TargetFrameworks>
+    <LangVersion>7.3</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--<DotNetCliToolReference Include="T5.TextTransform.Tool" Version="1.1.0-*" />-->
+    <!--<TextTemplate Include="**\*.Generated.tt"/>
+    <Generated Include="**\*.Generated.cs"/>-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Views.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Views.cs</LastGenOutput>
+    </None>
+    <None Update="TestT4.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TestT4.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Views.tt</DependentUpon>
+    </Compile>
+    <Compile Update="TestT4.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TestT4.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+
+  <!--<Target Name="TextTemplateTransform" BeforeTargets="BeforeBuild">
+    <ItemGroup>
+      <Compile Remove="**\*.cs"/>
+    </ItemGroup>
+    <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet tt %(TextTemplate.Identity)"/>
+    <ItemGroup>
+      <Compile Include="**\*.cs"/>
+    </ItemGroup>
+  </Target>
+
+  <Target Name="TextTemplateClean" AfterTargets="Clean">
+    <Delete Files="@(Generated)" />
+  </Target>-->
+  
+</Project>
