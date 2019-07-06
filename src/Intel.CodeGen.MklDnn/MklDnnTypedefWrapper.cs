@@ -26,14 +26,14 @@ namespace Intel.CodeGen.MklDnn
 
             if (typedef.IsStruct)
             {
-                m_sb.AppendLine("[System::Runtime::InteropServices::StructLayout(System::Runtime::InteropServices::LayoutKind::Sequential)]");
+                m_sb.AppendLine("[System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Sequential)]");
             }
-            m_sb.AppendFormat("public {0} {1}", CppHelper.WrapTypedefType(typedef.Type), MklDnnHelper.WrapTypedefName(typedef.Name));
+            m_sb.AppendFormat("public {0} {1}", CSharpHelper.WrapTypedefType(typedef.Type), MklDnnHelper.WrapTypedefName(typedef.Name));
             m_sb.AppendLine();
             m_sb.AppendLine("{");
             if (typedef.IsStruct)
             {
-                m_sb.AppendLine("public:");
+                //m_sb.AppendLine("public:");
             }
             foreach (var line in typedef.Lines)
             {

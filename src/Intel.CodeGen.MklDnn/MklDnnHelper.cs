@@ -64,11 +64,11 @@ namespace Intel.CodeGen.MklDnn
             }
         }
 
-        public static string WrapMethodName(string ippName)
+        public static string WrapMethodName(string mklDnnName)
         {
             int index = 0;
-            while (char.IsLower(ippName[index])) { ++index; }
-            return ippName.Substring(index);
+            while (char.IsLower(mklDnnName[index])) { ++index; }
+            return mklDnnName.Substring(index);
         }
 
         public static Typedef ParseTypedef(string typedefString)
@@ -85,16 +85,17 @@ namespace Intel.CodeGen.MklDnn
             return text.Split(separator).Where(s => !string.IsNullOrWhiteSpace(s)).Select(s => s.Trim()).ToArray();
         }
 
-        public static string WrapTypedefName(string ippName)
+        public static string WrapTypedefName(string mklDnnName)
         {
-            return "N" + ippName;
+            return mklDnnName;
         }
 
-        public static string WrapEnumValue(string ippName)
+        public static string WrapEnumValue(string mklDnnName)
         {
-            int index = 0;
-            while (char.IsLower(ippName[index])) { ++index; }
-            return ippName.Substring(index);
+            return mklDnnName;
+            //int index = 0;
+            //while (char.IsLower(mklDnnName[index])) { ++index; }
+            //return mklDnnName.Substring(index);
         }
 
     }

@@ -50,9 +50,9 @@ namespace Intel.CodeGen.MklDnn.Mkl
             var anyArrayStartIndex = text.IndexOf('[');
             var newLength = anyArrayStartIndex > 0 ? anyArrayStartIndex : text.Length;
             var nameEndIndex = newLength - 1;
-            while (!CppHelper.IsIdentifierChar(text[nameEndIndex])) { --nameEndIndex; }
+            while (!CSharpHelper.IsIdentifierChar(text[nameEndIndex])) { --nameEndIndex; }
             var nameStartIndex = nameEndIndex;
-            while (CppHelper.IsIdentifierChar(text[nameStartIndex])) { --nameStartIndex; }
+            while (CSharpHelper.IsIdentifierChar(text[nameStartIndex])) { --nameStartIndex; }
             ++nameStartIndex;
 
             var typeText = text.Substring(0, nameStartIndex).Trim();

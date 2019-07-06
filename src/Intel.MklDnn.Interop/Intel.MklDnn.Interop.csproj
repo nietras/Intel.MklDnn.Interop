@@ -10,19 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Ipp.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Ipp.tt</DependentUpon>
-    </None>
-    <None Include="IppTypedefs.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>IppTypedefs.tt</DependentUpon>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="MklDnn.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MklDnn.cs</LastGenOutput>

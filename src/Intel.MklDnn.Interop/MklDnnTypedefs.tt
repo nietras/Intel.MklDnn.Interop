@@ -10,12 +10,11 @@
 <#@ import namespace="System.Collections.Generic" #> 
 <#@ import namespace="Intel.CodeGen.MklDnn" #> 
 <#@ include file="MklDnnCommon.ttinclude" #>
-#pragma once
 <#
 	var typedefs = FindAllDistinctTypes();
 	var typedefWrapper = new MklDnnTypedefWrapper(typedefs);
 #>
-#include <ippdefs.h>
+using System;
 
 namespace Intel.MklDnn
 {

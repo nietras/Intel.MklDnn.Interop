@@ -28,7 +28,7 @@ namespace Intel.CodeGen.MklDnn.Mkl
             {
                 m_sb.AppendLine("[System::Runtime::InteropServices::StructLayout(System::Runtime::InteropServices::LayoutKind::Sequential)]");
             }
-            m_sb.AppendFormat("public {0} {1}", CppHelper.WrapTypedefType(typedef.Type), CblasHelper.WrapTypedefName(typedef.Name));
+            m_sb.AppendFormat("public {0} {1}", CSharpHelper.WrapTypedefType(typedef.Type), CblasHelper.WrapTypedefName(typedef.Name));
             m_sb.AppendLine();
             m_sb.AppendLine("{");
             if (typedef.IsStruct)

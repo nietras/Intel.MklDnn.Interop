@@ -19,7 +19,7 @@ namespace Intel.CodeGen.MklDnn.Mkl
             {
                 line = line.Trim();
 
-                if (line.StartsWith(CppHelper.Typedef))
+                if (line.StartsWith(CSharpHelper.Typedef))
                 {
                     m_currentTypedef = line;
 
