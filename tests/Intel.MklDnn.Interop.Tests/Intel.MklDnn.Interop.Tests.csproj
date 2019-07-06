@@ -1,30 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp1.1;netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp1.1;netcoreapp2.0;netcoreapp2.1;netcoreapp3.0</TargetFrameworks>
 
     <IsPackable>false</IsPackable>
 
     <LangVersion>7.3</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
-    <DefineConstants>HASSPAN</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="DotNetCross.Memory.Unsafe" Version="0.3.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Condition="'$(TargetFramework)' != 'netcoreapp2.1'" 
-                      Include="System.Memory" Version="4.5.2" />
-    <!--TODO: Why do we need to refer to Unsafe package when netcoreapp2.1?-->
-    <PackageReference Condition="'$(TargetFramework)' == 'netcoreapp2.1'"
-                      Include="System.Runtime.CompilerServices.Unsafe" Version="4.*" />
   </ItemGroup>
 
   <ItemGroup>
