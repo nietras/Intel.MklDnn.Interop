@@ -5,16 +5,16 @@ using System.IO;
 using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Intel.CodeGen.MklDnn.Test.Intel.Ipp
+namespace Intel.CodeGen.MklDnn.Test
 {
     [TestClass]
-    public class IppcoreMethodParseTest : IppMethodParseTest
+    public class MklDnnMethodParseTest : MklDnnMethodParseBaseTest
     {
-        readonly Method Method0 = new Method("const IppLibraryVersion*", "ippGetLibVersion", new Parameter[] { });
-        readonly Method Method1 = new Method("const char*", "ippGetStatusString", new Parameter[] { new Parameter("IppStatus", "StsCode") });
+        readonly Method Method0 = new Method("const MklDnnLibraryVersion*", "ippGetLibVersion", new Parameter[] { });
+        readonly Method Method1 = new Method("const char*", "ippGetStatusString", new Parameter[] { new Parameter("MklDnnStatus", "StsCode") });
 
         [TestMethod]
-        public void IppcoreMethodParseTest_ParseMethodsInResource()
+        public void MklDnncoreMethodParseTest_ParseMethodsInResource()
         {
             var methods = ParseMethodsInResource("ippcore.h").ToList();
 

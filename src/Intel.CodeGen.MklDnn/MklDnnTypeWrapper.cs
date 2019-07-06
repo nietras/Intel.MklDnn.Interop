@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intel.CodeGen.MklDnn.Ipp
+namespace Intel.CodeGen.MklDnn
 {
-    public class IppTypeWrapper
+    public class MklDnnTypeWrapper
     {
         readonly IReadOnlyList<Typedef> m_typedefs;
 
-        public IppTypeWrapper(params Typedef[] typedefs)
+        public MklDnnTypeWrapper(params Typedef[] typedefs)
             : this(typedefs as IReadOnlyList<Typedef>)
         { }
 
-        public IppTypeWrapper(IReadOnlyList<Typedef> typedefs)
+        public MklDnnTypeWrapper(IReadOnlyList<Typedef> typedefs)
         {
             if (typedefs == null) { throw new ArgumentNullException("typedefs"); }
             m_typedefs = typedefs;
@@ -34,11 +34,11 @@ namespace Intel.CodeGen.MklDnn.Ipp
                 var typeUsage = new TypeUsage(ippName);
                 //if (typeUsage.HasConst)
                 //{
-                //    return IppHelper.WrapTypedefName(typeUsage.NameOnly);
+                //    return MklDnnHelper.WrapTypedefName(typeUsage.NameOnly);
                 //}
                 //else
                 {
-                    return IppHelper.WrapTypedefName(typeUsage.RemoveConst());
+                    return MklDnnHelper.WrapTypedefName(typeUsage.RemoveConst());
                 }
             }
             return ippName;
@@ -100,7 +100,7 @@ namespace Intel.CodeGen.MklDnn.Ipp
 
         private string WrapTypeUsage(TypeUsage typeUsage)
         {
-            return IppHelper.WrapTypedefName(typeUsage.NameOnly);
+            return MklDnnHelper.WrapTypedefName(typeUsage.NameOnly);
         }
 
         private Typedef TryFindTypedefNtv(string ippName)
@@ -115,7 +115,7 @@ namespace Intel.CodeGen.MklDnn.Ipp
 
         private Typedef TryFindTypedefMgd(string mgdName)
         {
-            var typedefs = m_typedefs.Where(t => mgdName.Contains(IppHelper.WrapTypedefName(t.Name))).OrderByDescending(t => t.Name.Length).ToArray(); ;
+            var typedefs = m_typedefs.Where(t => mgdName.Contains(MklDnnHelper.WrapTypedefName(t.Name))).OrderByDescending(t => t.Name.Length).ToArray(); ;
             if (typedefs.Any())
             {
                 return typedefs.First();

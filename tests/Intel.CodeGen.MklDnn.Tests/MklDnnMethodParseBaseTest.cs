@@ -3,15 +3,15 @@ using System.Linq;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using Intel.CodeGen.MklDnn.Ipp;
+using Intel.CodeGen.MklDnn;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Intel.CodeGen.MklDnn.Test.Intel.Ipp
+namespace Intel.CodeGen.MklDnn.Test
 {
     [TestClass]
-    public abstract class IppMethodParseTest
+    public abstract class MklDnnMethodParseBaseTest
     {
-        IppMethodParser m_parser = new IppMethodParser();
+        MklDnnMethodParser m_parser = new MklDnnMethodParser();
 
         public IEnumerable<Method> ParseMethodsInResource(string filename)
         {

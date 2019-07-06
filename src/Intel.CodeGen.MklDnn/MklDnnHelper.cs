@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intel.CodeGen.MklDnn.Ipp
+namespace Intel.CodeGen.MklDnn
 {
-    public static class IppHelper
+    public static class MklDnnHelper
     {
-        public const string IPPAPI = "IPPAPI";
-        public const string IPP_DEPRECATED = "IPP_DEPRECATED";
+        public const string MKLDNNAPI = "MKLDNN_API";
+        public const string MKLDNN_DEPRECATED = "MKLDNN_DEPRECATED";
 
         public static Method ParseMethod(string methodString)
         {
-            var majorParts = IppSplit(methodString, '(').Skip(1);
-            var methodParts =IppSplit(majorParts.First(), ',');
-            var argsParts = IppSplit(majorParts.Skip(1).Single().Replace(")", string.Empty), ',');
+            var majorParts = MklDnnSplit(methodString, '(');
+            var methodParts = MklDnnSplit(majorParts.First(), ' ');
+            var argsParts = MklDnnSplit(majorParts.Skip(1).Single().Replace(")", string.Empty), ',');
 
             var returnType = methodParts.First();
-            var name = methodParts.Skip(1).Single();
+            var name = methodParts.Skip(2).Single();
             var parameters = ParseParameters(argsParts);
 
             return new Method(returnType, name, parameters);
@@ -74,13 +74,13 @@ namespace Intel.CodeGen.MklDnn.Ipp
         public static Typedef ParseTypedef(string typedefString)
         {
             var typedefLines = typedefString.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-            var type = IppSplit(typedefLines[0], ' ')[1].Trim();
+            var type = MklDnnSplit(typedefLines[0], ' ')[1].Trim();
             var name = typedefLines.Last().KeepAlphaNumericUnderscore();
             var lines = typedefLines.Skip(1).Take(typedefLines.Length - 2).Select(s => s.Trim()).ToArray();
             return new Typedef(type, name, lines);
         }
 
-        private static string[] IppSplit(string text, char separator)
+        private static string[] MklDnnSplit(string text, char separator)
         {
             return text.Split(separator).Where(s => !string.IsNullOrWhiteSpace(s)).Select(s => s.Trim()).ToArray();
         }

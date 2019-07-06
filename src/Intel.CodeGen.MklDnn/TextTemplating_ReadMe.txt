@@ -22,7 +22,7 @@
 
  * Define *.tt files as after normal item groups:
    <ItemGroup>
-    <None Include="Ipp.tt">
+    <None Include="MklDnn.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
     </None>
    </ItemGroup>

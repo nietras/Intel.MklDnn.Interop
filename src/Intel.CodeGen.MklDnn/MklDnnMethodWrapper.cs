@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Intel.CodeGen.MklDnn.Ipp
+namespace Intel.CodeGen.MklDnn
 {
-    public class IppMethodWrapper
+    public class MklDnnMethodWrapper
     {
-        readonly IppTypeWrapper m_wrapper;
+        readonly MklDnnTypeWrapper m_wrapper;
         StringBuilder m_sb = new StringBuilder();
 
-        public IppMethodWrapper()
-            : this(new IppTypeWrapper())
+        public MklDnnMethodWrapper()
+            : this(new MklDnnTypeWrapper())
         { }
 
-        public IppMethodWrapper(IppTypeWrapper wrapper)
+        public MklDnnMethodWrapper(MklDnnTypeWrapper wrapper)
         {
             if (wrapper == null) { throw new ArgumentNullException("wrapper"); }
             m_wrapper = wrapper;
@@ -26,7 +26,7 @@ namespace Intel.CodeGen.MklDnn.Ipp
 
             var mgdReturnType = m_wrapper.WrapType(method.ReturnType);
             var mgdParameters = method.Parameters.Select(p => (p.IsStaticArray ? p.Type.Replace("const", string.Empty).Trim() + "*" : m_wrapper.WrapType(p.Type)) + " " + p.DecoratedName);
-            m_sb.AppendFormat("{0} {1}({2})", mgdReturnType, IppHelper.WrapMethodName(method.Name),
+            m_sb.AppendFormat("{0} {1}({2})", mgdReturnType, MklDnnHelper.WrapMethodName(method.Name),
                                               string.Join(", ", mgdParameters));
             m_sb.AppendLine();
 
@@ -79,7 +79,7 @@ namespace Intel.CodeGen.MklDnn.Ipp
         private void WrapStaticArray(Parameter p, StringBuilder sb)
         {
             var sizes = p.StaticArraySize.Sizes;
-            // Ipp16u value_[3];
+            // MklDnn16u value_[3];
             var staticArrayName = p.Name + "_";
             sb.AppendFormat("    {0} {1}{2};", StaticArrayParameter(p), staticArrayName, sizes.Select(s => "[" + s + "]").Aggregate((a, b) => a + b));
             sb.AppendLine();

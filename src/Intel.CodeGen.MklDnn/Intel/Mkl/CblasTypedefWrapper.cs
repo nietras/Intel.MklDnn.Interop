@@ -10,7 +10,7 @@ namespace Intel.CodeGen.MklDnn.Mkl
         //readonly IReadOnlyList<Typedef> m_typedefs;
         StringBuilder m_sb = new StringBuilder();
 
-        //public IppTypedefWrapper(params Typedef[] typedefs)
+        //public MklDnnTypedefWrapper(params Typedef[] typedefs)
         //    : this(typedefs as IReadOnlyList<Typedef>)
         //{ }
 
@@ -41,7 +41,7 @@ namespace Intel.CodeGen.MklDnn.Mkl
                 //var typedefMatching = m_typedefs.Where(t => line.StartsWith(t.Name)).SingleOrDefault();
                 //if (typedefMatching != null)
                 //{
-                //    newLine = IppHelper.WrapTypedefName(line);
+                //    newLine = MklDnnHelper.WrapTypedefName(line);
                 //}
                 //else 
                 if(typedef.IsEnum)

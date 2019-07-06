@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intel.CodeGen.MklDnn.Ipp
+namespace Intel.CodeGen.MklDnn
 {
-    public class IppMethodParser
+    public class MklDnnMethodParser
     {
         bool m_nextMethodDeprecated = false;
         string m_currentMethod = null;
@@ -17,7 +17,7 @@ namespace Intel.CodeGen.MklDnn.Ipp
             string line = null;
             while ((line = reader.ReadLine()) != null)
             {
-                if (line.StartsWith(IppHelper.IPPAPI))
+                if (line.StartsWith(MklDnnHelper.MKLDNNAPI))
                 {
                     m_currentMethod = line;
                     while (!(m_currentMethod.EndsWith("))") || m_currentMethod.EndsWith(") )")))
@@ -26,14 +26,14 @@ namespace Intel.CodeGen.MklDnn.Ipp
                     }
                     if (!m_nextMethodDeprecated)
                     {
-                        yield return IppHelper.ParseMethod(m_currentMethod);
+                        yield return MklDnnHelper.ParseMethod(m_currentMethod);
                     }
                     else
                     {
                         m_nextMethodDeprecated = false;
                     }
                 }
-                else if (line.StartsWith(IppHelper.IPP_DEPRECATED))
+                else if (line.StartsWith(MklDnnHelper.MKLDNN_DEPRECATED))
                 {
                     m_nextMethodDeprecated = true;
                 }

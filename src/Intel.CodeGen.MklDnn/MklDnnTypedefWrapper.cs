@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Intel.CodeGen.MklDnn.Ipp
+namespace Intel.CodeGen.MklDnn
 {
-    public class IppTypedefWrapper
+    public class MklDnnTypedefWrapper
     {
         readonly IReadOnlyList<Typedef> m_typedefs;
         StringBuilder m_sb = new StringBuilder();
 
-        public IppTypedefWrapper(params Typedef[] typedefs)
+        public MklDnnTypedefWrapper(params Typedef[] typedefs)
             : this(typedefs as IReadOnlyList<Typedef>)
         { }
 
-        public IppTypedefWrapper(IReadOnlyList<Typedef> typedefs)
+        public MklDnnTypedefWrapper(IReadOnlyList<Typedef> typedefs)
         {
             if (typedefs == null) { throw new ArgumentNullException("typedefs"); }
             m_typedefs = typedefs;
@@ -28,7 +28,7 @@ namespace Intel.CodeGen.MklDnn.Ipp
             {
                 m_sb.AppendLine("[System::Runtime::InteropServices::StructLayout(System::Runtime::InteropServices::LayoutKind::Sequential)]");
             }
-            m_sb.AppendFormat("public {0} {1}", CppHelper.WrapTypedefType(typedef.Type), IppHelper.WrapTypedefName(typedef.Name));
+            m_sb.AppendFormat("public {0} {1}", CppHelper.WrapTypedefType(typedef.Type), MklDnnHelper.WrapTypedefName(typedef.Name));
             m_sb.AppendLine();
             m_sb.AppendLine("{");
             if (typedef.IsStruct)
@@ -47,9 +47,9 @@ namespace Intel.CodeGen.MklDnn.Ipp
                 }
                 else if (line.Contains("value[3]"))
                 {
-                    m_sb.AppendLine("    " + "Ipp64f value0;");
-                    m_sb.AppendLine("    " + "Ipp64f value1;");
-                    m_sb.AppendLine("    " + "Ipp64f value2;");
+                    m_sb.AppendLine("    " + "MklDnn64f value0;");
+                    m_sb.AppendLine("    " + "MklDnn64f value1;");
+                    m_sb.AppendLine("    " + "MklDnn64f value2;");
                 }
                 else
                 {
@@ -57,11 +57,11 @@ namespace Intel.CodeGen.MklDnn.Ipp
                     var typedefMatching = m_typedefs.Where(t => line.StartsWith(t.Name)).SingleOrDefault();
                     if (typedefMatching != null)
                     {
-                        newLine = IppHelper.WrapTypedefName(line);
+                        newLine = MklDnnHelper.WrapTypedefName(line);
                     }
-                    else if(typedef.IsEnum && typedef.Name != "IppDataType")
+                    else if(typedef.IsEnum && typedef.Name != "MklDnnDataType")
                     {
-                        newLine = IppHelper.WrapEnumValue(line);
+                        newLine = MklDnnHelper.WrapEnumValue(line);
                     }
                     m_sb.AppendLine("    " + newLine);
                 }

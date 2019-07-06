@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intel.CodeGen.MklDnn.Ipp
+namespace Intel.CodeGen.MklDnn
 {
-    public class IppTypedefParser
+    public class MklDnnTypedefParser
     {
         string m_currentTypedef = null;
 
@@ -32,7 +32,7 @@ namespace Intel.CodeGen.MklDnn.Ipp
                             m_currentTypedef += line;
                         }
 
-                        yield return IppHelper.ParseTypedef(m_currentTypedef);
+                        yield return MklDnnHelper.ParseTypedef(m_currentTypedef);
                     }
                     else if (line.EndsWith(";") && !line.Contains("[")) // Last checks if this is is an array typedef
                     {
@@ -44,7 +44,7 @@ namespace Intel.CodeGen.MklDnn.Ipp
                             Debug.Assert(name.Length > 0);
                             yield return new Typedef("struct", name, new string[0]);
                         }
-                        else if (type.StartsWith("Ipp")) // Custom type forwarding from earlier typedef cannot do this in managed so just making new type
+                        else if (type.StartsWith("MklDnn")) // Custom type forwarding from earlier typedef cannot do this in managed so just making new type
                         {
                             var name = parts[2];
                             Debug.Assert(name.Length > 0);

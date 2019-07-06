@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using Intel.CodeGen.MklDnn.Ipp;
+using Intel.CodeGen.MklDnn;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Intel.CodeGen.MklDnn.Mkl;
 
