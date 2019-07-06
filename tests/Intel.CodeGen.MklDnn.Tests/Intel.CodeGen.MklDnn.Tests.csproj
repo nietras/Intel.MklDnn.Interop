@@ -16,4 +16,16 @@
     <ProjectReference Include="..\..\src\Intel.CodeGen.MklDnn\Intel.CodeGen.MklDnn.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\headers\mkldnn.h" Link="Resources\mkldnn.h" />
+    <EmbeddedResource Include="..\..\headers\mkldnn_config.h" Link="Resources\mkldnn_config.h" />
+    <EmbeddedResource Include="..\..\headers\mkldnn_debug.h" Link="Resources\mkldnn_debug.h" />
+    <EmbeddedResource Include="..\..\headers\mkldnn_types.h" Link="Resources\mkldnn_types.h" />
+    <EmbeddedResource Include="..\..\headers\mkldnn_version.h" Link="Resources\mkldnn_version.h" />
+  </ItemGroup>
+
 </Project>
