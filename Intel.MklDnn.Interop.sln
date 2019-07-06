@@ -10,6 +10,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.CodeGen.MklDnn", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.CodeGen.MklDnn.Tests", "tests\Intel.CodeGen.MklDnn.Tests\Intel.CodeGen.MklDnn.Tests.csproj", "{FA68B2A0-E7AF-41B6-A3C1-9FADEAEAACC7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "headers", "headers", "{ECA183A9-27FF-43D2-9235-D77214DBD19D}"
+	ProjectSection(SolutionItems) = preProject
+		headers\mkldnn.h = headers\mkldnn.h
+		headers\mkldnn_config.h = headers\mkldnn_config.h
+		headers\mkldnn_debug.h = headers\mkldnn_debug.h
+		headers\mkldnn_types.h = headers\mkldnn_types.h
+		headers\mkldnn_version.h = headers\mkldnn_version.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{366475B6-29CA-40D5-9512-679791B41D8A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		README.md = README.md
+		rename.ps1 = rename.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
