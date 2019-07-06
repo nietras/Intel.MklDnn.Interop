@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Intel.CodeGen.MklDnn
 {
@@ -14,11 +12,13 @@ namespace Intel.CodeGen.MklDnn
         public static Method ParseMethod(string methodString)
         {
             var majorParts = MklDnnSplit(methodString, '(');
-            var methodParts = MklDnnSplit(majorParts.First(), ' ');
-            var argsParts = MklDnnSplit(majorParts.Skip(1).Single().Replace(")", string.Empty), ',');
+            var methodParts = majorParts.First().Split(new string[] { MKLDNNAPI + " " }, 
+                StringSplitOptions.RemoveEmptyEntries);
+            var argsParts = MklDnnSplit(majorParts.Skip(1).Single()
+                .Replace(")", string.Empty).Replace(";", string.Empty), ',');
 
-            var returnType = methodParts.First();
-            var name = methodParts.Skip(2).Single();
+            var returnType = methodParts.First().Trim();
+            var name = methodParts.Skip(1).Single().Trim();
             var parameters = ParseParameters(argsParts);
 
             return new Method(returnType, name, parameters);

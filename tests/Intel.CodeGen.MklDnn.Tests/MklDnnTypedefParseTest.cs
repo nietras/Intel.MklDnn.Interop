@@ -24,7 +24,7 @@ namespace Intel.CodeGen.MklDnn.Test
         [TestMethod]
         public void MklDnncoreTypedefParseTest_ParseTypedefsInResource()
         {
-            var typedefs = ParseTypedefsInResource("ippcore.h").ToList();
+            var typedefs = ParseTypedefsInResource("mkldnn.h").ToList();
 
             Assert.AreEqual(Typedef0, typedefs[0]);
             Assert.AreEqual(1, typedefs.Count); // Update when ipp changes, do check

@@ -1,9 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Intel.CodeGen.MklDnn.Test
 {
@@ -16,14 +12,15 @@ namespace Intel.CodeGen.MklDnn.Test
         [TestMethod]
         public void MklDnncoreMethodParseTest_ParseMethodsInResource()
         {
-            var methods = ParseMethodsInResource("ippcore.h").ToList();
+            var methods = ParseMethodsInResource("mkldnn.h").ToList();
 
-            Assert.AreEqual(Method0, methods[0]);
-            Assert.AreEqual(Method1, methods[1]);
-            Assert.AreEqual(16, methods.Count); // Update when ipp changes, do check
-            // Check a sample of deprecated are not in output
-            Assert.IsFalse(methods.Any(m => m.Name.Equals("ippStaticInit")));
-            Assert.IsFalse(methods.Any(m => m.Name.Equals("ippStatusToMessageIdI18n")));            
+            Assert.AreEqual(106, methods.Count); // Update when header changes, do check
+
+            //Assert.AreEqual(Method0, methods[0]);
+            //Assert.AreEqual(Method1, methods[1]);
+            //// Check a sample of deprecated are not in output
+            //Assert.IsFalse(methods.Any(m => m.Name.Equals("ippStaticInit")));
+            //Assert.IsFalse(methods.Any(m => m.Name.Equals("ippStatusToMessageIdI18n")));            
         }
     }
 }

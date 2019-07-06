@@ -17,10 +17,10 @@ namespace Intel.CodeGen.MklDnn
             string line = null;
             while ((line = reader.ReadLine()) != null)
             {
-                if (line.StartsWith(MklDnnHelper.MKLDNNAPI))
+                if (line.Contains(MklDnnHelper.MKLDNNAPI))
                 {
                     m_currentMethod = line;
-                    while (!(m_currentMethod.EndsWith("))") || m_currentMethod.EndsWith(") )")))
+                    while (!m_currentMethod.EndsWith(";"))
                     {
                         m_currentMethod += " " + reader.ReadLine().Trim();
                     }
