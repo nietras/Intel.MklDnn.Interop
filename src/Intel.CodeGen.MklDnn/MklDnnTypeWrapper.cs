@@ -20,18 +20,18 @@ namespace Intel.CodeGen.MklDnn
             m_typedefs = typedefs;
         }
 
-        public bool ShouldWrapType(string ippName)
+        public bool ShouldWrapType(string mklDnnName)
         {
-            var typedef = TryFindTypedefNtv(ippName);
+            var typedef = TryFindTypedefNtv(mklDnnName);
             return typedef != null;
         }
 
-        public string WrapType(string ippName)
+        public string WrapType(string mklDnnName)
         {
-            var typedef = TryFindTypedefNtv(ippName);
+            var typedef = TryFindTypedefNtv(mklDnnName);
             if (typedef != null)
             {
-                var typeUsage = new TypeUsage(ippName);
+                var typeUsage = new TypeUsage(mklDnnName);
                 //if (typeUsage.HasConst)
                 //{
                 //    return MklDnnHelper.WrapTypedefName(typeUsage.NameOnly);
@@ -41,15 +41,15 @@ namespace Intel.CodeGen.MklDnn
                     return MklDnnHelper.WrapTypedefName(typeUsage.RemoveConst());
                 }
             }
-            return ippName;
+            return mklDnnName;
         }
 
-        public string CastTypeToMgd(string ippName, string content)
+        public string CastTypeToMgd(string mklDnnName, string content)
         {
-            var typedef = TryFindTypedefNtv(ippName);
+            var typedef = TryFindTypedefNtv(mklDnnName);
             if (typedef != null)
             {
-                var typeUsage = new TypeUsage(ippName);
+                var typeUsage = new TypeUsage(mklDnnName);
                 if (typeUsage.HasPointer)
                 {
                     if (typeUsage.HasConst)
@@ -103,9 +103,9 @@ namespace Intel.CodeGen.MklDnn
             return MklDnnHelper.WrapTypedefName(typeUsage.NameOnly);
         }
 
-        private Typedef TryFindTypedefNtv(string ippName)
+        private Typedef TryFindTypedefNtv(string mklDnnName)
         {
-            var typedefs = m_typedefs.Where(t => ippName.Contains(t.Name)).OrderByDescending(t => t.Name.Length).ToArray();
+            var typedefs = m_typedefs.Where(t => mklDnnName.Contains(t.Name)).OrderByDescending(t => t.Name.Length).ToArray();
             if (typedefs.Any())
             {
                 return typedefs.First();

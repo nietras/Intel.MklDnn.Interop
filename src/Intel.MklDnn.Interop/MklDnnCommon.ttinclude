@@ -1,0 +1,31 @@
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="System.Runtime.dll" #>
+<#@ Assembly Name="System.IO.dll" #>
+<#@ Assembly Name="$(SolutionDir)build/Intel.CodeGen.MklDnn_$(Configuration)/Intel.CodeGen.MklDnn.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intel.CodeGen.MklDnn" #> 
+<#+
+    Typedef[] FindAllTypes()
+    {
+        var mkldnnPath = Host.ResolvePath(@"../../headers/mkldnn.h");
+        var mkldnnTypesPath = Host.ResolvePath(@"../../headers/mkldnn_types.h");
+        var parser = new MklDnnTypedefParser();
+        var typedefs = parser.ParseTypedefs(new StreamReader(mkldnnPath))
+            .Concat(parser.ParseTypedefs(new StreamReader(mkldnnTypesPath)))
+            .ToArray();
+        return typedefs;
+    }
+
+    Typedef[] FindAllDistinctTypes()
+    {
+        return FindAllTypes().Distinct(new NameTypedefEqualityComparer()).ToArray();
+    }
+
+    MklDnnTypeWrapper CreateTypeWrapper()
+    {
+        var typedefs = FindAllTypes();
+        var typeWrapper = new MklDnnTypeWrapper(typedefs);
+        return typeWrapper;
+    }
+#>

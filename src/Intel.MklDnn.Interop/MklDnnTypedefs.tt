@@ -1,0 +1,34 @@
+<#@ template language="C#" debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="$(SolutionDir)build/Intel.CodeGen.MklDnn_$(Configuration)/Intel.CodeGen.MklDnn.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="Intel.CodeGen.MklDnn" #> 
+<#@ include file="MklDnnCommon.ttinclude" #>
+#pragma once
+<#
+	var typedefs = FindAllDistinctTypes();
+	var typedefWrapper = new MklDnnTypedefWrapper(typedefs);
+#>
+#include <ippdefs.h>
+
+namespace Intel.MklDnn
+{
+<#
+	PushIndent("    ");
+	foreach (var typedef in typedefs)
+    {
+		var wrapTypedef = typedefWrapper.WrapTypedef(typedef);
+#>
+<#= wrapTypedef #>
+
+<#
+    }
+	PopIndent();
+#>
+} }

@@ -10,19 +10,30 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!--<DotNetCliToolReference Include="T5.TextTransform.Tool" Version="1.1.0-*" />-->
-    <!--<TextTemplate Include="**\*.Generated.tt"/>
-    <Generated Include="**\*.Generated.cs"/>-->
+    <None Include="Ipp.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Ipp.tt</DependentUpon>
+    </None>
+    <None Include="IppTypedefs.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IppTypedefs.tt</DependentUpon>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="MklDnn.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MklDnn.cs</LastGenOutput>
+    </None>
+    <None Update="MklDnnTypedefs.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MklDnnTypedefs.cs</LastGenOutput>
+    </None>
     <None Update="Views.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Views.cs</LastGenOutput>
-    </None>
-    <None Update="TestT4.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TestT4.cs</LastGenOutput>
     </None>
   </ItemGroup>
 
@@ -31,15 +42,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="MklDnn.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MklDnn.tt</DependentUpon>
+    </Compile>
+    <Compile Update="MklDnnTypedefs.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MklDnnTypedefs.tt</DependentUpon>
+    </Compile>
     <Compile Update="Views.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Views.tt</DependentUpon>
-    </Compile>
-    <Compile Update="TestT4.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>TestT4.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

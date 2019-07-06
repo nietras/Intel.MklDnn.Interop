@@ -1,0 +1,70 @@
+<#@ template language="C#" debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="$(SolutionDir)build/Intel.CodeGen.MklDnn_$(Configuration)/Intel.CodeGen.MklDnn.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="Intel.CodeGen.MklDnn" #> 
+<#@ include file="MklDnnCommon.ttinclude" #>
+using namespace System;
+<#
+	var typeWrapper = CreateTypeWrapper();
+
+	var path = Host.ResolvePath(@"../../headers/mkldnn.h");
+	var methods = new MklDnnMethodParser().ParseMethods(new StreamReader(path));
+	var methodWrapper = new MklDnnMethodWrapper(typeWrapper);
+#>
+// http://msdn.microsoft.com/en-us/library/ee847423(v=vs.110).aspx
+namespace Intel.MklDnn
+{
+	public ref class MklDnnException sealed : Exception
+	{
+	public:
+		MklDnnException(String^ message, NMklDnnStatus status)
+			: Exception(message)
+			, Status(status)
+		{}
+
+		initonly NMklDnnStatus Status;
+	};
+
+	public ref class MklDnn abstract sealed
+	{
+	public:
+		static void ThrowOnError(NMklDnnStatus status)
+		{
+			if (status != NMklDnnStatus::StsNoErr)
+			{
+				auto message = GetStatusText(status);
+				throw gcnew MklDnnException(message, status);
+			}
+		}
+
+		static String^ GetStatusText(NMklDnnStatus status)
+		{
+			auto characters = ippGetStatusString((MklDnnStatus)status);
+			return msclr::interop::marshal_as<String^>(characters);
+		}
+
+<#
+
+	PushIndent("    ");
+	PushIndent("    ");
+	foreach (var method in methods)
+    {
+		var wrapMethod = methodWrapper.WrapMethod(method);
+#>
+static <#= wrapMethod #>
+
+<#
+    }
+	PopIndent();
+	PopIndent();
+#>
+
+	};
+} }
