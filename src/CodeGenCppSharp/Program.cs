@@ -4,6 +4,7 @@ using System.Linq;
 using CppSharp;
 using CppSharp.AST;
 using CppSharp.Generators;
+using CppSharp.Passes;
 
 namespace CodeGenCppSharp
 {
@@ -15,6 +16,7 @@ namespace CodeGenCppSharp
         }
     }
 
+    // https://github.com/tritao/LLDBSharp/blob/master/LLDBSharpGen.cs
     public class MklDnnLibrary : ILibrary
     {
         public void Setup(Driver driver)
@@ -41,7 +43,9 @@ namespace CodeGenCppSharp
 
         public void SetupPasses(Driver driver)
         {
-
+            //var pass = new TranslationUnitPass();
+            //pass..RemovePrefix("SB")
+            //driver.AddTranslationUnitPass( ;
         }
 
         public void Preprocess(Driver driver, ASTContext ctx)

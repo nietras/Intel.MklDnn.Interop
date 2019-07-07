@@ -8,7 +8,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace mkldnn
+namespace Intel.MklDnn
 {
     public unsafe partial class mkldnn
     {
@@ -17,12 +17,12 @@ namespace mkldnn
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_desc_iterator_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescIteratorCreate(global::System.IntPtr iterator, global::System.IntPtr op_desc, global::System.IntPtr attr, global::System.IntPtr engine, global::System.IntPtr hint_forward_primitive_desc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescIteratorCreate(global::System.IntPtr iterator, global::System.IntPtr op_desc, global::System.IntPtr attr, global::System.IntPtr engine, global::System.IntPtr hint_forward_primitive_desc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_desc_iterator_next")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescIteratorNext(global::System.IntPtr iterator);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescIteratorNext(global::System.IntPtr iterator);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -32,117 +32,117 @@ namespace mkldnn
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_desc_iterator_destroy")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescIteratorDestroy(global::System.IntPtr iterator);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescIteratorDestroy(global::System.IntPtr iterator);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_desc_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescCreate(global::System.IntPtr primitive_desc, global::System.IntPtr op_desc, global::System.IntPtr attr, global::System.IntPtr engine, global::System.IntPtr hint_forward_primitive_desc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescCreate(global::System.IntPtr primitive_desc, global::System.IntPtr op_desc, global::System.IntPtr attr, global::System.IntPtr engine, global::System.IntPtr hint_forward_primitive_desc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_desc_clone")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescClone(global::System.IntPtr primitive_desc, global::System.IntPtr existing_primitive_desc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescClone(global::System.IntPtr primitive_desc, global::System.IntPtr existing_primitive_desc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_desc_get_attr")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescGetAttr(global::System.IntPtr primitive_desc, global::System.IntPtr attr);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescGetAttr(global::System.IntPtr primitive_desc, global::System.IntPtr attr);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_desc_destroy")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescDestroy(global::System.IntPtr primitive_desc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescDestroy(global::System.IntPtr primitive_desc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_desc_query")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescQuery(global::System.IntPtr primitive_desc, global::mkldnn.MkldnnQueryT what, int index, global::System.IntPtr result);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescQuery(global::System.IntPtr primitive_desc, global::Intel.MklDnn.MkldnnQueryT what, int index, global::System.IntPtr result);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_desc_query_md")]
-            internal static extern global::System.IntPtr MkldnnPrimitiveDescQueryMd(global::System.IntPtr primitive_desc, global::mkldnn.MkldnnQueryT what, int index);
+            internal static extern global::System.IntPtr MkldnnPrimitiveDescQueryMd(global::System.IntPtr primitive_desc, global::Intel.MklDnn.MkldnnQueryT what, int index);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_desc_query_s32")]
-            internal static extern int MkldnnPrimitiveDescQueryS32(global::System.IntPtr primitive_desc, global::mkldnn.MkldnnQueryT what, int index);
+            internal static extern int MkldnnPrimitiveDescQueryS32(global::System.IntPtr primitive_desc, global::Intel.MklDnn.MkldnnQueryT what, int index);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveCreate(global::System.IntPtr primitive, global::System.IntPtr primitive_desc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveCreate(global::System.IntPtr primitive, global::System.IntPtr primitive_desc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_execute")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveExecute(global::System.IntPtr primitive, global::System.IntPtr stream, int nargs, global::System.IntPtr args);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveExecute(global::System.IntPtr primitive, global::System.IntPtr stream, int nargs, global::System.IntPtr args);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_get_primitive_desc")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveGetPrimitiveDesc(global::System.IntPtr primitive, global::System.IntPtr primitive_desc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveGetPrimitiveDesc(global::System.IntPtr primitive, global::System.IntPtr primitive_desc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_destroy")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveDestroy(global::System.IntPtr primitive);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDestroy(global::System.IntPtr primitive);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrCreate(global::System.IntPtr attr);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrCreate(global::System.IntPtr attr);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_clone")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrClone(global::System.IntPtr attr, global::System.IntPtr existing_attr);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrClone(global::System.IntPtr attr, global::System.IntPtr existing_attr);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_destroy")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrDestroy(global::System.IntPtr attr);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrDestroy(global::System.IntPtr attr);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_get_scratchpad_mode")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrGetScratchpadMode(global::System.IntPtr attr, global::mkldnn.MkldnnScratchpadModeT* mode);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrGetScratchpadMode(global::System.IntPtr attr, global::Intel.MklDnn.MkldnnScratchpadModeT* mode);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_set_scratchpad_mode")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrSetScratchpadMode(global::System.IntPtr attr, global::mkldnn.MkldnnScratchpadModeT mode);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrSetScratchpadMode(global::System.IntPtr attr, global::Intel.MklDnn.MkldnnScratchpadModeT mode);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_get_output_scales")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrGetOutputScales(global::System.IntPtr attr, long* count, int* mask, float** scales);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrGetOutputScales(global::System.IntPtr attr, long* count, int* mask, float** scales);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_set_output_scales")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrSetOutputScales(global::System.IntPtr attr, long count, int mask, float* scales);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrSetOutputScales(global::System.IntPtr attr, long count, int mask, float* scales);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_get_post_ops")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrGetPostOps(global::System.IntPtr attr, global::System.IntPtr post_ops);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrGetPostOps(global::System.IntPtr attr, global::System.IntPtr post_ops);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_set_post_ops")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrSetPostOps(global::System.IntPtr attr, global::System.IntPtr post_ops);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrSetPostOps(global::System.IntPtr attr, global::System.IntPtr post_ops);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_post_ops_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPostOpsCreate(global::System.IntPtr post_ops);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsCreate(global::System.IntPtr post_ops);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_post_ops_destroy")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPostOpsDestroy(global::System.IntPtr post_ops);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsDestroy(global::System.IntPtr post_ops);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -152,42 +152,42 @@ namespace mkldnn
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_post_ops_get_kind")]
-            internal static extern global::mkldnn.MkldnnPrimitiveKindT MkldnnPostOpsGetKind(global::System.IntPtr post_ops, int index);
+            internal static extern global::Intel.MklDnn.MkldnnPrimitiveKindT MkldnnPostOpsGetKind(global::System.IntPtr post_ops, int index);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_post_ops_append_sum")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPostOpsAppendSum(global::System.IntPtr post_ops, float scale);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsAppendSum(global::System.IntPtr post_ops, float scale);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_post_ops_get_params_sum")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPostOpsGetParamsSum(global::System.IntPtr post_ops, int index, float* scale);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsGetParamsSum(global::System.IntPtr post_ops, int index, float* scale);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_post_ops_append_eltwise")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPostOpsAppendEltwise(global::System.IntPtr post_ops, float scale, global::mkldnn.MkldnnAlgKindT alg, float alpha, float beta);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsAppendEltwise(global::System.IntPtr post_ops, float scale, global::Intel.MklDnn.MkldnnAlgKindT alg, float alpha, float beta);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_post_ops_get_params_eltwise")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPostOpsGetParamsEltwise(global::System.IntPtr post_ops, int index, float* scale, global::mkldnn.MkldnnAlgKindT* alg, float* alpha, float* beta);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsGetParamsEltwise(global::System.IntPtr post_ops, int index, float* scale, global::Intel.MklDnn.MkldnnAlgKindT* alg, float* alpha, float* beta);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_desc_init_by_strides")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemoryDescInitByStrides(global::System.IntPtr memory_desc, int ndims, long[] dims, global::mkldnn.MkldnnDataTypeT data_type, long[] strides);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryDescInitByStrides(global::System.IntPtr memory_desc, int ndims, long[] dims, global::Intel.MklDnn.MkldnnDataTypeT data_type, long[] strides);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_desc_init_by_tag")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemoryDescInitByTag(global::System.IntPtr memory_desc, int ndims, long[] dims, global::mkldnn.MkldnnDataTypeT data_type, global::mkldnn.MkldnnFormatTagT tag);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryDescInitByTag(global::System.IntPtr memory_desc, int ndims, long[] dims, global::Intel.MklDnn.MkldnnDataTypeT data_type, global::Intel.MklDnn.MkldnnFormatTagT tag);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_desc_init_submemory")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemoryDescInitSubmemory(global::System.IntPtr memory_desc, global::System.IntPtr parent_memory_desc, long[] dims, long[] offsets);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryDescInitSubmemory(global::System.IntPtr memory_desc, global::System.IntPtr parent_memory_desc, long[] dims, long[] offsets);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -202,287 +202,287 @@ namespace mkldnn
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemoryCreate(global::System.IntPtr memory, global::System.IntPtr memory_desc, global::System.IntPtr engine, global::System.IntPtr handle);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryCreate(global::System.IntPtr memory, global::System.IntPtr memory_desc, global::System.IntPtr engine, global::System.IntPtr handle);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_get_memory_desc")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemoryGetMemoryDesc(global::System.IntPtr memory, global::System.IntPtr memory_desc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryGetMemoryDesc(global::System.IntPtr memory, global::System.IntPtr memory_desc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_get_engine")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemoryGetEngine(global::System.IntPtr memory, global::System.IntPtr engine);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryGetEngine(global::System.IntPtr memory, global::System.IntPtr engine);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_map_data")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemoryMapData(global::System.IntPtr memory, void** mapped_ptr);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryMapData(global::System.IntPtr memory, void** mapped_ptr);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_unmap_data")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemoryUnmapData(global::System.IntPtr memory, global::System.IntPtr mapped_ptr);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryUnmapData(global::System.IntPtr memory, global::System.IntPtr mapped_ptr);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_get_data_handle")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemoryGetDataHandle(global::System.IntPtr memory, void** handle);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryGetDataHandle(global::System.IntPtr memory, void** handle);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_set_data_handle")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemorySetDataHandle(global::System.IntPtr memory, global::System.IntPtr handle);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemorySetDataHandle(global::System.IntPtr memory, global::System.IntPtr handle);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_memory_destroy")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnMemoryDestroy(global::System.IntPtr memory);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryDestroy(global::System.IntPtr memory);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_reorder_primitive_desc_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnReorderPrimitiveDescCreate(global::System.IntPtr reorder_primitive_desc, global::System.IntPtr src_md, global::System.IntPtr src_engine, global::System.IntPtr dst_md, global::System.IntPtr dst_engine, global::System.IntPtr attr);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnReorderPrimitiveDescCreate(global::System.IntPtr reorder_primitive_desc, global::System.IntPtr src_md, global::System.IntPtr src_engine, global::System.IntPtr dst_md, global::System.IntPtr dst_engine, global::System.IntPtr attr);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_concat_primitive_desc_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnConcatPrimitiveDescCreate(global::System.IntPtr concat_primitive_desc, global::System.IntPtr dst_md, int n, int concat_dimension, global::System.IntPtr src_mds, global::System.IntPtr attr, global::System.IntPtr engine);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnConcatPrimitiveDescCreate(global::System.IntPtr concat_primitive_desc, global::System.IntPtr dst_md, int n, int concat_dimension, global::System.IntPtr src_mds, global::System.IntPtr attr, global::System.IntPtr engine);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_sum_primitive_desc_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnSumPrimitiveDescCreate(global::System.IntPtr sum_primitive_desc, global::System.IntPtr dst_mds, int n, float* scales, global::System.IntPtr src_mds, global::System.IntPtr attr, global::System.IntPtr engine);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnSumPrimitiveDescCreate(global::System.IntPtr sum_primitive_desc, global::System.IntPtr dst_mds, int n, float* scales, global::System.IntPtr src_mds, global::System.IntPtr attr, global::System.IntPtr engine);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_convolution_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnConvolutionForwardDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr weights_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_desc, long[] strides, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnConvolutionForwardDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr weights_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_desc, long[] strides, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_dilated_convolution_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnDilatedConvolutionForwardDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr weights_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedConvolutionForwardDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr weights_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_convolution_backward_data_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnConvolutionBackwardDataDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_src_desc, global::System.IntPtr weights_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnConvolutionBackwardDataDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_src_desc, global::System.IntPtr weights_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_dilated_convolution_backward_data_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnDilatedConvolutionBackwardDataDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_src_desc, global::System.IntPtr weights_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedConvolutionBackwardDataDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_src_desc, global::System.IntPtr weights_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_convolution_backward_weights_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnConvolutionBackwardWeightsDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr diff_weights_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnConvolutionBackwardWeightsDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr diff_weights_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_dilated_convolution_backward_weights_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnDilatedConvolutionBackwardWeightsDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr diff_weights_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedConvolutionBackwardWeightsDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr diff_weights_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_deconvolution_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnDeconvolutionForwardDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr weights_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_desc, long[] strides, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnDeconvolutionForwardDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr weights_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_desc, long[] strides, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_dilated_deconvolution_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnDilatedDeconvolutionForwardDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr weights_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedDeconvolutionForwardDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr weights_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_deconvolution_backward_data_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnDeconvolutionBackwardDataDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_src_desc, global::System.IntPtr weights_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnDeconvolutionBackwardDataDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_src_desc, global::System.IntPtr weights_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_dilated_deconvolution_backward_data_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnDilatedDeconvolutionBackwardDataDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_src_desc, global::System.IntPtr weights_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedDeconvolutionBackwardDataDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_src_desc, global::System.IntPtr weights_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_deconvolution_backward_weights_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnDeconvolutionBackwardWeightsDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr diff_weights_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnDeconvolutionBackwardWeightsDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr diff_weights_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_dilated_deconvolution_backward_weights_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnDilatedDeconvolutionBackwardWeightsDescInit(global::System.IntPtr conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr diff_weights_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedDeconvolutionBackwardWeightsDescInit(global::System.IntPtr conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr diff_weights_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_shuffle_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnShuffleForwardDescInit(global::System.IntPtr shuffle_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::System.IntPtr data_desc, int axis, long group_size);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnShuffleForwardDescInit(global::System.IntPtr shuffle_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::System.IntPtr data_desc, int axis, long group_size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_shuffle_backward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnShuffleBackwardDescInit(global::System.IntPtr shuffle_desc, global::System.IntPtr diff_data_desc, int axis, long group_size);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnShuffleBackwardDescInit(global::System.IntPtr shuffle_desc, global::System.IntPtr diff_data_desc, int axis, long group_size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_eltwise_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnEltwiseForwardDescInit(global::System.IntPtr eltwise_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr data_desc, float alpha, float beta);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnEltwiseForwardDescInit(global::System.IntPtr eltwise_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr data_desc, float alpha, float beta);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_eltwise_backward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnEltwiseBackwardDescInit(global::System.IntPtr eltwise_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_data_desc, global::System.IntPtr data_desc, float alpha, float beta);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnEltwiseBackwardDescInit(global::System.IntPtr eltwise_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_data_desc, global::System.IntPtr data_desc, float alpha, float beta);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_softmax_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnSoftmaxForwardDescInit(global::System.IntPtr softmax_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::System.IntPtr data_desc, int softmax_axis);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnSoftmaxForwardDescInit(global::System.IntPtr softmax_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::System.IntPtr data_desc, int softmax_axis);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_softmax_backward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnSoftmaxBackwardDescInit(global::System.IntPtr softmax_desc, global::System.IntPtr diff_desc, global::System.IntPtr data_desc, int softmax_axis);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnSoftmaxBackwardDescInit(global::System.IntPtr softmax_desc, global::System.IntPtr diff_desc, global::System.IntPtr data_desc, int softmax_axis);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_pooling_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPoolingForwardDescInit(global::System.IntPtr pool_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr dst_desc, long[] strides, long[] kernel, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPoolingForwardDescInit(global::System.IntPtr pool_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr src_desc, global::System.IntPtr dst_desc, long[] strides, long[] kernel, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_pooling_backward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPoolingBackwardDescInit(global::System.IntPtr pool_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_src_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] kernel, long[] padding_l, long[] padding_r);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPoolingBackwardDescInit(global::System.IntPtr pool_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_src_desc, global::System.IntPtr diff_dst_desc, long[] strides, long[] kernel, long[] padding_l, long[] padding_r);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_lrn_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnLrnForwardDescInit(global::System.IntPtr lrn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr data_desc, long local_size, float alpha, float beta, float k);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnLrnForwardDescInit(global::System.IntPtr lrn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr data_desc, long local_size, float alpha, float beta, float k);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_lrn_backward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnLrnBackwardDescInit(global::System.IntPtr lrn_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_data_desc, global::System.IntPtr data_desc, long local_size, float alpha, float beta, float k);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnLrnBackwardDescInit(global::System.IntPtr lrn_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::System.IntPtr diff_data_desc, global::System.IntPtr data_desc, long local_size, float alpha, float beta, float k);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_batch_normalization_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnBatchNormalizationForwardDescInit(global::System.IntPtr bnrm_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::System.IntPtr data_desc, float epsilon, uint flags);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnBatchNormalizationForwardDescInit(global::System.IntPtr bnrm_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::System.IntPtr data_desc, float epsilon, uint flags);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_batch_normalization_backward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnBatchNormalizationBackwardDescInit(global::System.IntPtr bnrm_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::System.IntPtr diff_data_desc, global::System.IntPtr data_desc, float epsilon, uint flags);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnBatchNormalizationBackwardDescInit(global::System.IntPtr bnrm_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::System.IntPtr diff_data_desc, global::System.IntPtr data_desc, float epsilon, uint flags);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_inner_product_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnInnerProductForwardDescInit(global::System.IntPtr ip_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::System.IntPtr src_desc, global::System.IntPtr weights_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_desc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnInnerProductForwardDescInit(global::System.IntPtr ip_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::System.IntPtr src_desc, global::System.IntPtr weights_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_desc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_inner_product_backward_data_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnInnerProductBackwardDataDescInit(global::System.IntPtr ip_desc, global::System.IntPtr diff_src_desc, global::System.IntPtr weights_desc, global::System.IntPtr diff_dst_desc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnInnerProductBackwardDataDescInit(global::System.IntPtr ip_desc, global::System.IntPtr diff_src_desc, global::System.IntPtr weights_desc, global::System.IntPtr diff_dst_desc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_inner_product_backward_weights_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnInnerProductBackwardWeightsDescInit(global::System.IntPtr ip_desc, global::System.IntPtr src_desc, global::System.IntPtr diff_weights_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_desc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnInnerProductBackwardWeightsDescInit(global::System.IntPtr ip_desc, global::System.IntPtr src_desc, global::System.IntPtr diff_weights_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_desc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_set_rnn_data_qparams")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrSetRnnDataQparams(global::System.IntPtr attr, float scale, float shift);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrSetRnnDataQparams(global::System.IntPtr attr, float scale, float shift);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_primitive_attr_set_rnn_weights_qparams")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrSetRnnWeightsQparams(global::System.IntPtr attr, long count, int mask, float* weights_scales);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrSetRnnWeightsQparams(global::System.IntPtr attr, long count, int mask, float* weights_scales);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_vanilla_rnn_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnVanillaRnnForwardDescInit(global::System.IntPtr rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT activation, global::mkldnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, uint flags, float alpha, float beta);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnVanillaRnnForwardDescInit(global::System.IntPtr rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT activation, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, uint flags, float alpha, float beta);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_vanilla_rnn_backward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnVanillaRnnBackwardDescInit(global::System.IntPtr rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT activation, global::mkldnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, global::System.IntPtr diff_src_layer_desc, global::System.IntPtr diff_src_iter_desc, global::System.IntPtr diff_weights_layer_desc, global::System.IntPtr diff_weights_iter_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_layer_desc, global::System.IntPtr diff_dst_iter_desc, uint flags, float alpha, float beta);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnVanillaRnnBackwardDescInit(global::System.IntPtr rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT activation, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, global::System.IntPtr diff_src_layer_desc, global::System.IntPtr diff_src_iter_desc, global::System.IntPtr diff_weights_layer_desc, global::System.IntPtr diff_weights_iter_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_layer_desc, global::System.IntPtr diff_dst_iter_desc, uint flags, float alpha, float beta);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_lstm_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnLstmForwardDescInit(global::System.IntPtr rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr src_iter_c_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, global::System.IntPtr dst_iter_c_desc, uint flags);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnLstmForwardDescInit(global::System.IntPtr rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr src_iter_c_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, global::System.IntPtr dst_iter_c_desc, uint flags);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_lstm_backward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnLstmBackwardDescInit(global::System.IntPtr rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr src_iter_c_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, global::System.IntPtr dst_iter_c_desc, global::System.IntPtr diff_src_layer_desc, global::System.IntPtr diff_src_iter_desc, global::System.IntPtr diff_src_iter_c_desc, global::System.IntPtr diff_weights_layer_desc, global::System.IntPtr diff_weights_iter_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_layer_desc, global::System.IntPtr diff_dst_iter_desc, global::System.IntPtr diff_dst_iter_c_desc, uint flags);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnLstmBackwardDescInit(global::System.IntPtr rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr src_iter_c_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, global::System.IntPtr dst_iter_c_desc, global::System.IntPtr diff_src_layer_desc, global::System.IntPtr diff_src_iter_desc, global::System.IntPtr diff_src_iter_c_desc, global::System.IntPtr diff_weights_layer_desc, global::System.IntPtr diff_weights_iter_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_layer_desc, global::System.IntPtr diff_dst_iter_desc, global::System.IntPtr diff_dst_iter_c_desc, uint flags);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_gru_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnGruForwardDescInit(global::System.IntPtr rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, uint flags);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnGruForwardDescInit(global::System.IntPtr rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, uint flags);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_gru_backward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnGruBackwardDescInit(global::System.IntPtr rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, global::System.IntPtr diff_src_layer_desc, global::System.IntPtr diff_src_iter_desc, global::System.IntPtr diff_weights_layer_desc, global::System.IntPtr diff_weights_iter_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_layer_desc, global::System.IntPtr diff_dst_iter_desc, uint flags);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnGruBackwardDescInit(global::System.IntPtr rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, global::System.IntPtr diff_src_layer_desc, global::System.IntPtr diff_src_iter_desc, global::System.IntPtr diff_weights_layer_desc, global::System.IntPtr diff_weights_iter_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_layer_desc, global::System.IntPtr diff_dst_iter_desc, uint flags);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_lbr_gru_forward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnLbrGruForwardDescInit(global::System.IntPtr rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, uint flags);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnLbrGruForwardDescInit(global::System.IntPtr rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, uint flags);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_lbr_gru_backward_desc_init")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnLbrGruBackwardDescInit(global::System.IntPtr rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, global::System.IntPtr diff_src_layer_desc, global::System.IntPtr diff_src_iter_desc, global::System.IntPtr diff_weights_layer_desc, global::System.IntPtr diff_weights_iter_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_layer_desc, global::System.IntPtr diff_dst_iter_desc, uint flags);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnLbrGruBackwardDescInit(global::System.IntPtr rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::System.IntPtr src_layer_desc, global::System.IntPtr src_iter_desc, global::System.IntPtr weights_layer_desc, global::System.IntPtr weights_iter_desc, global::System.IntPtr bias_desc, global::System.IntPtr dst_layer_desc, global::System.IntPtr dst_iter_desc, global::System.IntPtr diff_src_layer_desc, global::System.IntPtr diff_src_iter_desc, global::System.IntPtr diff_weights_layer_desc, global::System.IntPtr diff_weights_iter_desc, global::System.IntPtr diff_bias_desc, global::System.IntPtr diff_dst_layer_desc, global::System.IntPtr diff_dst_iter_desc, uint flags);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_engine_get_count")]
-            internal static extern ulong MkldnnEngineGetCount(global::mkldnn.MkldnnEngineKindT kind);
+            internal static extern ulong MkldnnEngineGetCount(global::Intel.MklDnn.MkldnnEngineKindT kind);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_engine_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnEngineCreate(global::System.IntPtr engine, global::mkldnn.MkldnnEngineKindT kind, ulong index);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnEngineCreate(global::System.IntPtr engine, global::Intel.MklDnn.MkldnnEngineKindT kind, ulong index);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_engine_get_kind")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnEngineGetKind(global::System.IntPtr engine, global::mkldnn.MkldnnEngineKindT* kind);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnEngineGetKind(global::System.IntPtr engine, global::Intel.MklDnn.MkldnnEngineKindT* kind);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_engine_destroy")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnEngineDestroy(global::System.IntPtr engine);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnEngineDestroy(global::System.IntPtr engine);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_stream_create")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnStreamCreate(global::System.IntPtr stream, global::System.IntPtr engine, uint flags);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnStreamCreate(global::System.IntPtr stream, global::System.IntPtr engine, uint flags);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_stream_wait")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnStreamWait(global::System.IntPtr stream);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnStreamWait(global::System.IntPtr stream);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_stream_destroy")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnStreamDestroy(global::System.IntPtr stream);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnStreamDestroy(global::System.IntPtr stream);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_set_verbose")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnSetVerbose(int level);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnSetVerbose(int level);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_set_jit_dump")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnSetJitDump(int enable);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnSetJitDump(int enable);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -492,17 +492,17 @@ namespace mkldnn
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_sgemm")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnSgemm(sbyte transa, sbyte transb, long M, long N, long K, float alpha, float* A, long lda, float* B, long ldb, float beta, float* C, long ldc);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnSgemm(sbyte transa, sbyte transb, long M, long N, long K, float alpha, float* A, long lda, float* B, long ldb, float beta, float* C, long ldc);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_gemm_u8s8s32")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnGemmU8s8s32(sbyte transa, sbyte transb, sbyte offsetc, long M, long N, long K, float alpha, byte* A, long lda, byte ao, sbyte* B, long ldb, sbyte bo, float beta, int* C, long ldc, int* co);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnGemmU8s8s32(sbyte transa, sbyte transb, sbyte offsetc, long M, long N, long K, float alpha, byte* A, long lda, byte ao, sbyte* B, long ldb, sbyte bo, float beta, int* C, long ldc, int* co);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_gemm_s8s8s32")]
-            internal static extern global::mkldnn.MkldnnStatusT MkldnnGemmS8s8s32(sbyte transa, sbyte transb, sbyte offsetc, long M, long N, long K, float alpha, sbyte* A, long lda, sbyte ao, sbyte* B, long ldb, sbyte bo, float beta, int* C, long ldc, int* co);
+            internal static extern global::Intel.MklDnn.MkldnnStatusT MkldnnGemmS8s8s32(sbyte transa, sbyte transb, sbyte offsetc, long M, long N, long K, float alpha, sbyte* A, long lda, sbyte ao, sbyte* B, long ldb, sbyte bo, float beta, int* C, long ldc, int* co);
         }
 
         /// <summary>
@@ -510,7 +510,7 @@ namespace mkldnn
 /// <para>propagation (required for backward propagation). Passfor forward</para>
 /// <para>propagation.</para>
 /// </summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescIteratorCreate(global::mkldnn.MkldnnPrimitiveDescIterator iterator, global::System.IntPtr op_desc, global::mkldnn.MkldnnPrimitiveAttr attr, global::mkldnn.MkldnnEngine engine, global::mkldnn.MkldnnPrimitiveDesc hint_forward_primitive_desc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescIteratorCreate(global::Intel.MklDnn.MkldnnPrimitiveDescIterator iterator, global::System.IntPtr op_desc, global::Intel.MklDnn.MkldnnPrimitiveAttr attr, global::Intel.MklDnn.MkldnnEngine engine, global::Intel.MklDnn.MkldnnPrimitiveDesc hint_forward_primitive_desc)
         {
             var ____arg0 = ReferenceEquals(iterator, null) ? global::System.IntPtr.Zero : iterator.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -525,7 +525,7 @@ namespace mkldnn
 /// <para>Iterates over primitive descriptors. Returns #mkldnn_iterator_ends if no</para>
 /// <para>more primitive descriptors are available.</para>
 /// </summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescIteratorNext(global::mkldnn.MkldnnPrimitiveDescIterator iterator)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescIteratorNext(global::Intel.MklDnn.MkldnnPrimitiveDescIterator iterator)
         {
             var __arg0 = ReferenceEquals(iterator, null) ? global::System.IntPtr.Zero : iterator.__Instance;
             var __ret = __Internal.MkldnnPrimitiveDescIteratorNext(__arg0);
@@ -537,20 +537,20 @@ namespace mkldnn
 /// <para>The user should delete the fetched primitive descriptor using</para>
 /// <para>mkldnn_primitive_desc_destroy() once it is no longer needed.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnPrimitiveDesc MkldnnPrimitiveDescIteratorFetch(global::mkldnn.MkldnnPrimitiveDescIterator iterator)
+        public static global::Intel.MklDnn.MkldnnPrimitiveDesc MkldnnPrimitiveDescIteratorFetch(global::Intel.MklDnn.MkldnnPrimitiveDescIterator iterator)
         {
             var __arg0 = ReferenceEquals(iterator, null) ? global::System.IntPtr.Zero : iterator.__Instance;
             var __ret = __Internal.MkldnnPrimitiveDescIteratorFetch(__arg0);
-            global::mkldnn.MkldnnPrimitiveDesc __result0;
+            global::Intel.MklDnn.MkldnnPrimitiveDesc __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::mkldnn.MkldnnPrimitiveDesc.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::mkldnn.MkldnnPrimitiveDesc) global::mkldnn.MkldnnPrimitiveDesc.NativeToManagedMap[__ret];
-            else __result0 = global::mkldnn.MkldnnPrimitiveDesc.__CreateInstance(__ret);
+            else if (global::Intel.MklDnn.MkldnnPrimitiveDesc.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::Intel.MklDnn.MkldnnPrimitiveDesc) global::Intel.MklDnn.MkldnnPrimitiveDesc.NativeToManagedMap[__ret];
+            else __result0 = global::Intel.MklDnn.MkldnnPrimitiveDesc.__CreateInstance(__ret);
             return __result0;
         }
 
         /// <summary>Deletes a primitive descriptor</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescIteratorDestroy(global::mkldnn.MkldnnPrimitiveDescIterator iterator)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescIteratorDestroy(global::Intel.MklDnn.MkldnnPrimitiveDescIterator iterator)
         {
             var __arg0 = ReferenceEquals(iterator, null) ? global::System.IntPtr.Zero : iterator.__Instance;
             var __ret = __Internal.MkldnnPrimitiveDescIteratorDestroy(__arg0);
@@ -563,7 +563,7 @@ namespace mkldnn
 /// <para>equivalent to creating a primitive descriptor iterator, immediately fetching</para>
 /// <para>a primitive descriptor, and then destroying the iterator.</para>
 /// </summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescCreate(global::mkldnn.MkldnnPrimitiveDesc primitive_desc, global::System.IntPtr op_desc, global::mkldnn.MkldnnPrimitiveAttr attr, global::mkldnn.MkldnnEngine engine, global::mkldnn.MkldnnPrimitiveDesc hint_forward_primitive_desc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescCreate(global::Intel.MklDnn.MkldnnPrimitiveDesc primitive_desc, global::System.IntPtr op_desc, global::Intel.MklDnn.MkldnnPrimitiveAttr attr, global::Intel.MklDnn.MkldnnEngine engine, global::Intel.MklDnn.MkldnnPrimitiveDesc hint_forward_primitive_desc)
         {
             var ____arg0 = ReferenceEquals(primitive_desc, null) ? global::System.IntPtr.Zero : primitive_desc.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -575,7 +575,7 @@ namespace mkldnn
         }
 
         /// <summary>Makes a copy of a</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescClone(global::mkldnn.MkldnnPrimitiveDesc primitive_desc, global::mkldnn.MkldnnPrimitiveDesc existing_primitive_desc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescClone(global::Intel.MklDnn.MkldnnPrimitiveDesc primitive_desc, global::Intel.MklDnn.MkldnnPrimitiveDesc existing_primitive_desc)
         {
             var ____arg0 = ReferenceEquals(primitive_desc, null) ? global::System.IntPtr.Zero : primitive_desc.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -590,7 +590,7 @@ namespace mkldnn
 /// <para>The lifetime of anis the same as that of aso it is illegal to use theoncehas been</para>
 /// <para>destroyed.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescGetAttr(global::mkldnn.MkldnnPrimitiveDesc primitive_desc, global::mkldnn.MkldnnPrimitiveAttr attr)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescGetAttr(global::Intel.MklDnn.MkldnnPrimitiveDesc primitive_desc, global::Intel.MklDnn.MkldnnPrimitiveAttr attr)
         {
             var __arg0 = ReferenceEquals(primitive_desc, null) ? global::System.IntPtr.Zero : primitive_desc.__Instance;
             var ____arg1 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
@@ -600,7 +600,7 @@ namespace mkldnn
         }
 
         /// <summary>Deletes a</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescDestroy(global::mkldnn.MkldnnPrimitiveDesc primitive_desc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescDestroy(global::Intel.MklDnn.MkldnnPrimitiveDesc primitive_desc)
         {
             var __arg0 = ReferenceEquals(primitive_desc, null) ? global::System.IntPtr.Zero : primitive_desc.__Instance;
             var __ret = __Internal.MkldnnPrimitiveDescDestroy(__arg0);
@@ -633,7 +633,7 @@ namespace mkldnn
 /// <para>#mkldnn_query_num_of_outputs_s32 respectively)</para>
 /// <para>mkldnn_query_t for more options</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveDescQuery(global::mkldnn.MkldnnPrimitiveDesc primitive_desc, global::mkldnn.MkldnnQueryT what, int index, global::System.IntPtr result)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDescQuery(global::Intel.MklDnn.MkldnnPrimitiveDesc primitive_desc, global::Intel.MklDnn.MkldnnQueryT what, int index, global::System.IntPtr result)
         {
             var __arg0 = ReferenceEquals(primitive_desc, null) ? global::System.IntPtr.Zero : primitive_desc.__Instance;
             var __ret = __Internal.MkldnnPrimitiveDescQuery(__arg0, what, index, result);
@@ -646,15 +646,15 @@ namespace mkldnn
 /// <para>This is just a specialized version of mkldnn_primitive_desc_query</para>
 /// <para>used for convenience.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnMemoryDescT MkldnnPrimitiveDescQueryMd(global::mkldnn.MkldnnPrimitiveDesc primitive_desc, global::mkldnn.MkldnnQueryT what, int index)
+        public static global::Intel.MklDnn.MkldnnMemoryDescT MkldnnPrimitiveDescQueryMd(global::Intel.MklDnn.MkldnnPrimitiveDesc primitive_desc, global::Intel.MklDnn.MkldnnQueryT what, int index)
         {
             var __arg0 = ReferenceEquals(primitive_desc, null) ? global::System.IntPtr.Zero : primitive_desc.__Instance;
             var __ret = __Internal.MkldnnPrimitiveDescQueryMd(__arg0, what, index);
-            global::mkldnn.MkldnnMemoryDescT __result0;
+            global::Intel.MklDnn.MkldnnMemoryDescT __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::mkldnn.MkldnnMemoryDescT.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::mkldnn.MkldnnMemoryDescT) global::mkldnn.MkldnnMemoryDescT.NativeToManagedMap[__ret];
-            else __result0 = global::mkldnn.MkldnnMemoryDescT.__CreateInstance(__ret);
+            else if (global::Intel.MklDnn.MkldnnMemoryDescT.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::Intel.MklDnn.MkldnnMemoryDescT) global::Intel.MklDnn.MkldnnMemoryDescT.NativeToManagedMap[__ret];
+            else __result0 = global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(__ret);
             return __result0;
         }
 
@@ -666,7 +666,7 @@ namespace mkldnn
 /// <para>This is just a specialized version of mkldnn_primitive_desc_query</para>
 /// <para>used for convenience.</para>
 /// </remarks>
-        public static int MkldnnPrimitiveDescQueryS32(global::mkldnn.MkldnnPrimitiveDesc primitive_desc, global::mkldnn.MkldnnQueryT what, int index)
+        public static int MkldnnPrimitiveDescQueryS32(global::Intel.MklDnn.MkldnnPrimitiveDesc primitive_desc, global::Intel.MklDnn.MkldnnQueryT what, int index)
         {
             var __arg0 = ReferenceEquals(primitive_desc, null) ? global::System.IntPtr.Zero : primitive_desc.__Instance;
             var __ret = __Internal.MkldnnPrimitiveDescQueryS32(__arg0, what, index);
@@ -674,7 +674,7 @@ namespace mkldnn
         }
 
         /// <summary>Creates ausing adescriptor.</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveCreate(global::mkldnn.MkldnnPrimitive primitive, global::mkldnn.MkldnnPrimitiveDesc primitive_desc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveCreate(global::Intel.MklDnn.MkldnnPrimitive primitive, global::Intel.MklDnn.MkldnnPrimitiveDesc primitive_desc)
         {
             var ____arg0 = ReferenceEquals(primitive, null) ? global::System.IntPtr.Zero : primitive.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -684,7 +684,7 @@ namespace mkldnn
         }
 
         /// <summary>Executes ausing aandarguments</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveExecute(global::mkldnn.MkldnnPrimitive primitive, global::mkldnn.MkldnnStream stream, int nargs, global::mkldnn.MkldnnExecArgT args)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveExecute(global::Intel.MklDnn.MkldnnPrimitive primitive, global::Intel.MklDnn.MkldnnStream stream, int nargs, global::Intel.MklDnn.MkldnnExecArgT args)
         {
             var __arg0 = ReferenceEquals(primitive, null) ? global::System.IntPtr.Zero : primitive.__Instance;
             var __arg1 = ReferenceEquals(stream, null) ? global::System.IntPtr.Zero : stream.__Instance;
@@ -695,7 +695,7 @@ namespace mkldnn
 
         /// <summary>Retrieves a reference to thedescriptor of given</summary>
 /// <remarks>The returned object must not be destroyed by the user. Thequalifier of the returned object prevents such attempts.</remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveGetPrimitiveDesc(global::mkldnn.MkldnnPrimitive primitive, global::mkldnn.MkldnnPrimitiveDesc primitive_desc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveGetPrimitiveDesc(global::Intel.MklDnn.MkldnnPrimitive primitive, global::Intel.MklDnn.MkldnnPrimitiveDesc primitive_desc)
         {
             var __arg0 = ReferenceEquals(primitive, null) ? global::System.IntPtr.Zero : primitive.__Instance;
             var ____arg1 = ReferenceEquals(primitive_desc, null) ? global::System.IntPtr.Zero : primitive_desc.__Instance;
@@ -705,7 +705,7 @@ namespace mkldnn
         }
 
         /// <summary>Deletes a</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveDestroy(global::mkldnn.MkldnnPrimitive primitive)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveDestroy(global::Intel.MklDnn.MkldnnPrimitive primitive)
         {
             var __arg0 = ReferenceEquals(primitive, null) ? global::System.IntPtr.Zero : primitive.__Instance;
             var __ret = __Internal.MkldnnPrimitiveDestroy(__arg0);
@@ -720,7 +720,7 @@ namespace mkldnn
 /// <para>An empty attribute is used in primitive descriptor creation whenever it</para>
 /// <para>is not passed explicitly, e.g. in mkldnn_primitive_desc_create.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrCreate(global::mkldnn.MkldnnPrimitiveAttr attr)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrCreate(global::Intel.MklDnn.MkldnnPrimitiveAttr attr)
         {
             var ____arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -729,7 +729,7 @@ namespace mkldnn
         }
 
         /// <summary>Makes a copy of an</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrClone(global::mkldnn.MkldnnPrimitiveAttr attr, global::mkldnn.MkldnnPrimitiveAttr existing_attr)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrClone(global::Intel.MklDnn.MkldnnPrimitiveAttr attr, global::Intel.MklDnn.MkldnnPrimitiveAttr existing_attr)
         {
             var ____arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -739,7 +739,7 @@ namespace mkldnn
         }
 
         /// <summary>Deletes an</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrDestroy(global::mkldnn.MkldnnPrimitiveAttr attr)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrDestroy(global::Intel.MklDnn.MkldnnPrimitiveAttr attr)
         {
             var __arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             var __ret = __Internal.MkldnnPrimitiveAttrDestroy(__arg0);
@@ -747,7 +747,7 @@ namespace mkldnn
         }
 
         /// <summary>Returns the scratchpadset in the attribute</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrGetScratchpadMode(global::mkldnn.MkldnnPrimitiveAttr attr, global::mkldnn.MkldnnScratchpadModeT* mode)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrGetScratchpadMode(global::Intel.MklDnn.MkldnnPrimitiveAttr attr, global::Intel.MklDnn.MkldnnScratchpadModeT* mode)
         {
             var __arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             var __ret = __Internal.MkldnnPrimitiveAttrGetScratchpadMode(__arg0, mode);
@@ -759,7 +759,7 @@ namespace mkldnn
 /// <para>The possible values are: #mkldnn_scratchpad_mode_library (default) and</para>
 /// <para>#mkldnn_scratchpad_mode_user.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrSetScratchpadMode(global::mkldnn.MkldnnPrimitiveAttr attr, global::mkldnn.MkldnnScratchpadModeT mode)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrSetScratchpadMode(global::Intel.MklDnn.MkldnnPrimitiveAttr attr, global::Intel.MklDnn.MkldnnScratchpadModeT mode)
         {
             var __arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             var __ret = __Internal.MkldnnPrimitiveAttrSetScratchpadMode(__arg0, mode);
@@ -777,7 +777,7 @@ namespace mkldnn
 /// <para>The lifetime ofis the same as that of theto which it</para>
 /// <para>belongs, so it is illegal to useafteris destroyed.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrGetOutputScales(global::mkldnn.MkldnnPrimitiveAttr attr, ref long count, ref int mask, float** scales)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrGetOutputScales(global::Intel.MklDnn.MkldnnPrimitiveAttr attr, ref long count, ref int mask, float** scales)
         {
             var __arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             fixed (long* __count1 = &count)
@@ -809,7 +809,7 @@ namespace mkldnn
 /// <para>actual primitive descriptor is created, so it is the user's</para>
 /// <para>responsibility to set proper values. The following formula must hold:</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrSetOutputScales(global::mkldnn.MkldnnPrimitiveAttr attr, long count, int mask, ref float scales)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrSetOutputScales(global::Intel.MklDnn.MkldnnPrimitiveAttr attr, long count, int mask, ref float scales)
         {
             var __arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             fixed (float* __scales3 = &scales)
@@ -826,7 +826,7 @@ namespace mkldnn
 /// <para>modify or destroyAlso, the lifetime ofis the</para>
 /// <para>same as that of theit belongs to, so it is illegal to useafterhas been destroyed.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrGetPostOps(global::mkldnn.MkldnnPrimitiveAttr attr, global::mkldnn.MkldnnPostOps post_ops)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrGetPostOps(global::Intel.MklDnn.MkldnnPrimitiveAttr attr, global::Intel.MklDnn.MkldnnPostOps post_ops)
         {
             var __arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             var ____arg1 = ReferenceEquals(post_ops, null) ? global::System.IntPtr.Zero : post_ops.__Instance;
@@ -845,7 +845,7 @@ namespace mkldnn
 /// <para>Therefore the user should handle an error that might occur at the</para>
 /// <para>mkldnn_primitive_desc_create call.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrSetPostOps(global::mkldnn.MkldnnPrimitiveAttr attr, global::mkldnn.MkldnnPostOps post_ops)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrSetPostOps(global::Intel.MklDnn.MkldnnPrimitiveAttr attr, global::Intel.MklDnn.MkldnnPostOps post_ops)
         {
             var __arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             var __arg1 = ReferenceEquals(post_ops, null) ? global::System.IntPtr.Zero : post_ops.__Instance;
@@ -854,7 +854,7 @@ namespace mkldnn
         }
 
         /// <summary>Creates an empty sequence of post operations</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPostOpsCreate(global::mkldnn.MkldnnPostOps post_ops)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsCreate(global::Intel.MklDnn.MkldnnPostOps post_ops)
         {
             var ____arg0 = ReferenceEquals(post_ops, null) ? global::System.IntPtr.Zero : post_ops.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -863,7 +863,7 @@ namespace mkldnn
         }
 
         /// <summary>Deletes asequence.</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPostOpsDestroy(global::mkldnn.MkldnnPostOps post_ops)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsDestroy(global::Intel.MklDnn.MkldnnPostOps post_ops)
         {
             var __arg0 = ReferenceEquals(post_ops, null) ? global::System.IntPtr.Zero : post_ops.__Instance;
             var __ret = __Internal.MkldnnPostOpsDestroy(__arg0);
@@ -871,7 +871,7 @@ namespace mkldnn
         }
 
         /// <summary>Returns theof post operations for given</summary>
-        public static int MkldnnPostOpsLen(global::mkldnn.MkldnnPostOps post_ops)
+        public static int MkldnnPostOpsLen(global::Intel.MklDnn.MkldnnPostOps post_ops)
         {
             var __arg0 = ReferenceEquals(post_ops, null) ? global::System.IntPtr.Zero : post_ops.__Instance;
             var __ret = __Internal.MkldnnPostOpsLen(__arg0);
@@ -882,7 +882,7 @@ namespace mkldnn
 /// <para>Returns the kind of post operation with indexin given</para>
 /// <para>In case of error, returns #mkldnn_undefined_primitive.</para>
 /// </summary>
-        public static global::mkldnn.MkldnnPrimitiveKindT MkldnnPostOpsGetKind(global::mkldnn.MkldnnPostOps post_ops, int index)
+        public static global::Intel.MklDnn.MkldnnPrimitiveKindT MkldnnPostOpsGetKind(global::Intel.MklDnn.MkldnnPostOps post_ops, int index)
         {
             var __arg0 = ReferenceEquals(post_ops, null) ? global::System.IntPtr.Zero : post_ops.__Instance;
             var __ret = __Internal.MkldnnPostOpsGetKind(__arg0, index);
@@ -908,7 +908,7 @@ namespace mkldnn
 /// <para>destination is expected to be the same as the layout of the stored</para>
 /// <para>destination.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPostOpsAppendSum(global::mkldnn.MkldnnPostOps post_ops, float scale)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsAppendSum(global::Intel.MklDnn.MkldnnPostOps post_ops, float scale)
         {
             var __arg0 = ReferenceEquals(post_ops, null) ? global::System.IntPtr.Zero : post_ops.__Instance;
             var __ret = __Internal.MkldnnPostOpsAppendSum(__arg0, scale);
@@ -923,7 +923,7 @@ namespace mkldnn
 /// <para>If indexwould not correspond to the accumulation post</para>
 /// <para>operation, the function returns #mkldnn_invalid_arguments.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPostOpsGetParamsSum(global::mkldnn.MkldnnPostOps post_ops, int index, ref float scale)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsGetParamsSum(global::Intel.MklDnn.MkldnnPostOps post_ops, int index, ref float scale)
         {
             var __arg0 = ReferenceEquals(post_ops, null) ? global::System.IntPtr.Zero : post_ops.__Instance;
             fixed (float* __scale2 = &scale)
@@ -947,7 +947,7 @@ namespace mkldnn
 /// <para>dst[]&lt;&gt;- scale * eltwise_op ( op(...) ) // instead of dst[]&lt;&gt;- op(...)</para>
 /// <para>where eltwise_op is configured with the given parameters.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPostOpsAppendEltwise(global::mkldnn.MkldnnPostOps post_ops, float scale, global::mkldnn.MkldnnAlgKindT alg, float alpha, float beta)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsAppendEltwise(global::Intel.MklDnn.MkldnnPostOps post_ops, float scale, global::Intel.MklDnn.MkldnnAlgKindT alg, float alpha, float beta)
         {
             var __arg0 = ReferenceEquals(post_ops, null) ? global::System.IntPtr.Zero : post_ops.__Instance;
             var __ret = __Internal.MkldnnPostOpsAppendEltwise(__arg0, scale, alg, alpha, beta);
@@ -958,7 +958,7 @@ namespace mkldnn
 /// <para>Gets the eltwise parameters of the post operation with indexin</para>
 /// <para>the sequence of</para>
 /// </summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnPostOpsGetParamsEltwise(global::mkldnn.MkldnnPostOps post_ops, int index, ref float scale, global::mkldnn.MkldnnAlgKindT* alg, ref float alpha, ref float beta)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPostOpsGetParamsEltwise(global::Intel.MklDnn.MkldnnPostOps post_ops, int index, ref float scale, global::Intel.MklDnn.MkldnnAlgKindT* alg, ref float alpha, ref float beta)
         {
             var __arg0 = ReferenceEquals(post_ops, null) ? global::System.IntPtr.Zero : post_ops.__Instance;
             fixed (float* __scale2 = &scale)
@@ -984,7 +984,7 @@ namespace mkldnn
 /// <para>The logical order of dimensions is defined by a primitive that</para>
 /// <para>consumes the memory.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemoryDescInitByStrides(global::mkldnn.MkldnnMemoryDescT memory_desc, int ndims, long[] dims, global::mkldnn.MkldnnDataTypeT data_type, long[] strides)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryDescInitByStrides(global::Intel.MklDnn.MkldnnMemoryDescT memory_desc, int ndims, long[] dims, global::Intel.MklDnn.MkldnnDataTypeT data_type, long[] strides)
         {
             var __arg0 = ReferenceEquals(memory_desc, null) ? global::System.IntPtr.Zero : memory_desc.__Instance;
             if (dims == null || dims.Length != 12)
@@ -1001,7 +1001,7 @@ namespace mkldnn
 /// <para>the appropriate memory format. In this case, thewould be set</para>
 /// <para>to #mkldnn_format_kind_any</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemoryDescInitByTag(global::mkldnn.MkldnnMemoryDescT memory_desc, int ndims, long[] dims, global::mkldnn.MkldnnDataTypeT data_type, global::mkldnn.MkldnnFormatTagT tag)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryDescInitByTag(global::Intel.MklDnn.MkldnnMemoryDescT memory_desc, int ndims, long[] dims, global::Intel.MklDnn.MkldnnDataTypeT data_type, global::Intel.MklDnn.MkldnnFormatTagT tag)
         {
             var __arg0 = ReferenceEquals(memory_desc, null) ? global::System.IntPtr.Zero : memory_desc.__Instance;
             if (dims == null || dims.Length != 12)
@@ -1016,7 +1016,7 @@ namespace mkldnn
 /// <para>obtain desired submemory. In this case consider using `extract` or `insert`</para>
 /// <para>primitive</para>
 /// </summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemoryDescInitSubmemory(global::mkldnn.MkldnnMemoryDescT memory_desc, global::mkldnn.MkldnnMemoryDescT parent_memory_desc, long[] dims, long[] offsets)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryDescInitSubmemory(global::Intel.MklDnn.MkldnnMemoryDescT memory_desc, global::Intel.MklDnn.MkldnnMemoryDescT parent_memory_desc, long[] dims, long[] offsets)
         {
             var __arg0 = ReferenceEquals(memory_desc, null) ? global::System.IntPtr.Zero : memory_desc.__Instance;
             var __arg1 = ReferenceEquals(parent_memory_desc, null) ? global::System.IntPtr.Zero : parent_memory_desc.__Instance;
@@ -1035,7 +1035,7 @@ namespace mkldnn
 /// <para>Use this function to identify whether a reorder is required between the</para>
 /// <para>two memories</para>
 /// </returns>
-        public static int MkldnnMemoryDescEqual(global::mkldnn.MkldnnMemoryDescT lhs, global::mkldnn.MkldnnMemoryDescT rhs)
+        public static int MkldnnMemoryDescEqual(global::Intel.MklDnn.MkldnnMemoryDescT lhs, global::Intel.MklDnn.MkldnnMemoryDescT rhs)
         {
             var __arg0 = ReferenceEquals(lhs, null) ? global::System.IntPtr.Zero : lhs.__Instance;
             var __arg1 = ReferenceEquals(rhs, null) ? global::System.IntPtr.Zero : rhs.__Instance;
@@ -1044,7 +1044,7 @@ namespace mkldnn
         }
 
         /// <summary>Returns the size (in bytes) that is required for given</summary>
-        public static ulong MkldnnMemoryDescGetSize(global::mkldnn.MkldnnMemoryDescT memory_desc)
+        public static ulong MkldnnMemoryDescGetSize(global::Intel.MklDnn.MkldnnMemoryDescT memory_desc)
         {
             var __arg0 = ReferenceEquals(memory_desc, null) ? global::System.IntPtr.Zero : memory_desc.__Instance;
             var __ret = __Internal.MkldnnMemoryDescGetSize(__arg0);
@@ -1059,7 +1059,7 @@ namespace mkldnn
 /// <para>attach memory. In this case the library owns allocated memory.</para>
 /// <para>- MKLDNN_MEMORY_NONE to create mkldnn_memory w/o attached memory.</para>
 /// </summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemoryCreate(global::mkldnn.MkldnnMemory memory, global::mkldnn.MkldnnMemoryDescT memory_desc, global::mkldnn.MkldnnEngine engine, global::System.IntPtr handle)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryCreate(global::Intel.MklDnn.MkldnnMemory memory, global::Intel.MklDnn.MkldnnMemoryDescT memory_desc, global::Intel.MklDnn.MkldnnEngine engine, global::System.IntPtr handle)
         {
             var ____arg0 = ReferenceEquals(memory, null) ? global::System.IntPtr.Zero : memory.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -1070,7 +1070,7 @@ namespace mkldnn
         }
 
         /// <summary>Returns aassociated with</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemoryGetMemoryDesc(global::mkldnn.MkldnnMemory memory, global::mkldnn.MkldnnMemoryDescT memory_desc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryGetMemoryDesc(global::Intel.MklDnn.MkldnnMemory memory, global::Intel.MklDnn.MkldnnMemoryDescT memory_desc)
         {
             var __arg0 = ReferenceEquals(memory, null) ? global::System.IntPtr.Zero : memory.__Instance;
             var ____arg1 = ReferenceEquals(memory_desc, null) ? global::System.IntPtr.Zero : memory_desc.__Instance;
@@ -1080,7 +1080,7 @@ namespace mkldnn
         }
 
         /// <summary>Returns anassociated with</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemoryGetEngine(global::mkldnn.MkldnnMemory memory, global::mkldnn.MkldnnEngine engine)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryGetEngine(global::Intel.MklDnn.MkldnnMemory memory, global::Intel.MklDnn.MkldnnEngine engine)
         {
             var __arg0 = ReferenceEquals(memory, null) ? global::System.IntPtr.Zero : memory.__Instance;
             var ____arg1 = ReferenceEquals(engine, null) ? global::System.IntPtr.Zero : engine.__Instance;
@@ -1101,7 +1101,7 @@ namespace mkldnn
 /// <para>Map/unmap API is provided mainly for debug/testing purposes and its</para>
 /// <para>performance may be suboptimal.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemoryMapData(global::mkldnn.MkldnnMemory memory, void** mapped_ptr)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryMapData(global::Intel.MklDnn.MkldnnMemory memory, void** mapped_ptr)
         {
             var __arg0 = ReferenceEquals(memory, null) ? global::System.IntPtr.Zero : memory.__Instance;
             var __ret = __Internal.MkldnnMemoryMapData(__arg0, mapped_ptr);
@@ -1116,7 +1116,7 @@ namespace mkldnn
 /// <para>Map/unmap API is provided mainly for debug/testing purposes and its</para>
 /// <para>performance may be suboptimal.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemoryUnmapData(global::mkldnn.MkldnnMemory memory, global::System.IntPtr mapped_ptr)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryUnmapData(global::Intel.MklDnn.MkldnnMemory memory, global::System.IntPtr mapped_ptr)
         {
             var __arg0 = ReferenceEquals(memory, null) ? global::System.IntPtr.Zero : memory.__Instance;
             var __ret = __Internal.MkldnnMemoryUnmapData(__arg0, mapped_ptr);
@@ -1125,7 +1125,7 @@ namespace mkldnn
 
         /// <summary>For areturns the data</summary>
 /// <remarks>For the CPU engine, the data handle is a pointer to the actual data.</remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemoryGetDataHandle(global::mkldnn.MkldnnMemory memory, void** handle)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryGetDataHandle(global::Intel.MklDnn.MkldnnMemory memory, void** handle)
         {
             var __arg0 = ReferenceEquals(memory, null) ? global::System.IntPtr.Zero : memory.__Instance;
             var __ret = __Internal.MkldnnMemoryGetDataHandle(__arg0, handle);
@@ -1133,7 +1133,7 @@ namespace mkldnn
         }
 
         /// <summary>For asets the data</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemorySetDataHandle(global::mkldnn.MkldnnMemory memory, global::System.IntPtr handle)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemorySetDataHandle(global::Intel.MklDnn.MkldnnMemory memory, global::System.IntPtr handle)
         {
             var __arg0 = ReferenceEquals(memory, null) ? global::System.IntPtr.Zero : memory.__Instance;
             var __ret = __Internal.MkldnnMemorySetDataHandle(__arg0, handle);
@@ -1141,7 +1141,7 @@ namespace mkldnn
         }
 
         /// <summary>Deletes a</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnMemoryDestroy(global::mkldnn.MkldnnMemory memory)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnMemoryDestroy(global::Intel.MklDnn.MkldnnMemory memory)
         {
             var __arg0 = ReferenceEquals(memory, null) ? global::System.IntPtr.Zero : memory.__Instance;
             var __ret = __Internal.MkldnnMemoryDestroy(__arg0);
@@ -1158,7 +1158,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- output (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnReorderPrimitiveDescCreate(global::mkldnn.MkldnnPrimitiveDesc reorder_primitive_desc, global::mkldnn.MkldnnMemoryDescT src_md, global::mkldnn.MkldnnEngine src_engine, global::mkldnn.MkldnnMemoryDescT dst_md, global::mkldnn.MkldnnEngine dst_engine, global::mkldnn.MkldnnPrimitiveAttr attr)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnReorderPrimitiveDescCreate(global::Intel.MklDnn.MkldnnPrimitiveDesc reorder_primitive_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_md, global::Intel.MklDnn.MkldnnEngine src_engine, global::Intel.MklDnn.MkldnnMemoryDescT dst_md, global::Intel.MklDnn.MkldnnEngine dst_engine, global::Intel.MklDnn.MkldnnPrimitiveAttr attr)
         {
             var ____arg0 = ReferenceEquals(reorder_primitive_desc, null) ? global::System.IntPtr.Zero : reorder_primitive_desc.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -1186,7 +1186,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- output (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnConcatPrimitiveDescCreate(global::mkldnn.MkldnnPrimitiveDesc concat_primitive_desc, global::mkldnn.MkldnnMemoryDescT dst_md, int n, int concat_dimension, global::mkldnn.MkldnnMemoryDescT src_mds, global::mkldnn.MkldnnPrimitiveAttr attr, global::mkldnn.MkldnnEngine engine)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnConcatPrimitiveDescCreate(global::Intel.MklDnn.MkldnnPrimitiveDesc concat_primitive_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_md, int n, int concat_dimension, global::Intel.MklDnn.MkldnnMemoryDescT src_mds, global::Intel.MklDnn.MkldnnPrimitiveAttr attr, global::Intel.MklDnn.MkldnnEngine engine)
         {
             var ____arg0 = ReferenceEquals(concat_primitive_desc, null) ? global::System.IntPtr.Zero : concat_primitive_desc.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -1213,7 +1213,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- output (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnSumPrimitiveDescCreate(global::mkldnn.MkldnnPrimitiveDesc sum_primitive_desc, global::mkldnn.MkldnnMemoryDescT dst_mds, int n, ref float scales, global::mkldnn.MkldnnMemoryDescT src_mds, global::mkldnn.MkldnnPrimitiveAttr attr, global::mkldnn.MkldnnEngine engine)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnSumPrimitiveDescCreate(global::Intel.MklDnn.MkldnnPrimitiveDesc sum_primitive_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_mds, int n, ref float scales, global::Intel.MklDnn.MkldnnMemoryDescT src_mds, global::Intel.MklDnn.MkldnnPrimitiveAttr attr, global::Intel.MklDnn.MkldnnEngine engine)
         {
             var ____arg0 = ReferenceEquals(sum_primitive_desc, null) ? global::System.IntPtr.Zero : sum_primitive_desc.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -1247,7 +1247,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- dst (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnConvolutionForwardDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT weights_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_desc, long[] strides, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnConvolutionForwardDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_desc, long[] strides, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg3 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1281,7 +1281,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- dst (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnDilatedConvolutionForwardDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT weights_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedConvolutionForwardDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg3 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1313,7 +1313,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- diff_src (#mkldnn_query_diff_src_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnConvolutionBackwardDataDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT diff_src_desc, global::mkldnn.MkldnnMemoryDescT weights_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnConvolutionBackwardDataDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg2 = ReferenceEquals(diff_src_desc, null) ? global::System.IntPtr.Zero : diff_src_desc.__Instance;
@@ -1342,7 +1342,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- diff_src (#mkldnn_query_diff_src_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnDilatedConvolutionBackwardDataDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT diff_src_desc, global::mkldnn.MkldnnMemoryDescT weights_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedConvolutionBackwardDataDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg2 = ReferenceEquals(diff_src_desc, null) ? global::System.IntPtr.Zero : diff_src_desc.__Instance;
@@ -1374,7 +1374,7 @@ namespace mkldnn
 /// <para>- diff_weights (#mkldnn_query_diff_weights_md, 0)</para>
 /// <para>- diff_bias (#mkldnn_query_diff_weights_md, 1), if created with bias</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnConvolutionBackwardWeightsDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_desc, global::mkldnn.MkldnnMemoryDescT diff_bias_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnConvolutionBackwardWeightsDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg2 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1405,7 +1405,7 @@ namespace mkldnn
 /// <para>- diff_weights (#mkldnn_query_diff_weights_md, 0)</para>
 /// <para>- diff_bias (#mkldnn_query_diff_weights_md, 1), if created with bias</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnDilatedConvolutionBackwardWeightsDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_desc, global::mkldnn.MkldnnMemoryDescT diff_bias_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedConvolutionBackwardWeightsDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg2 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1442,7 +1442,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- dst (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnDeconvolutionForwardDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT weights_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_desc, long[] strides, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnDeconvolutionForwardDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_desc, long[] strides, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg3 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1478,7 +1478,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- dst (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnDilatedDeconvolutionForwardDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT weights_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedDeconvolutionForwardDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg3 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1510,7 +1510,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- diff_src (#mkldnn_query_diff_src_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnDeconvolutionBackwardDataDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT diff_src_desc, global::mkldnn.MkldnnMemoryDescT weights_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnDeconvolutionBackwardDataDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg2 = ReferenceEquals(diff_src_desc, null) ? global::System.IntPtr.Zero : diff_src_desc.__Instance;
@@ -1539,7 +1539,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- diff_src (#mkldnn_query_diff_src_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnDilatedDeconvolutionBackwardDataDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT diff_src_desc, global::mkldnn.MkldnnMemoryDescT weights_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedDeconvolutionBackwardDataDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg2 = ReferenceEquals(diff_src_desc, null) ? global::System.IntPtr.Zero : diff_src_desc.__Instance;
@@ -1571,7 +1571,7 @@ namespace mkldnn
 /// <para>- diff_weights (#mkldnn_query_diff_weights_md, 0)</para>
 /// <para>- diff_bias (#mkldnn_query_diff_weights_md, 1), if created with bias</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnDeconvolutionBackwardWeightsDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_desc, global::mkldnn.MkldnnMemoryDescT diff_bias_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnDeconvolutionBackwardWeightsDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg2 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1603,7 +1603,7 @@ namespace mkldnn
 /// <para>- diff_weights (#mkldnn_query_diff_weights_md, 0)</para>
 /// <para>- diff_bias (#mkldnn_query_diff_weights_md, 1), if created with bias</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnDilatedDeconvolutionBackwardWeightsDescInit(global::mkldnn.MkldnnConvolutionDescT conv_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_desc, global::mkldnn.MkldnnMemoryDescT diff_bias_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnDilatedDeconvolutionBackwardWeightsDescInit(global::Intel.MklDnn.MkldnnConvolutionDescT conv_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] dilates, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(conv_desc, null) ? global::System.IntPtr.Zero : conv_desc.__Instance;
             var __arg2 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1629,7 +1629,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- dst (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnShuffleForwardDescInit(global::mkldnn.MkldnnShuffleDescT shuffle_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnMemoryDescT data_desc, int axis, long group_size)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnShuffleForwardDescInit(global::Intel.MklDnn.MkldnnShuffleDescT shuffle_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnMemoryDescT data_desc, int axis, long group_size)
         {
             var __arg0 = ReferenceEquals(shuffle_desc, null) ? global::System.IntPtr.Zero : shuffle_desc.__Instance;
             var __arg2 = ReferenceEquals(data_desc, null) ? global::System.IntPtr.Zero : data_desc.__Instance;
@@ -1647,7 +1647,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- diff_src (#mkldnn_query_diff_src_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnShuffleBackwardDescInit(global::mkldnn.MkldnnShuffleDescT shuffle_desc, global::mkldnn.MkldnnMemoryDescT diff_data_desc, int axis, long group_size)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnShuffleBackwardDescInit(global::Intel.MklDnn.MkldnnShuffleDescT shuffle_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_data_desc, int axis, long group_size)
         {
             var __arg0 = ReferenceEquals(shuffle_desc, null) ? global::System.IntPtr.Zero : shuffle_desc.__Instance;
             var __arg1 = ReferenceEquals(diff_data_desc, null) ? global::System.IntPtr.Zero : diff_data_desc.__Instance;
@@ -1667,7 +1667,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- dst (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnEltwiseForwardDescInit(global::mkldnn.MkldnnEltwiseDescT eltwise_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT data_desc, float alpha, float beta)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnEltwiseForwardDescInit(global::Intel.MklDnn.MkldnnEltwiseDescT eltwise_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT data_desc, float alpha, float beta)
         {
             var __arg0 = ReferenceEquals(eltwise_desc, null) ? global::System.IntPtr.Zero : eltwise_desc.__Instance;
             var __arg3 = ReferenceEquals(data_desc, null) ? global::System.IntPtr.Zero : data_desc.__Instance;
@@ -1687,7 +1687,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- diff_src (#mkldnn_query_diff_src_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnEltwiseBackwardDescInit(global::mkldnn.MkldnnEltwiseDescT eltwise_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT diff_data_desc, global::mkldnn.MkldnnMemoryDescT data_desc, float alpha, float beta)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnEltwiseBackwardDescInit(global::Intel.MklDnn.MkldnnEltwiseDescT eltwise_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT diff_data_desc, global::Intel.MklDnn.MkldnnMemoryDescT data_desc, float alpha, float beta)
         {
             var __arg0 = ReferenceEquals(eltwise_desc, null) ? global::System.IntPtr.Zero : eltwise_desc.__Instance;
             var __arg2 = ReferenceEquals(diff_data_desc, null) ? global::System.IntPtr.Zero : diff_data_desc.__Instance;
@@ -1706,7 +1706,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- dst (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnSoftmaxForwardDescInit(global::mkldnn.MkldnnSoftmaxDescT softmax_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnMemoryDescT data_desc, int softmax_axis)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnSoftmaxForwardDescInit(global::Intel.MklDnn.MkldnnSoftmaxDescT softmax_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnMemoryDescT data_desc, int softmax_axis)
         {
             var __arg0 = ReferenceEquals(softmax_desc, null) ? global::System.IntPtr.Zero : softmax_desc.__Instance;
             var __arg2 = ReferenceEquals(data_desc, null) ? global::System.IntPtr.Zero : data_desc.__Instance;
@@ -1725,7 +1725,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- diff_src (#mkldnn_query_diff_src_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnSoftmaxBackwardDescInit(global::mkldnn.MkldnnSoftmaxDescT softmax_desc, global::mkldnn.MkldnnMemoryDescT diff_desc, global::mkldnn.MkldnnMemoryDescT data_desc, int softmax_axis)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnSoftmaxBackwardDescInit(global::Intel.MklDnn.MkldnnSoftmaxDescT softmax_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_desc, global::Intel.MklDnn.MkldnnMemoryDescT data_desc, int softmax_axis)
         {
             var __arg0 = ReferenceEquals(softmax_desc, null) ? global::System.IntPtr.Zero : softmax_desc.__Instance;
             var __arg1 = ReferenceEquals(diff_desc, null) ? global::System.IntPtr.Zero : diff_desc.__Instance;
@@ -1750,7 +1750,7 @@ namespace mkldnn
 /// <para>if= #mkldnn_pooling_max and</para>
 /// <para>= #mkldnn_forward_training</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPoolingForwardDescInit(global::mkldnn.MkldnnPoolingDescT pool_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT dst_desc, long[] strides, long[] kernel, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPoolingForwardDescInit(global::Intel.MklDnn.MkldnnPoolingDescT pool_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_desc, long[] strides, long[] kernel, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(pool_desc, null) ? global::System.IntPtr.Zero : pool_desc.__Instance;
             var __arg3 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1781,7 +1781,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- diff_src (#mkldnn_query_diff_src_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPoolingBackwardDescInit(global::mkldnn.MkldnnPoolingDescT pool_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT diff_src_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] kernel, long[] padding_l, long[] padding_r)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPoolingBackwardDescInit(global::Intel.MklDnn.MkldnnPoolingDescT pool_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc, long[] strides, long[] kernel, long[] padding_l, long[] padding_r)
         {
             var __arg0 = ReferenceEquals(pool_desc, null) ? global::System.IntPtr.Zero : pool_desc.__Instance;
             var __arg2 = ReferenceEquals(diff_src_desc, null) ? global::System.IntPtr.Zero : diff_src_desc.__Instance;
@@ -1811,7 +1811,7 @@ namespace mkldnn
 /// <para>- workspace (#mkldnn_query_workspace_md, 0),</para>
 /// <para>if the underlying implementation requires</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnLrnForwardDescInit(global::mkldnn.MkldnnLrnDescT lrn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT data_desc, long local_size, float alpha, float beta, float k)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnLrnForwardDescInit(global::Intel.MklDnn.MkldnnLrnDescT lrn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT data_desc, long local_size, float alpha, float beta, float k)
         {
             var __arg0 = ReferenceEquals(lrn_desc, null) ? global::System.IntPtr.Zero : lrn_desc.__Instance;
             var __arg3 = ReferenceEquals(data_desc, null) ? global::System.IntPtr.Zero : data_desc.__Instance;
@@ -1832,7 +1832,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- diff_src (#mkldnn_query_diff_src_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnLrnBackwardDescInit(global::mkldnn.MkldnnLrnDescT lrn_desc, global::mkldnn.MkldnnAlgKindT alg_kind, global::mkldnn.MkldnnMemoryDescT diff_data_desc, global::mkldnn.MkldnnMemoryDescT data_desc, long local_size, float alpha, float beta, float k)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnLrnBackwardDescInit(global::Intel.MklDnn.MkldnnLrnDescT lrn_desc, global::Intel.MklDnn.MkldnnAlgKindT alg_kind, global::Intel.MklDnn.MkldnnMemoryDescT diff_data_desc, global::Intel.MklDnn.MkldnnMemoryDescT data_desc, long local_size, float alpha, float beta, float k)
         {
             var __arg0 = ReferenceEquals(lrn_desc, null) ? global::System.IntPtr.Zero : lrn_desc.__Instance;
             var __arg2 = ReferenceEquals(diff_data_desc, null) ? global::System.IntPtr.Zero : diff_data_desc.__Instance;
@@ -1867,7 +1867,7 @@ namespace mkldnn
 /// <para>as src.</para>
 /// <para>mkldnn_batch_normalization_desc_t</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnBatchNormalizationForwardDescInit(global::mkldnn.MkldnnBatchNormalizationDescT bnrm_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnMemoryDescT data_desc, float epsilon, uint flags)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnBatchNormalizationForwardDescInit(global::Intel.MklDnn.MkldnnBatchNormalizationDescT bnrm_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnMemoryDescT data_desc, float epsilon, uint flags)
         {
             var __arg0 = ReferenceEquals(bnrm_desc, null) ? global::System.IntPtr.Zero : bnrm_desc.__Instance;
             var __arg2 = ReferenceEquals(data_desc, null) ? global::System.IntPtr.Zero : data_desc.__Instance;
@@ -1899,7 +1899,7 @@ namespace mkldnn
 /// <para>i.e. diff_src points to the same memory as diff_dst.</para>
 /// <para>mkldnn_batch_normalization_desc_t</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnBatchNormalizationBackwardDescInit(global::mkldnn.MkldnnBatchNormalizationDescT bnrm_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnMemoryDescT diff_data_desc, global::mkldnn.MkldnnMemoryDescT data_desc, float epsilon, uint flags)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnBatchNormalizationBackwardDescInit(global::Intel.MklDnn.MkldnnBatchNormalizationDescT bnrm_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnMemoryDescT diff_data_desc, global::Intel.MklDnn.MkldnnMemoryDescT data_desc, float epsilon, uint flags)
         {
             var __arg0 = ReferenceEquals(bnrm_desc, null) ? global::System.IntPtr.Zero : bnrm_desc.__Instance;
             var __arg2 = ReferenceEquals(diff_data_desc, null) ? global::System.IntPtr.Zero : diff_data_desc.__Instance;
@@ -1926,7 +1926,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- dst (#mkldnn_query_dst_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnInnerProductForwardDescInit(global::mkldnn.MkldnnInnerProductDescT ip_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT weights_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_desc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnInnerProductForwardDescInit(global::Intel.MklDnn.MkldnnInnerProductDescT ip_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_desc)
         {
             var __arg0 = ReferenceEquals(ip_desc, null) ? global::System.IntPtr.Zero : ip_desc.__Instance;
             var __arg2 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1950,7 +1950,7 @@ namespace mkldnn
 /// <para>Outputs:</para>
 /// <para>- diff_src (#mkldnn_query_diff_src_md, 0)</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnInnerProductBackwardDataDescInit(global::mkldnn.MkldnnInnerProductDescT ip_desc, global::mkldnn.MkldnnMemoryDescT diff_src_desc, global::mkldnn.MkldnnMemoryDescT weights_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnInnerProductBackwardDataDescInit(global::Intel.MklDnn.MkldnnInnerProductDescT ip_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc)
         {
             var __arg0 = ReferenceEquals(ip_desc, null) ? global::System.IntPtr.Zero : ip_desc.__Instance;
             var __arg1 = ReferenceEquals(diff_src_desc, null) ? global::System.IntPtr.Zero : diff_src_desc.__Instance;
@@ -1974,7 +1974,7 @@ namespace mkldnn
 /// <para>- diff_weights (#mkldnn_query_diff_weights_md, 0)</para>
 /// <para>- diff_bias (#mkldnn_query_diff_weights_md, 1), if created with bias</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnInnerProductBackwardWeightsDescInit(global::mkldnn.MkldnnInnerProductDescT ip_desc, global::mkldnn.MkldnnMemoryDescT src_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_desc, global::mkldnn.MkldnnMemoryDescT diff_bias_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_desc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnInnerProductBackwardWeightsDescInit(global::Intel.MklDnn.MkldnnInnerProductDescT ip_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_desc)
         {
             var __arg0 = ReferenceEquals(ip_desc, null) ? global::System.IntPtr.Zero : ip_desc.__Instance;
             var __arg1 = ReferenceEquals(src_desc, null) ? global::System.IntPtr.Zero : src_desc.__Instance;
@@ -1997,7 +1997,7 @@ namespace mkldnn
 /// <para>Quantization scale and shift are common for src_layer, src_iter,</para>
 /// <para>dst_iter and dst_layer.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrSetRnnDataQparams(global::mkldnn.MkldnnPrimitiveAttr attr, float scale, float shift)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrSetRnnDataQparams(global::Intel.MklDnn.MkldnnPrimitiveAttr attr, float scale, float shift)
         {
             var __arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             var __ret = __Internal.MkldnnPrimitiveAttrSetRnnDataQparams(__arg0, scale, shift);
@@ -2024,7 +2024,7 @@ namespace mkldnn
 /// <para>actual primitive descriptor is created, so it is user's responsibility</para>
 /// <para>to set proper values. The following formula must be held:</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnPrimitiveAttrSetRnnWeightsQparams(global::mkldnn.MkldnnPrimitiveAttr attr, long count, int mask, ref float weights_scales)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnPrimitiveAttrSetRnnWeightsQparams(global::Intel.MklDnn.MkldnnPrimitiveAttr attr, long count, int mask, ref float weights_scales)
         {
             var __arg0 = ReferenceEquals(attr, null) ? global::System.IntPtr.Zero : attr.__Instance;
             fixed (float* __weights_scales3 = &weights_scales)
@@ -2064,7 +2064,7 @@ namespace mkldnn
 /// <para>- workspace (#mkldnn_query_workspace_md, 0),</para>
 /// <para>ifequals #mkldnn_forward_training</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnVanillaRnnForwardDescInit(global::mkldnn.MkldnnRnnDescT rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT activation, global::mkldnn.MkldnnRnnDirectionT direction, global::mkldnn.MkldnnMemoryDescT src_layer_desc, global::mkldnn.MkldnnMemoryDescT src_iter_desc, global::mkldnn.MkldnnMemoryDescT weights_layer_desc, global::mkldnn.MkldnnMemoryDescT weights_iter_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_layer_desc, global::mkldnn.MkldnnMemoryDescT dst_iter_desc, uint flags, float alpha, float beta)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnVanillaRnnForwardDescInit(global::Intel.MklDnn.MkldnnRnnDescT rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT activation, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::Intel.MklDnn.MkldnnMemoryDescT src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_iter_desc, uint flags, float alpha, float beta)
         {
             var __arg0 = ReferenceEquals(rnn_desc, null) ? global::System.IntPtr.Zero : rnn_desc.__Instance;
             var __arg4 = ReferenceEquals(src_layer_desc, null) ? global::System.IntPtr.Zero : src_layer_desc.__Instance;
@@ -2112,7 +2112,7 @@ namespace mkldnn
 /// <para>- diff_weights_iter (#mkldnn_query_diff_weights_md, 1)</para>
 /// <para>- diff_bias (#mkldnn_query_diff_weights_md, 2), if used</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnVanillaRnnBackwardDescInit(global::mkldnn.MkldnnRnnDescT rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnAlgKindT activation, global::mkldnn.MkldnnRnnDirectionT direction, global::mkldnn.MkldnnMemoryDescT src_layer_desc, global::mkldnn.MkldnnMemoryDescT src_iter_desc, global::mkldnn.MkldnnMemoryDescT weights_layer_desc, global::mkldnn.MkldnnMemoryDescT weights_iter_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_layer_desc, global::mkldnn.MkldnnMemoryDescT dst_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_src_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_src_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_bias_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_iter_desc, uint flags, float alpha, float beta)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnVanillaRnnBackwardDescInit(global::Intel.MklDnn.MkldnnRnnDescT rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnAlgKindT activation, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::Intel.MklDnn.MkldnnMemoryDescT src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_iter_desc, uint flags, float alpha, float beta)
         {
             var __arg0 = ReferenceEquals(rnn_desc, null) ? global::System.IntPtr.Zero : rnn_desc.__Instance;
             var __arg4 = ReferenceEquals(src_layer_desc, null) ? global::System.IntPtr.Zero : src_layer_desc.__Instance;
@@ -2161,7 +2161,7 @@ namespace mkldnn
 /// <para>- workspace (#mkldnn_query_workspace_md, 0),</para>
 /// <para>ifequals #mkldnn_forward_training</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnLstmForwardDescInit(global::mkldnn.MkldnnRnnDescT rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::mkldnn.MkldnnMemoryDescT src_layer_desc, global::mkldnn.MkldnnMemoryDescT src_iter_desc, global::mkldnn.MkldnnMemoryDescT src_iter_c_desc, global::mkldnn.MkldnnMemoryDescT weights_layer_desc, global::mkldnn.MkldnnMemoryDescT weights_iter_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_layer_desc, global::mkldnn.MkldnnMemoryDescT dst_iter_desc, global::mkldnn.MkldnnMemoryDescT dst_iter_c_desc, uint flags)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnLstmForwardDescInit(global::Intel.MklDnn.MkldnnRnnDescT rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::Intel.MklDnn.MkldnnMemoryDescT src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_iter_c_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_iter_c_desc, uint flags)
         {
             var __arg0 = ReferenceEquals(rnn_desc, null) ? global::System.IntPtr.Zero : rnn_desc.__Instance;
             var __arg3 = ReferenceEquals(src_layer_desc, null) ? global::System.IntPtr.Zero : src_layer_desc.__Instance;
@@ -2212,7 +2212,7 @@ namespace mkldnn
 /// <para>- diff_weights_iter (#mkldnn_query_diff_weights_md, 1)</para>
 /// <para>- diff_bias (#mkldnn_query_diff_weights_md, 2), if used</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnLstmBackwardDescInit(global::mkldnn.MkldnnRnnDescT rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::mkldnn.MkldnnMemoryDescT src_layer_desc, global::mkldnn.MkldnnMemoryDescT src_iter_desc, global::mkldnn.MkldnnMemoryDescT src_iter_c_desc, global::mkldnn.MkldnnMemoryDescT weights_layer_desc, global::mkldnn.MkldnnMemoryDescT weights_iter_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_layer_desc, global::mkldnn.MkldnnMemoryDescT dst_iter_desc, global::mkldnn.MkldnnMemoryDescT dst_iter_c_desc, global::mkldnn.MkldnnMemoryDescT diff_src_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_src_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_src_iter_c_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_bias_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_iter_c_desc, uint flags)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnLstmBackwardDescInit(global::Intel.MklDnn.MkldnnRnnDescT rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::Intel.MklDnn.MkldnnMemoryDescT src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_iter_c_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_iter_c_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_iter_c_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_iter_c_desc, uint flags)
         {
             var __arg0 = ReferenceEquals(rnn_desc, null) ? global::System.IntPtr.Zero : rnn_desc.__Instance;
             var __arg3 = ReferenceEquals(src_layer_desc, null) ? global::System.IntPtr.Zero : src_layer_desc.__Instance;
@@ -2263,7 +2263,7 @@ namespace mkldnn
 /// <para>- workspace (#mkldnn_query_workspace_md, 0),</para>
 /// <para>ifequals #mkldnn_forward_training</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnGruForwardDescInit(global::mkldnn.MkldnnRnnDescT rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::mkldnn.MkldnnMemoryDescT src_layer_desc, global::mkldnn.MkldnnMemoryDescT src_iter_desc, global::mkldnn.MkldnnMemoryDescT weights_layer_desc, global::mkldnn.MkldnnMemoryDescT weights_iter_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_layer_desc, global::mkldnn.MkldnnMemoryDescT dst_iter_desc, uint flags)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnGruForwardDescInit(global::Intel.MklDnn.MkldnnRnnDescT rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::Intel.MklDnn.MkldnnMemoryDescT src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_iter_desc, uint flags)
         {
             var __arg0 = ReferenceEquals(rnn_desc, null) ? global::System.IntPtr.Zero : rnn_desc.__Instance;
             var __arg3 = ReferenceEquals(src_layer_desc, null) ? global::System.IntPtr.Zero : src_layer_desc.__Instance;
@@ -2308,7 +2308,7 @@ namespace mkldnn
 /// <para>- diff_weights_iter (#mkldnn_query_diff_weights_md, 1)</para>
 /// <para>- diff_bias (#mkldnn_query_diff_weights_md, 2), if used</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnGruBackwardDescInit(global::mkldnn.MkldnnRnnDescT rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::mkldnn.MkldnnMemoryDescT src_layer_desc, global::mkldnn.MkldnnMemoryDescT src_iter_desc, global::mkldnn.MkldnnMemoryDescT weights_layer_desc, global::mkldnn.MkldnnMemoryDescT weights_iter_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_layer_desc, global::mkldnn.MkldnnMemoryDescT dst_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_src_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_src_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_bias_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_iter_desc, uint flags)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnGruBackwardDescInit(global::Intel.MklDnn.MkldnnRnnDescT rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::Intel.MklDnn.MkldnnMemoryDescT src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_iter_desc, uint flags)
         {
             var __arg0 = ReferenceEquals(rnn_desc, null) ? global::System.IntPtr.Zero : rnn_desc.__Instance;
             var __arg3 = ReferenceEquals(src_layer_desc, null) ? global::System.IntPtr.Zero : src_layer_desc.__Instance;
@@ -2355,7 +2355,7 @@ namespace mkldnn
 /// <para>- workspace (#mkldnn_query_workspace_md, 0),</para>
 /// <para>ifequals #mkldnn_forward_training</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnLbrGruForwardDescInit(global::mkldnn.MkldnnRnnDescT rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::mkldnn.MkldnnMemoryDescT src_layer_desc, global::mkldnn.MkldnnMemoryDescT src_iter_desc, global::mkldnn.MkldnnMemoryDescT weights_layer_desc, global::mkldnn.MkldnnMemoryDescT weights_iter_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_layer_desc, global::mkldnn.MkldnnMemoryDescT dst_iter_desc, uint flags)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnLbrGruForwardDescInit(global::Intel.MklDnn.MkldnnRnnDescT rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::Intel.MklDnn.MkldnnMemoryDescT src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_iter_desc, uint flags)
         {
             var __arg0 = ReferenceEquals(rnn_desc, null) ? global::System.IntPtr.Zero : rnn_desc.__Instance;
             var __arg3 = ReferenceEquals(src_layer_desc, null) ? global::System.IntPtr.Zero : src_layer_desc.__Instance;
@@ -2400,7 +2400,7 @@ namespace mkldnn
 /// <para>- diff_weights_iter (#mkldnn_query_diff_weights_md, 1)</para>
 /// <para>- diff_bias (#mkldnn_query_diff_weights_md, 2), if used</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnLbrGruBackwardDescInit(global::mkldnn.MkldnnRnnDescT rnn_desc, global::mkldnn.MkldnnPropKindT prop_kind, global::mkldnn.MkldnnRnnDirectionT direction, global::mkldnn.MkldnnMemoryDescT src_layer_desc, global::mkldnn.MkldnnMemoryDescT src_iter_desc, global::mkldnn.MkldnnMemoryDescT weights_layer_desc, global::mkldnn.MkldnnMemoryDescT weights_iter_desc, global::mkldnn.MkldnnMemoryDescT bias_desc, global::mkldnn.MkldnnMemoryDescT dst_layer_desc, global::mkldnn.MkldnnMemoryDescT dst_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_src_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_src_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_weights_iter_desc, global::mkldnn.MkldnnMemoryDescT diff_bias_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_layer_desc, global::mkldnn.MkldnnMemoryDescT diff_dst_iter_desc, uint flags)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnLbrGruBackwardDescInit(global::Intel.MklDnn.MkldnnRnnDescT rnn_desc, global::Intel.MklDnn.MkldnnPropKindT prop_kind, global::Intel.MklDnn.MkldnnRnnDirectionT direction, global::Intel.MklDnn.MkldnnMemoryDescT src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT dst_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_src_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_weights_iter_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_bias_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_layer_desc, global::Intel.MklDnn.MkldnnMemoryDescT diff_dst_iter_desc, uint flags)
         {
             var __arg0 = ReferenceEquals(rnn_desc, null) ? global::System.IntPtr.Zero : rnn_desc.__Instance;
             var __arg3 = ReferenceEquals(src_layer_desc, null) ? global::System.IntPtr.Zero : src_layer_desc.__Instance;
@@ -2422,14 +2422,14 @@ namespace mkldnn
         }
 
         /// <summary>Returns the number of engines of a particular</summary>
-        public static ulong MkldnnEngineGetCount(global::mkldnn.MkldnnEngineKindT kind)
+        public static ulong MkldnnEngineGetCount(global::Intel.MklDnn.MkldnnEngineKindT kind)
         {
             var __ret = __Internal.MkldnnEngineGetCount(kind);
             return __ret;
         }
 
         /// <summary>Creates anof particularand</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnEngineCreate(global::mkldnn.MkldnnEngine engine, global::mkldnn.MkldnnEngineKindT kind, ulong index)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnEngineCreate(global::Intel.MklDnn.MkldnnEngine engine, global::Intel.MklDnn.MkldnnEngineKindT kind, ulong index)
         {
             var ____arg0 = ReferenceEquals(engine, null) ? global::System.IntPtr.Zero : engine.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -2438,7 +2438,7 @@ namespace mkldnn
         }
 
         /// <summary>Returns the kind of an</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnEngineGetKind(global::mkldnn.MkldnnEngine engine, global::mkldnn.MkldnnEngineKindT* kind)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnEngineGetKind(global::Intel.MklDnn.MkldnnEngine engine, global::Intel.MklDnn.MkldnnEngineKindT* kind)
         {
             var __arg0 = ReferenceEquals(engine, null) ? global::System.IntPtr.Zero : engine.__Instance;
             var __ret = __Internal.MkldnnEngineGetKind(__arg0, kind);
@@ -2446,7 +2446,7 @@ namespace mkldnn
         }
 
         /// <summary>Destroys an</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnEngineDestroy(global::mkldnn.MkldnnEngine engine)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnEngineDestroy(global::Intel.MklDnn.MkldnnEngine engine)
         {
             var __arg0 = ReferenceEquals(engine, null) ? global::System.IntPtr.Zero : engine.__Instance;
             var __ret = __Internal.MkldnnEngineDestroy(__arg0);
@@ -2454,7 +2454,7 @@ namespace mkldnn
         }
 
         /// <summary>Creates an executionforand with</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnStreamCreate(global::mkldnn.MkldnnStream stream, global::mkldnn.MkldnnEngine engine, uint flags)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnStreamCreate(global::Intel.MklDnn.MkldnnStream stream, global::Intel.MklDnn.MkldnnEngine engine, uint flags)
         {
             var ____arg0 = ReferenceEquals(stream, null) ? global::System.IntPtr.Zero : stream.__Instance;
             var __arg0 = new global::System.IntPtr(&____arg0);
@@ -2464,7 +2464,7 @@ namespace mkldnn
         }
 
         /// <summary>Waits for all primitives in the executionto finish.</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnStreamWait(global::mkldnn.MkldnnStream stream)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnStreamWait(global::Intel.MklDnn.MkldnnStream stream)
         {
             var __arg0 = ReferenceEquals(stream, null) ? global::System.IntPtr.Zero : stream.__Instance;
             var __ret = __Internal.MkldnnStreamWait(__arg0);
@@ -2472,7 +2472,7 @@ namespace mkldnn
         }
 
         /// <summary>Destroys an execution</summary>
-        public static global::mkldnn.MkldnnStatusT MkldnnStreamDestroy(global::mkldnn.MkldnnStream stream)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnStreamDestroy(global::Intel.MklDnn.MkldnnStream stream)
         {
             var __arg0 = ReferenceEquals(stream, null) ? global::System.IntPtr.Zero : stream.__Instance;
             var __ret = __Internal.MkldnnStreamDestroy(__arg0);
@@ -2490,7 +2490,7 @@ namespace mkldnn
 /// <para>Dumping information might affect performance.</para>
 /// <para>This setting overrides the MKLDNN_VERBOSE environment variable.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnSetVerbose(int level)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnSetVerbose(int level)
         {
             var __ret = __Internal.MkldnnSetVerbose(level);
             return __ret;
@@ -2503,7 +2503,7 @@ namespace mkldnn
 /// <para>- any other value -- enable</para>
 /// </summary>
 /// <remarks>This setting overrides the MKLDNN_JIT_DUMP environment variable.</remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnSetJitDump(int enable)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnSetJitDump(int enable)
         {
             var __ret = __Internal.MkldnnSetJitDump(enable);
             return __ret;
@@ -2517,14 +2517,14 @@ namespace mkldnn
 /// <para>- patch -- patch release number</para>
 /// <para>- hash -- git commit hash</para>
 /// </summary>
-        public static global::mkldnn.MkldnnVersionT MkldnnVersion()
+        public static global::Intel.MklDnn.MkldnnVersionT MkldnnVersion()
         {
             var __ret = __Internal.MkldnnVersion();
-            global::mkldnn.MkldnnVersionT __result0;
+            global::Intel.MklDnn.MkldnnVersionT __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::mkldnn.MkldnnVersionT.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::mkldnn.MkldnnVersionT) global::mkldnn.MkldnnVersionT.NativeToManagedMap[__ret];
-            else __result0 = global::mkldnn.MkldnnVersionT.__CreateInstance(__ret);
+            else if (global::Intel.MklDnn.MkldnnVersionT.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::Intel.MklDnn.MkldnnVersionT) global::Intel.MklDnn.MkldnnVersionT.NativeToManagedMap[__ret];
+            else __result0 = global::Intel.MklDnn.MkldnnVersionT.__CreateInstance(__ret);
             return __result0;
         }
 
@@ -2543,7 +2543,7 @@ namespace mkldnn
 /// <para>XERBLA is not supported: no error message will be printed</para>
 /// <para>in case of incorrect parameters.</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnSgemm(sbyte transa, sbyte transb, long M, long N, long K, float alpha, ref float A, long lda, ref float B, long ldb, float beta, ref float C, long ldc)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnSgemm(sbyte transa, sbyte transb, long M, long N, long K, float alpha, ref float A, long lda, ref float B, long ldb, float beta, ref float C, long ldc)
         {
             fixed (float* __A6 = &A)
             {
@@ -2588,7 +2588,7 @@ namespace mkldnn
 /// <para>On some architectures the intermediate saturation might happen,</para>
 /// <para>which would lead to unexpected results. For more details, refer to</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnGemmU8s8s32(sbyte transa, sbyte transb, sbyte offsetc, long M, long N, long K, float alpha, byte* A, long lda, byte ao, sbyte* B, long ldb, sbyte bo, float beta, ref int C, long ldc, ref int co)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnGemmU8s8s32(sbyte transa, sbyte transb, sbyte offsetc, long M, long N, long K, float alpha, byte* A, long lda, byte ao, sbyte* B, long ldb, sbyte bo, float beta, ref int C, long ldc, ref int co)
         {
             fixed (int* __C14 = &C)
             {
@@ -2611,7 +2611,7 @@ namespace mkldnn
 /// <para>For full description, see mkldnn_gemm_u8s8s32().</para>
 /// <para>dev_guide_int8_computations</para>
 /// </remarks>
-        public static global::mkldnn.MkldnnStatusT MkldnnGemmS8s8s32(sbyte transa, sbyte transb, sbyte offsetc, long M, long N, long K, float alpha, sbyte* A, long lda, sbyte ao, sbyte* B, long ldb, sbyte bo, float beta, ref int C, long ldc, ref int co)
+        public static global::Intel.MklDnn.MkldnnStatusT MkldnnGemmS8s8s32(sbyte transa, sbyte transb, sbyte offsetc, long M, long N, long K, float alpha, sbyte* A, long lda, sbyte ao, sbyte* B, long ldb, sbyte bo, float beta, ref int C, long ldc, ref int co)
         {
             fixed (int* __C14 = &C)
             {
@@ -4114,29 +4114,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnMemory> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnMemory>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnMemory> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnMemory>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnMemory __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnMemory __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnMemory(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnMemory(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnMemory __CreateInstance(global::mkldnn.MkldnnMemory.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnMemory __CreateInstance(global::Intel.MklDnn.MkldnnMemory.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnMemory(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnMemory(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnMemory.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnMemory.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnMemory.__Internal));
-            *(global::mkldnn.MkldnnMemory.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnMemory.__Internal));
+            *(global::Intel.MklDnn.MkldnnMemory.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnMemory(global::mkldnn.MkldnnMemory.__Internal native, bool skipVTables = false)
+        private MkldnnMemory(global::Intel.MklDnn.MkldnnMemory.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4162,29 +4162,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnEngine> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnEngine>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnEngine> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnEngine>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnEngine __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnEngine __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnEngine(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnEngine(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnEngine __CreateInstance(global::mkldnn.MkldnnEngine.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnEngine __CreateInstance(global::Intel.MklDnn.MkldnnEngine.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnEngine(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnEngine(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnEngine.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnEngine.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnEngine.__Internal));
-            *(global::mkldnn.MkldnnEngine.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnEngine.__Internal));
+            *(global::Intel.MklDnn.MkldnnEngine.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnEngine(global::mkldnn.MkldnnEngine.__Internal native, bool skipVTables = false)
+        private MkldnnEngine(global::Intel.MklDnn.MkldnnEngine.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4210,29 +4210,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPrimitiveDescIterator> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPrimitiveDescIterator>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPrimitiveDescIterator> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPrimitiveDescIterator>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnPrimitiveDescIterator __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPrimitiveDescIterator __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPrimitiveDescIterator(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnPrimitiveDescIterator(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnPrimitiveDescIterator __CreateInstance(global::mkldnn.MkldnnPrimitiveDescIterator.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPrimitiveDescIterator __CreateInstance(global::Intel.MklDnn.MkldnnPrimitiveDescIterator.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPrimitiveDescIterator(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnPrimitiveDescIterator(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnPrimitiveDescIterator.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnPrimitiveDescIterator.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnPrimitiveDescIterator.__Internal));
-            *(global::mkldnn.MkldnnPrimitiveDescIterator.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnPrimitiveDescIterator.__Internal));
+            *(global::Intel.MklDnn.MkldnnPrimitiveDescIterator.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnPrimitiveDescIterator(global::mkldnn.MkldnnPrimitiveDescIterator.__Internal native, bool skipVTables = false)
+        private MkldnnPrimitiveDescIterator(global::Intel.MklDnn.MkldnnPrimitiveDescIterator.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4258,29 +4258,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPrimitiveDesc> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPrimitiveDesc>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPrimitiveDesc> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPrimitiveDesc>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnPrimitiveDesc __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPrimitiveDesc __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPrimitiveDesc(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnPrimitiveDesc(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnPrimitiveDesc __CreateInstance(global::mkldnn.MkldnnPrimitiveDesc.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPrimitiveDesc __CreateInstance(global::Intel.MklDnn.MkldnnPrimitiveDesc.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPrimitiveDesc(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnPrimitiveDesc(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnPrimitiveDesc.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnPrimitiveDesc.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnPrimitiveDesc.__Internal));
-            *(global::mkldnn.MkldnnPrimitiveDesc.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnPrimitiveDesc.__Internal));
+            *(global::Intel.MklDnn.MkldnnPrimitiveDesc.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnPrimitiveDesc(global::mkldnn.MkldnnPrimitiveDesc.__Internal native, bool skipVTables = false)
+        private MkldnnPrimitiveDesc(global::Intel.MklDnn.MkldnnPrimitiveDesc.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4310,29 +4310,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPrimitiveAttr> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPrimitiveAttr>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPrimitiveAttr> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPrimitiveAttr>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnPrimitiveAttr __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPrimitiveAttr __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPrimitiveAttr(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnPrimitiveAttr(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnPrimitiveAttr __CreateInstance(global::mkldnn.MkldnnPrimitiveAttr.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPrimitiveAttr __CreateInstance(global::Intel.MklDnn.MkldnnPrimitiveAttr.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPrimitiveAttr(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnPrimitiveAttr(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnPrimitiveAttr.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnPrimitiveAttr.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnPrimitiveAttr.__Internal));
-            *(global::mkldnn.MkldnnPrimitiveAttr.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnPrimitiveAttr.__Internal));
+            *(global::Intel.MklDnn.MkldnnPrimitiveAttr.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnPrimitiveAttr(global::mkldnn.MkldnnPrimitiveAttr.__Internal native, bool skipVTables = false)
+        private MkldnnPrimitiveAttr(global::Intel.MklDnn.MkldnnPrimitiveAttr.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4371,29 +4371,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPostOps> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPostOps>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPostOps> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPostOps>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnPostOps __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPostOps __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPostOps(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnPostOps(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnPostOps __CreateInstance(global::mkldnn.MkldnnPostOps.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPostOps __CreateInstance(global::Intel.MklDnn.MkldnnPostOps.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPostOps(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnPostOps(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnPostOps.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnPostOps.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnPostOps.__Internal));
-            *(global::mkldnn.MkldnnPostOps.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnPostOps.__Internal));
+            *(global::Intel.MklDnn.MkldnnPostOps.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnPostOps(global::mkldnn.MkldnnPostOps.__Internal native, bool skipVTables = false)
+        private MkldnnPostOps(global::Intel.MklDnn.MkldnnPostOps.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4419,29 +4419,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPrimitive> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPrimitive>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPrimitive> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPrimitive>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnPrimitive __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPrimitive __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPrimitive(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnPrimitive(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnPrimitive __CreateInstance(global::mkldnn.MkldnnPrimitive.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPrimitive __CreateInstance(global::Intel.MklDnn.MkldnnPrimitive.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPrimitive(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnPrimitive(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnPrimitive.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnPrimitive.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnPrimitive.__Internal));
-            *(global::mkldnn.MkldnnPrimitive.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnPrimitive.__Internal));
+            *(global::Intel.MklDnn.MkldnnPrimitive.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnPrimitive(global::mkldnn.MkldnnPrimitive.__Internal native, bool skipVTables = false)
+        private MkldnnPrimitive(global::Intel.MklDnn.MkldnnPrimitive.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4467,29 +4467,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnStream> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnStream>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnStream> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnStream>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnStream __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnStream __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnStream(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnStream(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnStream __CreateInstance(global::mkldnn.MkldnnStream.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnStream __CreateInstance(global::Intel.MklDnn.MkldnnStream.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnStream(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnStream(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnStream.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnStream.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnStream.__Internal));
-            *(global::mkldnn.MkldnnStream.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnStream.__Internal));
+            *(global::Intel.MklDnn.MkldnnStream.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnStream(global::mkldnn.MkldnnStream.__Internal native, bool skipVTables = false)
+        private MkldnnStream(global::Intel.MklDnn.MkldnnStream.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4531,29 +4531,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnVersionT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnVersionT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnVersionT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnVersionT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnVersionT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnVersionT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnVersionT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnVersionT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnVersionT __CreateInstance(global::mkldnn.MkldnnVersionT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnVersionT __CreateInstance(global::Intel.MklDnn.MkldnnVersionT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnVersionT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnVersionT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnVersionT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnVersionT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnVersionT.__Internal));
-            *(global::mkldnn.MkldnnVersionT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnVersionT.__Internal));
+            *(global::Intel.MklDnn.MkldnnVersionT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnVersionT(global::mkldnn.MkldnnVersionT.__Internal native, bool skipVTables = false)
+        private MkldnnVersionT(global::Intel.MklDnn.MkldnnVersionT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4569,17 +4569,17 @@ namespace mkldnn
 
         public MkldnnVersionT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnVersionT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnVersionT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnVersionT(global::mkldnn.MkldnnVersionT _0)
+        public MkldnnVersionT(global::Intel.MklDnn.MkldnnVersionT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnVersionT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnVersionT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnVersionT.__Internal*) __Instance) = *((global::mkldnn.MkldnnVersionT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnVersionT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnVersionT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -4591,7 +4591,7 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnVersionT __dummy;
+            global::Intel.MklDnn.MkldnnVersionT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -4602,12 +4602,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnVersionT.__Internal*) __Instance)->major;
+                return ((global::Intel.MklDnn.MkldnnVersionT.__Internal*) __Instance)->major;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnVersionT.__Internal*)__Instance)->major = value;
+                ((global::Intel.MklDnn.MkldnnVersionT.__Internal*)__Instance)->major = value;
             }
         }
 
@@ -4615,12 +4615,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnVersionT.__Internal*) __Instance)->minor;
+                return ((global::Intel.MklDnn.MkldnnVersionT.__Internal*) __Instance)->minor;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnVersionT.__Internal*)__Instance)->minor = value;
+                ((global::Intel.MklDnn.MkldnnVersionT.__Internal*)__Instance)->minor = value;
             }
         }
 
@@ -4628,12 +4628,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnVersionT.__Internal*) __Instance)->patch;
+                return ((global::Intel.MklDnn.MkldnnVersionT.__Internal*) __Instance)->patch;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnVersionT.__Internal*)__Instance)->patch = value;
+                ((global::Intel.MklDnn.MkldnnVersionT.__Internal*)__Instance)->patch = value;
             }
         }
 
@@ -4641,12 +4641,12 @@ namespace mkldnn
         {
             get
             {
-                return Marshal.PtrToStringAnsi(((global::mkldnn.MkldnnVersionT.__Internal*) __Instance)->hash);
+                return Marshal.PtrToStringAnsi(((global::Intel.MklDnn.MkldnnVersionT.__Internal*) __Instance)->hash);
             }
 
             set
             {
-                ((global::mkldnn.MkldnnVersionT.__Internal*)__Instance)->hash = (global::System.IntPtr) Marshal.StringToHGlobalAnsi(value);
+                ((global::Intel.MklDnn.MkldnnVersionT.__Internal*)__Instance)->hash = (global::System.IntPtr) Marshal.StringToHGlobalAnsi(value);
             }
         }
     }
@@ -4678,29 +4678,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnBlockingDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnBlockingDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnBlockingDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnBlockingDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnBlockingDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnBlockingDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnBlockingDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnBlockingDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnBlockingDescT __CreateInstance(global::mkldnn.MkldnnBlockingDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnBlockingDescT __CreateInstance(global::Intel.MklDnn.MkldnnBlockingDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnBlockingDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnBlockingDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnBlockingDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnBlockingDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnBlockingDescT.__Internal));
-            *(global::mkldnn.MkldnnBlockingDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnBlockingDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnBlockingDescT(global::mkldnn.MkldnnBlockingDescT.__Internal native, bool skipVTables = false)
+        private MkldnnBlockingDescT(global::Intel.MklDnn.MkldnnBlockingDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4716,17 +4716,17 @@ namespace mkldnn
 
         public MkldnnBlockingDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnBlockingDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnBlockingDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnBlockingDescT(global::mkldnn.MkldnnBlockingDescT _0)
+        public MkldnnBlockingDescT(global::Intel.MklDnn.MkldnnBlockingDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnBlockingDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnBlockingDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnBlockingDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnBlockingDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -4738,7 +4738,7 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnBlockingDescT __dummy;
+            global::Intel.MklDnn.MkldnnBlockingDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -4750,11 +4750,11 @@ namespace mkldnn
             get
             {
                 long[] __value = null;
-                if (((global::mkldnn.MkldnnBlockingDescT.__Internal*) __Instance)->strides != null)
+                if (((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) __Instance)->strides != null)
                 {
                     __value = new long[12];
                     for (int i = 0; i < 12; i++)
-                        __value[i] = ((global::mkldnn.MkldnnBlockingDescT.__Internal*) __Instance)->strides[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) __Instance)->strides[i];
                 }
                 return __value;
             }
@@ -4764,7 +4764,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 12; i++)
-                        ((global::mkldnn.MkldnnBlockingDescT.__Internal*)__Instance)->strides[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*)__Instance)->strides[i] = value[i];
                 }
             }
         }
@@ -4773,12 +4773,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnBlockingDescT.__Internal*) __Instance)->inner_nblks;
+                return ((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) __Instance)->inner_nblks;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnBlockingDescT.__Internal*)__Instance)->inner_nblks = value;
+                ((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*)__Instance)->inner_nblks = value;
             }
         }
 
@@ -4787,11 +4787,11 @@ namespace mkldnn
             get
             {
                 long[] __value = null;
-                if (((global::mkldnn.MkldnnBlockingDescT.__Internal*) __Instance)->inner_blks != null)
+                if (((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) __Instance)->inner_blks != null)
                 {
                     __value = new long[12];
                     for (int i = 0; i < 12; i++)
-                        __value[i] = ((global::mkldnn.MkldnnBlockingDescT.__Internal*) __Instance)->inner_blks[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) __Instance)->inner_blks[i];
                 }
                 return __value;
             }
@@ -4801,7 +4801,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 12; i++)
-                        ((global::mkldnn.MkldnnBlockingDescT.__Internal*)__Instance)->inner_blks[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*)__Instance)->inner_blks[i] = value[i];
                 }
             }
         }
@@ -4811,11 +4811,11 @@ namespace mkldnn
             get
             {
                 long[] __value = null;
-                if (((global::mkldnn.MkldnnBlockingDescT.__Internal*) __Instance)->inner_idxs != null)
+                if (((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) __Instance)->inner_idxs != null)
                 {
                     __value = new long[12];
                     for (int i = 0; i < 12; i++)
-                        __value[i] = ((global::mkldnn.MkldnnBlockingDescT.__Internal*) __Instance)->inner_idxs[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) __Instance)->inner_idxs[i];
                 }
                 return __value;
             }
@@ -4825,7 +4825,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 12; i++)
-                        ((global::mkldnn.MkldnnBlockingDescT.__Internal*)__Instance)->inner_idxs[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*)__Instance)->inner_idxs[i] = value[i];
                 }
             }
         }
@@ -4838,7 +4838,7 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnWinoMemoryFormatT wino_format;
+            internal global::Intel.MklDnn.MkldnnWinoMemoryFormatT wino_format;
 
             [FieldOffset(4)]
             internal int r;
@@ -4879,29 +4879,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnWinoDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnWinoDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnWinoDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnWinoDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnWinoDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnWinoDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnWinoDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnWinoDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnWinoDescT __CreateInstance(global::mkldnn.MkldnnWinoDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnWinoDescT __CreateInstance(global::Intel.MklDnn.MkldnnWinoDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnWinoDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnWinoDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnWinoDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnWinoDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnWinoDescT.__Internal));
-            *(global::mkldnn.MkldnnWinoDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnWinoDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnWinoDescT(global::mkldnn.MkldnnWinoDescT.__Internal native, bool skipVTables = false)
+        private MkldnnWinoDescT(global::Intel.MklDnn.MkldnnWinoDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4917,17 +4917,17 @@ namespace mkldnn
 
         public MkldnnWinoDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnWinoDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnWinoDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnWinoDescT(global::mkldnn.MkldnnWinoDescT _0)
+        public MkldnnWinoDescT(global::Intel.MklDnn.MkldnnWinoDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnWinoDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnWinoDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnWinoDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -4939,23 +4939,23 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnWinoDescT __dummy;
+            global::Intel.MklDnn.MkldnnWinoDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnWinoMemoryFormatT WinoFormat
+        public global::Intel.MklDnn.MkldnnWinoMemoryFormatT WinoFormat
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->wino_format;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->wino_format;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->wino_format = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->wino_format = value;
             }
         }
 
@@ -4963,12 +4963,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->r;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->r;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->r = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->r = value;
             }
         }
 
@@ -4976,12 +4976,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->alpha;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->alpha;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->alpha = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->alpha = value;
             }
         }
 
@@ -4989,12 +4989,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->ic;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->ic;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->ic = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->ic = value;
             }
         }
 
@@ -5002,12 +5002,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->oc;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->oc;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->oc = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->oc = value;
             }
         }
 
@@ -5015,12 +5015,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->ic_block;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->ic_block;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->ic_block = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->ic_block = value;
             }
         }
 
@@ -5028,12 +5028,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->oc_block;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->oc_block;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->oc_block = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->oc_block = value;
             }
         }
 
@@ -5041,12 +5041,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->ic2_block;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->ic2_block;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->ic2_block = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->ic2_block = value;
             }
         }
 
@@ -5054,12 +5054,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->oc2_block;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->oc2_block;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->oc2_block = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->oc2_block = value;
             }
         }
 
@@ -5067,12 +5067,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->adj_scale;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->adj_scale;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->adj_scale = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->adj_scale = value;
             }
         }
 
@@ -5080,12 +5080,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnWinoDescT.__Internal*) __Instance)->size;
+                return ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) __Instance)->size;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnWinoDescT.__Internal*)__Instance)->size = value;
+                ((global::Intel.MklDnn.MkldnnWinoDescT.__Internal*)__Instance)->size = value;
             }
         }
     }
@@ -5097,7 +5097,7 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnRnnPackedMemoryFormatT format;
+            internal global::Intel.MklDnn.MkldnnRnnPackedMemoryFormatT format;
 
             [FieldOffset(4)]
             internal int n_parts;
@@ -5135,29 +5135,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnRnnPackedDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnRnnPackedDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnRnnPackedDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnRnnPackedDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnRnnPackedDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnRnnPackedDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnRnnPackedDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnRnnPackedDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnRnnPackedDescT __CreateInstance(global::mkldnn.MkldnnRnnPackedDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnRnnPackedDescT __CreateInstance(global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnRnnPackedDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnRnnPackedDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnRnnPackedDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnRnnPackedDescT.__Internal));
-            *(global::mkldnn.MkldnnRnnPackedDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnRnnPackedDescT(global::mkldnn.MkldnnRnnPackedDescT.__Internal native, bool skipVTables = false)
+        private MkldnnRnnPackedDescT(global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -5173,17 +5173,17 @@ namespace mkldnn
 
         public MkldnnRnnPackedDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnRnnPackedDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnRnnPackedDescT(global::mkldnn.MkldnnRnnPackedDescT _0)
+        public MkldnnRnnPackedDescT(global::Intel.MklDnn.MkldnnRnnPackedDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnRnnPackedDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -5195,23 +5195,23 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnRnnPackedDescT __dummy;
+            global::Intel.MklDnn.MkldnnRnnPackedDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnRnnPackedMemoryFormatT Format
+        public global::Intel.MklDnn.MkldnnRnnPackedMemoryFormatT Format
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->format;
+                return ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->format;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->format = value;
+                ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->format = value;
             }
         }
 
@@ -5219,12 +5219,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->n_parts;
+                return ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->n_parts;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->n_parts = value;
+                ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->n_parts = value;
             }
         }
 
@@ -5232,12 +5232,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->n;
+                return ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->n;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->n = value;
+                ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->n = value;
             }
         }
 
@@ -5245,12 +5245,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->ldb;
+                return ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->ldb;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->ldb = value;
+                ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->ldb = value;
             }
         }
 
@@ -5259,11 +5259,11 @@ namespace mkldnn
             get
             {
                 int[] __value = null;
-                if (((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->parts != null)
+                if (((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->parts != null)
                 {
                     __value = new int[4];
                     for (int i = 0; i < 4; i++)
-                        __value[i] = ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->parts[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->parts[i];
                 }
                 return __value;
             }
@@ -5273,7 +5273,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 4; i++)
-                        ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->parts[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->parts[i] = value[i];
                 }
             }
         }
@@ -5283,11 +5283,11 @@ namespace mkldnn
             get
             {
                 ulong[] __value = null;
-                if (((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->part_pack_size != null)
+                if (((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->part_pack_size != null)
                 {
                     __value = new ulong[4];
                     for (int i = 0; i < 4; i++)
-                        __value[i] = ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->part_pack_size[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->part_pack_size[i];
                 }
                 return __value;
             }
@@ -5297,7 +5297,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 4; i++)
-                        ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->part_pack_size[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->part_pack_size[i] = value[i];
                 }
             }
         }
@@ -5307,11 +5307,11 @@ namespace mkldnn
             get
             {
                 uint[] __value = null;
-                if (((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->pack_part != null)
+                if (((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->pack_part != null)
                 {
                     __value = new uint[4];
                     for (int i = 0; i < 4; i++)
-                        __value[i] = ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->pack_part[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->pack_part[i];
                 }
                 return __value;
             }
@@ -5321,7 +5321,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 4; i++)
-                        ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->pack_part[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->pack_part[i] = value[i];
                 }
             }
         }
@@ -5330,12 +5330,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->offset_compensation;
+                return ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->offset_compensation;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->offset_compensation = value;
+                ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->offset_compensation = value;
             }
         }
 
@@ -5343,12 +5343,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->size;
+                return ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->size;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->size = value;
+                ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->size = value;
             }
         }
 
@@ -5357,11 +5357,11 @@ namespace mkldnn
             get
             {
                 sbyte[] __value = null;
-                if (((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->reserved != null)
+                if (((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->reserved != null)
                 {
                     __value = new sbyte[200];
                     for (int i = 0; i < 200; i++)
-                        __value[i] = ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->reserved[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) __Instance)->reserved[i];
                 }
                 return __value;
             }
@@ -5371,7 +5371,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 200; i++)
-                        ((global::mkldnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->reserved[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*)__Instance)->reserved[i] = value[i];
                 }
             }
         }
@@ -5404,29 +5404,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnMemoryExtraDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnMemoryExtraDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnMemoryExtraDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnMemoryExtraDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnMemoryExtraDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnMemoryExtraDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnMemoryExtraDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnMemoryExtraDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnMemoryExtraDescT __CreateInstance(global::mkldnn.MkldnnMemoryExtraDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnMemoryExtraDescT __CreateInstance(global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnMemoryExtraDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnMemoryExtraDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnMemoryExtraDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnMemoryExtraDescT.__Internal));
-            *(global::mkldnn.MkldnnMemoryExtraDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnMemoryExtraDescT(global::mkldnn.MkldnnMemoryExtraDescT.__Internal native, bool skipVTables = false)
+        private MkldnnMemoryExtraDescT(global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -5442,17 +5442,17 @@ namespace mkldnn
 
         public MkldnnMemoryExtraDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnMemoryExtraDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnMemoryExtraDescT(global::mkldnn.MkldnnMemoryExtraDescT _0)
+        public MkldnnMemoryExtraDescT(global::Intel.MklDnn.MkldnnMemoryExtraDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnMemoryExtraDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -5464,7 +5464,7 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnMemoryExtraDescT __dummy;
+            global::Intel.MklDnn.MkldnnMemoryExtraDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -5475,12 +5475,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*) __Instance)->flags;
+                return ((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*) __Instance)->flags;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*)__Instance)->flags = value;
+                ((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*)__Instance)->flags = value;
             }
         }
 
@@ -5488,12 +5488,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*) __Instance)->compensation_mask;
+                return ((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*) __Instance)->compensation_mask;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*)__Instance)->compensation_mask = value;
+                ((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*)__Instance)->compensation_mask = value;
             }
         }
 
@@ -5501,12 +5501,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*) __Instance)->scale_adjust;
+                return ((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*) __Instance)->scale_adjust;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*)__Instance)->scale_adjust = value;
+                ((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*)__Instance)->scale_adjust = value;
             }
         }
 
@@ -5515,11 +5515,11 @@ namespace mkldnn
             get
             {
                 sbyte[] __value = null;
-                if (((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*) __Instance)->reserved != null)
+                if (((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*) __Instance)->reserved != null)
                 {
                     __value = new sbyte[64];
                     for (int i = 0; i < 64; i++)
-                        __value[i] = ((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*) __Instance)->reserved[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*) __Instance)->reserved[i];
                 }
                 return __value;
             }
@@ -5529,7 +5529,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 64; i++)
-                        ((global::mkldnn.MkldnnMemoryExtraDescT.__Internal*)__Instance)->reserved[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*)__Instance)->reserved[i] = value[i];
                 }
             }
         }
@@ -5553,7 +5553,7 @@ namespace mkldnn
             internal fixed long dims[12];
 
             [FieldOffset(104)]
-            internal global::mkldnn.MkldnnDataTypeT data_type;
+            internal global::Intel.MklDnn.MkldnnDataTypeT data_type;
 
             [FieldOffset(112)]
             internal fixed long padded_dims[12];
@@ -5565,13 +5565,13 @@ namespace mkldnn
             internal long offset0;
 
             [FieldOffset(312)]
-            internal global::mkldnn.MkldnnFormatKindT format_kind;
+            internal global::Intel.MklDnn.MkldnnFormatKindT format_kind;
 
             [FieldOffset(320)]
-            internal global::mkldnn.MkldnnMemoryDescT.FormatDesc.__Internal format_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc.__Internal format_desc;
 
             [FieldOffset(616)]
-            internal global::mkldnn.MkldnnMemoryExtraDescT.__Internal extra;
+            internal global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal extra;
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -5585,13 +5585,13 @@ namespace mkldnn
             public partial struct __Internal
             {
                 [FieldOffset(0)]
-                internal global::mkldnn.MkldnnBlockingDescT.__Internal blocking;
+                internal global::Intel.MklDnn.MkldnnBlockingDescT.__Internal blocking;
 
                 [FieldOffset(0)]
-                internal global::mkldnn.MkldnnWinoDescT.__Internal wino_desc;
+                internal global::Intel.MklDnn.MkldnnWinoDescT.__Internal wino_desc;
 
                 [FieldOffset(0)]
-                internal global::mkldnn.MkldnnRnnPackedDescT.__Internal rnn_packed_desc;
+                internal global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal rnn_packed_desc;
 
                 [SuppressUnmanagedCodeSecurity]
                 [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -5602,17 +5602,17 @@ namespace mkldnn
             private FormatDesc.__Internal __instance;
             internal FormatDesc.__Internal __Instance { get { return __instance; } }
 
-            internal static global::mkldnn.MkldnnMemoryDescT.FormatDesc __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+            internal static global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
             {
-                return new global::mkldnn.MkldnnMemoryDescT.FormatDesc(native.ToPointer(), skipVTables);
+                return new global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc(native.ToPointer(), skipVTables);
             }
 
-            internal static global::mkldnn.MkldnnMemoryDescT.FormatDesc __CreateInstance(global::mkldnn.MkldnnMemoryDescT.FormatDesc.__Internal native, bool skipVTables = false)
+            internal static global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc __CreateInstance(global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc.__Internal native, bool skipVTables = false)
             {
-                return new global::mkldnn.MkldnnMemoryDescT.FormatDesc(native, skipVTables);
+                return new global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc(native, skipVTables);
             }
 
-            private FormatDesc(global::mkldnn.MkldnnMemoryDescT.FormatDesc.__Internal native, bool skipVTables = false)
+            private FormatDesc(global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc.__Internal native, bool skipVTables = false)
                 : this()
             {
                 __instance = native;
@@ -5620,10 +5620,10 @@ namespace mkldnn
 
             private FormatDesc(void* native, bool skipVTables = false) : this()
             {
-                __instance = *(global::mkldnn.MkldnnMemoryDescT.FormatDesc.__Internal*) native;
+                __instance = *(global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc.__Internal*) native;
             }
 
-            public FormatDesc(global::mkldnn.MkldnnMemoryDescT.FormatDesc _0)
+            public FormatDesc(global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc _0)
                 : this()
             {
                 var ____arg0 = _0.__Instance;
@@ -5634,48 +5634,48 @@ namespace mkldnn
                 }
             }
 
-            public global::mkldnn.MkldnnBlockingDescT Blocking
+            public global::Intel.MklDnn.MkldnnBlockingDescT Blocking
             {
                 get
                 {
-                    return global::mkldnn.MkldnnBlockingDescT.__CreateInstance(__instance.blocking);
+                    return global::Intel.MklDnn.MkldnnBlockingDescT.__CreateInstance(__instance.blocking);
                 }
 
                 set
                 {
                     if (ReferenceEquals(value, null))
                         throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                    __instance.blocking = *(global::mkldnn.MkldnnBlockingDescT.__Internal*) value.__Instance;
+                    __instance.blocking = *(global::Intel.MklDnn.MkldnnBlockingDescT.__Internal*) value.__Instance;
                 }
             }
 
-            public global::mkldnn.MkldnnWinoDescT WinoDesc
+            public global::Intel.MklDnn.MkldnnWinoDescT WinoDesc
             {
                 get
                 {
-                    return global::mkldnn.MkldnnWinoDescT.__CreateInstance(__instance.wino_desc);
+                    return global::Intel.MklDnn.MkldnnWinoDescT.__CreateInstance(__instance.wino_desc);
                 }
 
                 set
                 {
                     if (ReferenceEquals(value, null))
                         throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                    __instance.wino_desc = *(global::mkldnn.MkldnnWinoDescT.__Internal*) value.__Instance;
+                    __instance.wino_desc = *(global::Intel.MklDnn.MkldnnWinoDescT.__Internal*) value.__Instance;
                 }
             }
 
-            public global::mkldnn.MkldnnRnnPackedDescT RnnPackedDesc
+            public global::Intel.MklDnn.MkldnnRnnPackedDescT RnnPackedDesc
             {
                 get
                 {
-                    return global::mkldnn.MkldnnRnnPackedDescT.__CreateInstance(__instance.rnn_packed_desc);
+                    return global::Intel.MklDnn.MkldnnRnnPackedDescT.__CreateInstance(__instance.rnn_packed_desc);
                 }
 
                 set
                 {
                     if (ReferenceEquals(value, null))
                         throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                    __instance.rnn_packed_desc = *(global::mkldnn.MkldnnRnnPackedDescT.__Internal*) value.__Instance;
+                    __instance.rnn_packed_desc = *(global::Intel.MklDnn.MkldnnRnnPackedDescT.__Internal*) value.__Instance;
                 }
             }
         }
@@ -5683,29 +5683,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnMemoryDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnMemoryDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnMemoryDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnMemoryDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnMemoryDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnMemoryDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnMemoryDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnMemoryDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnMemoryDescT __CreateInstance(global::mkldnn.MkldnnMemoryDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnMemoryDescT __CreateInstance(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnMemoryDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnMemoryDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnMemoryDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnMemoryDescT.__Internal));
-            *(global::mkldnn.MkldnnMemoryDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnMemoryDescT(global::mkldnn.MkldnnMemoryDescT.__Internal native, bool skipVTables = false)
+        private MkldnnMemoryDescT(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -5721,17 +5721,17 @@ namespace mkldnn
 
         public MkldnnMemoryDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnMemoryDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnMemoryDescT(global::mkldnn.MkldnnMemoryDescT _0)
+        public MkldnnMemoryDescT(global::Intel.MklDnn.MkldnnMemoryDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnMemoryDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnMemoryDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -5743,7 +5743,7 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnMemoryDescT __dummy;
+            global::Intel.MklDnn.MkldnnMemoryDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -5754,12 +5754,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->ndims;
+                return ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->ndims;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnMemoryDescT.__Internal*)__Instance)->ndims = value;
+                ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*)__Instance)->ndims = value;
             }
         }
 
@@ -5768,11 +5768,11 @@ namespace mkldnn
             get
             {
                 long[] __value = null;
-                if (((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->dims != null)
+                if (((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->dims != null)
                 {
                     __value = new long[12];
                     for (int i = 0; i < 12; i++)
-                        __value[i] = ((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->dims[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->dims[i];
                 }
                 return __value;
             }
@@ -5782,21 +5782,21 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 12; i++)
-                        ((global::mkldnn.MkldnnMemoryDescT.__Internal*)__Instance)->dims[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*)__Instance)->dims[i] = value[i];
                 }
             }
         }
 
-        public global::mkldnn.MkldnnDataTypeT DataType
+        public global::Intel.MklDnn.MkldnnDataTypeT DataType
         {
             get
             {
-                return ((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->data_type;
+                return ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->data_type;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnMemoryDescT.__Internal*)__Instance)->data_type = value;
+                ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*)__Instance)->data_type = value;
             }
         }
 
@@ -5805,11 +5805,11 @@ namespace mkldnn
             get
             {
                 long[] __value = null;
-                if (((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->padded_dims != null)
+                if (((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->padded_dims != null)
                 {
                     __value = new long[12];
                     for (int i = 0; i < 12; i++)
-                        __value[i] = ((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->padded_dims[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->padded_dims[i];
                 }
                 return __value;
             }
@@ -5819,7 +5819,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 12; i++)
-                        ((global::mkldnn.MkldnnMemoryDescT.__Internal*)__Instance)->padded_dims[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*)__Instance)->padded_dims[i] = value[i];
                 }
             }
         }
@@ -5829,11 +5829,11 @@ namespace mkldnn
             get
             {
                 long[] __value = null;
-                if (((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->padded_offsets != null)
+                if (((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->padded_offsets != null)
                 {
                     __value = new long[12];
                     for (int i = 0; i < 12; i++)
-                        __value[i] = ((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->padded_offsets[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->padded_offsets[i];
                 }
                 return __value;
             }
@@ -5843,7 +5843,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 12; i++)
-                        ((global::mkldnn.MkldnnMemoryDescT.__Internal*)__Instance)->padded_offsets[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*)__Instance)->padded_offsets[i] = value[i];
                 }
             }
         }
@@ -5852,53 +5852,53 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->offset0;
+                return ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->offset0;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnMemoryDescT.__Internal*)__Instance)->offset0 = value;
+                ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*)__Instance)->offset0 = value;
             }
         }
 
-        public global::mkldnn.MkldnnFormatKindT FormatKind
+        public global::Intel.MklDnn.MkldnnFormatKindT FormatKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->format_kind;
+                return ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->format_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnMemoryDescT.__Internal*)__Instance)->format_kind = value;
+                ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*)__Instance)->format_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT.FormatDesc format_desc
+        public global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc format_desc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.FormatDesc.__CreateInstance(((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->format_desc);
+                return global::Intel.MklDnn.MkldnnMemoryDescT.FormatDesc.__CreateInstance(((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->format_desc);
             }
 
             set
             {
-                ((global::mkldnn.MkldnnMemoryDescT.__Internal*)__Instance)->format_desc = value.__Instance;
+                ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*)__Instance)->format_desc = value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryExtraDescT Extra
+        public global::Intel.MklDnn.MkldnnMemoryExtraDescT Extra
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryExtraDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnMemoryDescT.__Internal*) __Instance)->extra));
+                return global::Intel.MklDnn.MkldnnMemoryExtraDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) __Instance)->extra));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnMemoryDescT.__Internal*)__Instance)->extra = *(global::mkldnn.MkldnnMemoryExtraDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*)__Instance)->extra = *(global::Intel.MklDnn.MkldnnMemoryExtraDescT.__Internal*) value.__Instance;
             }
         }
     }
@@ -5910,37 +5910,37 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnPrimitiveKindT primitive_kind;
+            internal global::Intel.MklDnn.MkldnnPrimitiveKindT primitive_kind;
 
             [FieldOffset(4)]
-            internal global::mkldnn.MkldnnPropKindT prop_kind;
+            internal global::Intel.MklDnn.MkldnnPropKindT prop_kind;
 
             [FieldOffset(8)]
-            internal global::mkldnn.MkldnnAlgKindT alg_kind;
+            internal global::Intel.MklDnn.MkldnnAlgKindT alg_kind;
 
             [FieldOffset(16)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal src_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal src_desc;
 
             [FieldOffset(712)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_src_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_src_desc;
 
             [FieldOffset(1408)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal weights_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal weights_desc;
 
             [FieldOffset(2104)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_weights_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_weights_desc;
 
             [FieldOffset(2800)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal bias_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal bias_desc;
 
             [FieldOffset(3496)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_bias_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_bias_desc;
 
             [FieldOffset(4192)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal dst_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal dst_desc;
 
             [FieldOffset(4888)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_dst_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_dst_desc;
 
             [FieldOffset(5584)]
             internal fixed long strides[12];
@@ -5952,7 +5952,7 @@ namespace mkldnn
             internal fixed long padding[24];
 
             [FieldOffset(5968)]
-            internal global::mkldnn.MkldnnDataTypeT accum_data_type;
+            internal global::Intel.MklDnn.MkldnnDataTypeT accum_data_type;
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -5963,29 +5963,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnConvolutionDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnConvolutionDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnConvolutionDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnConvolutionDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnConvolutionDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnConvolutionDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnConvolutionDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnConvolutionDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnConvolutionDescT __CreateInstance(global::mkldnn.MkldnnConvolutionDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnConvolutionDescT __CreateInstance(global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnConvolutionDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnConvolutionDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnConvolutionDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnConvolutionDescT.__Internal));
-            *(global::mkldnn.MkldnnConvolutionDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnConvolutionDescT(global::mkldnn.MkldnnConvolutionDescT.__Internal native, bool skipVTables = false)
+        private MkldnnConvolutionDescT(global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -6001,17 +6001,17 @@ namespace mkldnn
 
         public MkldnnConvolutionDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnConvolutionDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnConvolutionDescT(global::mkldnn.MkldnnConvolutionDescT _0)
+        public MkldnnConvolutionDescT(global::Intel.MklDnn.MkldnnConvolutionDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnConvolutionDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnConvolutionDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -6023,169 +6023,169 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnConvolutionDescT __dummy;
+            global::Intel.MklDnn.MkldnnConvolutionDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnPrimitiveKindT PrimitiveKind
+        public global::Intel.MklDnn.MkldnnPrimitiveKindT PrimitiveKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->primitive_kind;
+                return ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->primitive_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->primitive_kind = value;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->primitive_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnPropKindT PropKind
+        public global::Intel.MklDnn.MkldnnPropKindT PropKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->prop_kind;
+                return ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->prop_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->prop_kind = value;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->prop_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnAlgKindT AlgKind
+        public global::Intel.MklDnn.MkldnnAlgKindT AlgKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->alg_kind;
+                return ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->alg_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->alg_kind = value;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->alg_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT SrcDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT SrcDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->src_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->src_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->src_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->src_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffSrcDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffSrcDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->diff_src_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->diff_src_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->diff_src_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->diff_src_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT WeightsDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT WeightsDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->weights_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->weights_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->weights_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->weights_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffWeightsDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffWeightsDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->diff_weights_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->diff_weights_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->diff_weights_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->diff_weights_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT BiasDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT BiasDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->bias_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->bias_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->bias_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->bias_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffBiasDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffBiasDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->diff_bias_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->diff_bias_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->diff_bias_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->diff_bias_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DstDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DstDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->dst_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->dst_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->dst_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->dst_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDstDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDstDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->diff_dst_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->diff_dst_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->diff_dst_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->diff_dst_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
@@ -6194,11 +6194,11 @@ namespace mkldnn
             get
             {
                 long[] __value = null;
-                if (((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->strides != null)
+                if (((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->strides != null)
                 {
                     __value = new long[12];
                     for (int i = 0; i < 12; i++)
-                        __value[i] = ((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->strides[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->strides[i];
                 }
                 return __value;
             }
@@ -6208,7 +6208,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 12; i++)
-                        ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->strides[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->strides[i] = value[i];
                 }
             }
         }
@@ -6218,11 +6218,11 @@ namespace mkldnn
             get
             {
                 long[] __value = null;
-                if (((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->dilates != null)
+                if (((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->dilates != null)
                 {
                     __value = new long[12];
                     for (int i = 0; i < 12; i++)
-                        __value[i] = ((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->dilates[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->dilates[i];
                 }
                 return __value;
             }
@@ -6232,21 +6232,21 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 12; i++)
-                        ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->dilates[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->dilates[i] = value[i];
                 }
             }
         }
 
-        public global::mkldnn.MkldnnDataTypeT AccumDataType
+        public global::Intel.MklDnn.MkldnnDataTypeT AccumDataType
         {
             get
             {
-                return ((global::mkldnn.MkldnnConvolutionDescT.__Internal*) __Instance)->accum_data_type;
+                return ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*) __Instance)->accum_data_type;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnConvolutionDescT.__Internal*)__Instance)->accum_data_type = value;
+                ((global::Intel.MklDnn.MkldnnConvolutionDescT.__Internal*)__Instance)->accum_data_type = value;
             }
         }
     }
@@ -6258,13 +6258,13 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnPrimitiveKindT primitive_kind;
+            internal global::Intel.MklDnn.MkldnnPrimitiveKindT primitive_kind;
 
             [FieldOffset(4)]
-            internal global::mkldnn.MkldnnPropKindT prop_kind;
+            internal global::Intel.MklDnn.MkldnnPropKindT prop_kind;
 
             [FieldOffset(8)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal data_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal data_desc;
 
             [FieldOffset(704)]
             internal int axis;
@@ -6281,29 +6281,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnShuffleDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnShuffleDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnShuffleDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnShuffleDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnShuffleDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnShuffleDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnShuffleDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnShuffleDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnShuffleDescT __CreateInstance(global::mkldnn.MkldnnShuffleDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnShuffleDescT __CreateInstance(global::Intel.MklDnn.MkldnnShuffleDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnShuffleDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnShuffleDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnShuffleDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnShuffleDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnShuffleDescT.__Internal));
-            *(global::mkldnn.MkldnnShuffleDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnShuffleDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnShuffleDescT(global::mkldnn.MkldnnShuffleDescT.__Internal native, bool skipVTables = false)
+        private MkldnnShuffleDescT(global::Intel.MklDnn.MkldnnShuffleDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -6319,17 +6319,17 @@ namespace mkldnn
 
         public MkldnnShuffleDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnShuffleDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnShuffleDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnShuffleDescT(global::mkldnn.MkldnnShuffleDescT _0)
+        public MkldnnShuffleDescT(global::Intel.MklDnn.MkldnnShuffleDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnShuffleDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnShuffleDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnShuffleDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnShuffleDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -6341,51 +6341,51 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnShuffleDescT __dummy;
+            global::Intel.MklDnn.MkldnnShuffleDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnPrimitiveKindT PrimitiveKind
+        public global::Intel.MklDnn.MkldnnPrimitiveKindT PrimitiveKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnShuffleDescT.__Internal*) __Instance)->primitive_kind;
+                return ((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*) __Instance)->primitive_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnShuffleDescT.__Internal*)__Instance)->primitive_kind = value;
+                ((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*)__Instance)->primitive_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnPropKindT PropKind
+        public global::Intel.MklDnn.MkldnnPropKindT PropKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnShuffleDescT.__Internal*) __Instance)->prop_kind;
+                return ((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*) __Instance)->prop_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnShuffleDescT.__Internal*)__Instance)->prop_kind = value;
+                ((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*)__Instance)->prop_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DataDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DataDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnShuffleDescT.__Internal*) __Instance)->data_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*) __Instance)->data_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnShuffleDescT.__Internal*)__Instance)->data_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*)__Instance)->data_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
@@ -6393,12 +6393,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnShuffleDescT.__Internal*) __Instance)->axis;
+                return ((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*) __Instance)->axis;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnShuffleDescT.__Internal*)__Instance)->axis = value;
+                ((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*)__Instance)->axis = value;
             }
         }
 
@@ -6406,12 +6406,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnShuffleDescT.__Internal*) __Instance)->group_size;
+                return ((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*) __Instance)->group_size;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnShuffleDescT.__Internal*)__Instance)->group_size = value;
+                ((global::Intel.MklDnn.MkldnnShuffleDescT.__Internal*)__Instance)->group_size = value;
             }
         }
     }
@@ -6423,19 +6423,19 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnPrimitiveKindT primitive_kind;
+            internal global::Intel.MklDnn.MkldnnPrimitiveKindT primitive_kind;
 
             [FieldOffset(4)]
-            internal global::mkldnn.MkldnnPropKindT prop_kind;
+            internal global::Intel.MklDnn.MkldnnPropKindT prop_kind;
 
             [FieldOffset(8)]
-            internal global::mkldnn.MkldnnAlgKindT alg_kind;
+            internal global::Intel.MklDnn.MkldnnAlgKindT alg_kind;
 
             [FieldOffset(16)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal data_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal data_desc;
 
             [FieldOffset(712)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_data_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_data_desc;
 
             [FieldOffset(1408)]
             internal float alpha;
@@ -6452,29 +6452,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnEltwiseDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnEltwiseDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnEltwiseDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnEltwiseDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnEltwiseDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnEltwiseDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnEltwiseDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnEltwiseDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnEltwiseDescT __CreateInstance(global::mkldnn.MkldnnEltwiseDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnEltwiseDescT __CreateInstance(global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnEltwiseDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnEltwiseDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnEltwiseDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnEltwiseDescT.__Internal));
-            *(global::mkldnn.MkldnnEltwiseDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnEltwiseDescT(global::mkldnn.MkldnnEltwiseDescT.__Internal native, bool skipVTables = false)
+        private MkldnnEltwiseDescT(global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -6490,17 +6490,17 @@ namespace mkldnn
 
         public MkldnnEltwiseDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnEltwiseDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnEltwiseDescT(global::mkldnn.MkldnnEltwiseDescT _0)
+        public MkldnnEltwiseDescT(global::Intel.MklDnn.MkldnnEltwiseDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnEltwiseDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnEltwiseDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnEltwiseDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -6512,79 +6512,79 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnEltwiseDescT __dummy;
+            global::Intel.MklDnn.MkldnnEltwiseDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnPrimitiveKindT PrimitiveKind
+        public global::Intel.MklDnn.MkldnnPrimitiveKindT PrimitiveKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnEltwiseDescT.__Internal*) __Instance)->primitive_kind;
+                return ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*) __Instance)->primitive_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnEltwiseDescT.__Internal*)__Instance)->primitive_kind = value;
+                ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*)__Instance)->primitive_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnPropKindT PropKind
+        public global::Intel.MklDnn.MkldnnPropKindT PropKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnEltwiseDescT.__Internal*) __Instance)->prop_kind;
+                return ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*) __Instance)->prop_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnEltwiseDescT.__Internal*)__Instance)->prop_kind = value;
+                ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*)__Instance)->prop_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnAlgKindT AlgKind
+        public global::Intel.MklDnn.MkldnnAlgKindT AlgKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnEltwiseDescT.__Internal*) __Instance)->alg_kind;
+                return ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*) __Instance)->alg_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnEltwiseDescT.__Internal*)__Instance)->alg_kind = value;
+                ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*)__Instance)->alg_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DataDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DataDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnEltwiseDescT.__Internal*) __Instance)->data_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*) __Instance)->data_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnEltwiseDescT.__Internal*)__Instance)->data_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*)__Instance)->data_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDataDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDataDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnEltwiseDescT.__Internal*) __Instance)->diff_data_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*) __Instance)->diff_data_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnEltwiseDescT.__Internal*)__Instance)->diff_data_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*)__Instance)->diff_data_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
@@ -6592,12 +6592,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnEltwiseDescT.__Internal*) __Instance)->alpha;
+                return ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*) __Instance)->alpha;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnEltwiseDescT.__Internal*)__Instance)->alpha = value;
+                ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*)__Instance)->alpha = value;
             }
         }
 
@@ -6605,12 +6605,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnEltwiseDescT.__Internal*) __Instance)->beta;
+                return ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*) __Instance)->beta;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnEltwiseDescT.__Internal*)__Instance)->beta = value;
+                ((global::Intel.MklDnn.MkldnnEltwiseDescT.__Internal*)__Instance)->beta = value;
             }
         }
     }
@@ -6622,16 +6622,16 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnPrimitiveKindT primitive_kind;
+            internal global::Intel.MklDnn.MkldnnPrimitiveKindT primitive_kind;
 
             [FieldOffset(4)]
-            internal global::mkldnn.MkldnnPropKindT prop_kind;
+            internal global::Intel.MklDnn.MkldnnPropKindT prop_kind;
 
             [FieldOffset(8)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal data_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal data_desc;
 
             [FieldOffset(704)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_desc;
 
             [FieldOffset(1400)]
             internal int softmax_axis;
@@ -6645,29 +6645,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnSoftmaxDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnSoftmaxDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnSoftmaxDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnSoftmaxDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnSoftmaxDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnSoftmaxDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnSoftmaxDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnSoftmaxDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnSoftmaxDescT __CreateInstance(global::mkldnn.MkldnnSoftmaxDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnSoftmaxDescT __CreateInstance(global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnSoftmaxDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnSoftmaxDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnSoftmaxDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnSoftmaxDescT.__Internal));
-            *(global::mkldnn.MkldnnSoftmaxDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnSoftmaxDescT(global::mkldnn.MkldnnSoftmaxDescT.__Internal native, bool skipVTables = false)
+        private MkldnnSoftmaxDescT(global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -6683,17 +6683,17 @@ namespace mkldnn
 
         public MkldnnSoftmaxDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnSoftmaxDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnSoftmaxDescT(global::mkldnn.MkldnnSoftmaxDescT _0)
+        public MkldnnSoftmaxDescT(global::Intel.MklDnn.MkldnnSoftmaxDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnSoftmaxDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnSoftmaxDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnSoftmaxDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -6705,66 +6705,66 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnSoftmaxDescT __dummy;
+            global::Intel.MklDnn.MkldnnSoftmaxDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnPrimitiveKindT PrimitiveKind
+        public global::Intel.MklDnn.MkldnnPrimitiveKindT PrimitiveKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnSoftmaxDescT.__Internal*) __Instance)->primitive_kind;
+                return ((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*) __Instance)->primitive_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnSoftmaxDescT.__Internal*)__Instance)->primitive_kind = value;
+                ((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*)__Instance)->primitive_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnPropKindT PropKind
+        public global::Intel.MklDnn.MkldnnPropKindT PropKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnSoftmaxDescT.__Internal*) __Instance)->prop_kind;
+                return ((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*) __Instance)->prop_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnSoftmaxDescT.__Internal*)__Instance)->prop_kind = value;
+                ((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*)__Instance)->prop_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DataDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DataDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnSoftmaxDescT.__Internal*) __Instance)->data_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*) __Instance)->data_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnSoftmaxDescT.__Internal*)__Instance)->data_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*)__Instance)->data_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnSoftmaxDescT.__Internal*) __Instance)->diff_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*) __Instance)->diff_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnSoftmaxDescT.__Internal*)__Instance)->diff_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*)__Instance)->diff_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
@@ -6772,12 +6772,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnSoftmaxDescT.__Internal*) __Instance)->softmax_axis;
+                return ((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*) __Instance)->softmax_axis;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnSoftmaxDescT.__Internal*)__Instance)->softmax_axis = value;
+                ((global::Intel.MklDnn.MkldnnSoftmaxDescT.__Internal*)__Instance)->softmax_axis = value;
             }
         }
     }
@@ -6789,25 +6789,25 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnPrimitiveKindT primitive_kind;
+            internal global::Intel.MklDnn.MkldnnPrimitiveKindT primitive_kind;
 
             [FieldOffset(4)]
-            internal global::mkldnn.MkldnnPropKindT prop_kind;
+            internal global::Intel.MklDnn.MkldnnPropKindT prop_kind;
 
             [FieldOffset(8)]
-            internal global::mkldnn.MkldnnAlgKindT alg_kind;
+            internal global::Intel.MklDnn.MkldnnAlgKindT alg_kind;
 
             [FieldOffset(16)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal src_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal src_desc;
 
             [FieldOffset(712)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_src_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_src_desc;
 
             [FieldOffset(1408)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal dst_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal dst_desc;
 
             [FieldOffset(2104)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_dst_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_dst_desc;
 
             [FieldOffset(2800)]
             internal fixed long strides[12];
@@ -6819,7 +6819,7 @@ namespace mkldnn
             internal fixed long padding[24];
 
             [FieldOffset(3184)]
-            internal global::mkldnn.MkldnnDataTypeT accum_data_type;
+            internal global::Intel.MklDnn.MkldnnDataTypeT accum_data_type;
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -6830,29 +6830,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPoolingDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnPoolingDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPoolingDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnPoolingDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnPoolingDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPoolingDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPoolingDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnPoolingDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnPoolingDescT __CreateInstance(global::mkldnn.MkldnnPoolingDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnPoolingDescT __CreateInstance(global::Intel.MklDnn.MkldnnPoolingDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnPoolingDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnPoolingDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnPoolingDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnPoolingDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnPoolingDescT.__Internal));
-            *(global::mkldnn.MkldnnPoolingDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnPoolingDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnPoolingDescT(global::mkldnn.MkldnnPoolingDescT.__Internal native, bool skipVTables = false)
+        private MkldnnPoolingDescT(global::Intel.MklDnn.MkldnnPoolingDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -6868,17 +6868,17 @@ namespace mkldnn
 
         public MkldnnPoolingDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnPoolingDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnPoolingDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnPoolingDescT(global::mkldnn.MkldnnPoolingDescT _0)
+        public MkldnnPoolingDescT(global::Intel.MklDnn.MkldnnPoolingDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnPoolingDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnPoolingDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnPoolingDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -6890,109 +6890,109 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnPoolingDescT __dummy;
+            global::Intel.MklDnn.MkldnnPoolingDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnPrimitiveKindT PrimitiveKind
+        public global::Intel.MklDnn.MkldnnPrimitiveKindT PrimitiveKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->primitive_kind;
+                return ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->primitive_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnPoolingDescT.__Internal*)__Instance)->primitive_kind = value;
+                ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*)__Instance)->primitive_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnPropKindT PropKind
+        public global::Intel.MklDnn.MkldnnPropKindT PropKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->prop_kind;
+                return ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->prop_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnPoolingDescT.__Internal*)__Instance)->prop_kind = value;
+                ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*)__Instance)->prop_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnAlgKindT AlgKind
+        public global::Intel.MklDnn.MkldnnAlgKindT AlgKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->alg_kind;
+                return ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->alg_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnPoolingDescT.__Internal*)__Instance)->alg_kind = value;
+                ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*)__Instance)->alg_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT SrcDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT SrcDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->src_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->src_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnPoolingDescT.__Internal*)__Instance)->src_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*)__Instance)->src_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffSrcDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffSrcDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->diff_src_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->diff_src_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnPoolingDescT.__Internal*)__Instance)->diff_src_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*)__Instance)->diff_src_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DstDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DstDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->dst_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->dst_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnPoolingDescT.__Internal*)__Instance)->dst_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*)__Instance)->dst_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDstDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDstDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->diff_dst_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->diff_dst_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnPoolingDescT.__Internal*)__Instance)->diff_dst_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*)__Instance)->diff_dst_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
@@ -7001,11 +7001,11 @@ namespace mkldnn
             get
             {
                 long[] __value = null;
-                if (((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->strides != null)
+                if (((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->strides != null)
                 {
                     __value = new long[12];
                     for (int i = 0; i < 12; i++)
-                        __value[i] = ((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->strides[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->strides[i];
                 }
                 return __value;
             }
@@ -7015,7 +7015,7 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 12; i++)
-                        ((global::mkldnn.MkldnnPoolingDescT.__Internal*)__Instance)->strides[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*)__Instance)->strides[i] = value[i];
                 }
             }
         }
@@ -7025,11 +7025,11 @@ namespace mkldnn
             get
             {
                 long[] __value = null;
-                if (((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->kernel != null)
+                if (((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->kernel != null)
                 {
                     __value = new long[12];
                     for (int i = 0; i < 12; i++)
-                        __value[i] = ((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->kernel[i];
+                        __value[i] = ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->kernel[i];
                 }
                 return __value;
             }
@@ -7039,21 +7039,21 @@ namespace mkldnn
                 if (value != null)
                 {
                     for (int i = 0; i < 12; i++)
-                        ((global::mkldnn.MkldnnPoolingDescT.__Internal*)__Instance)->kernel[i] = value[i];
+                        ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*)__Instance)->kernel[i] = value[i];
                 }
             }
         }
 
-        public global::mkldnn.MkldnnDataTypeT AccumDataType
+        public global::Intel.MklDnn.MkldnnDataTypeT AccumDataType
         {
             get
             {
-                return ((global::mkldnn.MkldnnPoolingDescT.__Internal*) __Instance)->accum_data_type;
+                return ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*) __Instance)->accum_data_type;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnPoolingDescT.__Internal*)__Instance)->accum_data_type = value;
+                ((global::Intel.MklDnn.MkldnnPoolingDescT.__Internal*)__Instance)->accum_data_type = value;
             }
         }
     }
@@ -7065,19 +7065,19 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnPrimitiveKindT primitive_kind;
+            internal global::Intel.MklDnn.MkldnnPrimitiveKindT primitive_kind;
 
             [FieldOffset(4)]
-            internal global::mkldnn.MkldnnPropKindT prop_kind;
+            internal global::Intel.MklDnn.MkldnnPropKindT prop_kind;
 
             [FieldOffset(8)]
-            internal global::mkldnn.MkldnnAlgKindT alg_kind;
+            internal global::Intel.MklDnn.MkldnnAlgKindT alg_kind;
 
             [FieldOffset(16)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal data_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal data_desc;
 
             [FieldOffset(712)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_data_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_data_desc;
 
             [FieldOffset(1408)]
             internal long local_size;
@@ -7100,29 +7100,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnLrnDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnLrnDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnLrnDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnLrnDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnLrnDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnLrnDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnLrnDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnLrnDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnLrnDescT __CreateInstance(global::mkldnn.MkldnnLrnDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnLrnDescT __CreateInstance(global::Intel.MklDnn.MkldnnLrnDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnLrnDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnLrnDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnLrnDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnLrnDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnLrnDescT.__Internal));
-            *(global::mkldnn.MkldnnLrnDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnLrnDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnLrnDescT(global::mkldnn.MkldnnLrnDescT.__Internal native, bool skipVTables = false)
+        private MkldnnLrnDescT(global::Intel.MklDnn.MkldnnLrnDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -7138,17 +7138,17 @@ namespace mkldnn
 
         public MkldnnLrnDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnLrnDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnLrnDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnLrnDescT(global::mkldnn.MkldnnLrnDescT _0)
+        public MkldnnLrnDescT(global::Intel.MklDnn.MkldnnLrnDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnLrnDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnLrnDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnLrnDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnLrnDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -7160,79 +7160,79 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnLrnDescT __dummy;
+            global::Intel.MklDnn.MkldnnLrnDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnPrimitiveKindT PrimitiveKind
+        public global::Intel.MklDnn.MkldnnPrimitiveKindT PrimitiveKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnLrnDescT.__Internal*) __Instance)->primitive_kind;
+                return ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) __Instance)->primitive_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnLrnDescT.__Internal*)__Instance)->primitive_kind = value;
+                ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*)__Instance)->primitive_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnPropKindT PropKind
+        public global::Intel.MklDnn.MkldnnPropKindT PropKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnLrnDescT.__Internal*) __Instance)->prop_kind;
+                return ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) __Instance)->prop_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnLrnDescT.__Internal*)__Instance)->prop_kind = value;
+                ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*)__Instance)->prop_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnAlgKindT AlgKind
+        public global::Intel.MklDnn.MkldnnAlgKindT AlgKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnLrnDescT.__Internal*) __Instance)->alg_kind;
+                return ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) __Instance)->alg_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnLrnDescT.__Internal*)__Instance)->alg_kind = value;
+                ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*)__Instance)->alg_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DataDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DataDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnLrnDescT.__Internal*) __Instance)->data_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) __Instance)->data_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnLrnDescT.__Internal*)__Instance)->data_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*)__Instance)->data_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDataDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDataDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnLrnDescT.__Internal*) __Instance)->diff_data_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) __Instance)->diff_data_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnLrnDescT.__Internal*)__Instance)->diff_data_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*)__Instance)->diff_data_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
@@ -7240,12 +7240,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnLrnDescT.__Internal*) __Instance)->local_size;
+                return ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) __Instance)->local_size;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnLrnDescT.__Internal*)__Instance)->local_size = value;
+                ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*)__Instance)->local_size = value;
             }
         }
 
@@ -7253,12 +7253,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnLrnDescT.__Internal*) __Instance)->lrn_alpha;
+                return ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) __Instance)->lrn_alpha;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnLrnDescT.__Internal*)__Instance)->lrn_alpha = value;
+                ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*)__Instance)->lrn_alpha = value;
             }
         }
 
@@ -7266,12 +7266,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnLrnDescT.__Internal*) __Instance)->lrn_beta;
+                return ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) __Instance)->lrn_beta;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnLrnDescT.__Internal*)__Instance)->lrn_beta = value;
+                ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*)__Instance)->lrn_beta = value;
             }
         }
 
@@ -7279,12 +7279,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnLrnDescT.__Internal*) __Instance)->lrn_k;
+                return ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*) __Instance)->lrn_k;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnLrnDescT.__Internal*)__Instance)->lrn_k = value;
+                ((global::Intel.MklDnn.MkldnnLrnDescT.__Internal*)__Instance)->lrn_k = value;
             }
         }
     }
@@ -7296,25 +7296,25 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnPrimitiveKindT primitive_kind;
+            internal global::Intel.MklDnn.MkldnnPrimitiveKindT primitive_kind;
 
             [FieldOffset(4)]
-            internal global::mkldnn.MkldnnPropKindT prop_kind;
+            internal global::Intel.MklDnn.MkldnnPropKindT prop_kind;
 
             [FieldOffset(8)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal data_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal data_desc;
 
             [FieldOffset(704)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_data_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_data_desc;
 
             [FieldOffset(1400)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal data_scaleshift_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal data_scaleshift_desc;
 
             [FieldOffset(2096)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_data_scaleshift_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_data_scaleshift_desc;
 
             [FieldOffset(2792)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal stat_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal stat_desc;
 
             [FieldOffset(3488)]
             internal float batch_norm_epsilon;
@@ -7331,29 +7331,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnBatchNormalizationDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnBatchNormalizationDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnBatchNormalizationDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnBatchNormalizationDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnBatchNormalizationDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnBatchNormalizationDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnBatchNormalizationDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnBatchNormalizationDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnBatchNormalizationDescT __CreateInstance(global::mkldnn.MkldnnBatchNormalizationDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnBatchNormalizationDescT __CreateInstance(global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnBatchNormalizationDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnBatchNormalizationDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnBatchNormalizationDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnBatchNormalizationDescT.__Internal));
-            *(global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnBatchNormalizationDescT(global::mkldnn.MkldnnBatchNormalizationDescT.__Internal native, bool skipVTables = false)
+        private MkldnnBatchNormalizationDescT(global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -7369,17 +7369,17 @@ namespace mkldnn
 
         public MkldnnBatchNormalizationDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnBatchNormalizationDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnBatchNormalizationDescT(global::mkldnn.MkldnnBatchNormalizationDescT _0)
+        public MkldnnBatchNormalizationDescT(global::Intel.MklDnn.MkldnnBatchNormalizationDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnBatchNormalizationDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -7391,111 +7391,111 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnBatchNormalizationDescT __dummy;
+            global::Intel.MklDnn.MkldnnBatchNormalizationDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnPrimitiveKindT PrimitiveKind
+        public global::Intel.MklDnn.MkldnnPrimitiveKindT PrimitiveKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->primitive_kind;
+                return ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->primitive_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->primitive_kind = value;
+                ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->primitive_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnPropKindT PropKind
+        public global::Intel.MklDnn.MkldnnPropKindT PropKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->prop_kind;
+                return ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->prop_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->prop_kind = value;
+                ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->prop_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DataDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DataDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->data_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->data_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->data_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->data_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDataDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDataDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->diff_data_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->diff_data_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->diff_data_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->diff_data_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DataScaleshiftDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DataScaleshiftDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->data_scaleshift_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->data_scaleshift_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->data_scaleshift_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->data_scaleshift_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDataScaleshiftDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDataScaleshiftDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->diff_data_scaleshift_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->diff_data_scaleshift_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->diff_data_scaleshift_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->diff_data_scaleshift_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT StatDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT StatDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->stat_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->stat_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->stat_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->stat_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
@@ -7503,12 +7503,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->batch_norm_epsilon;
+                return ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->batch_norm_epsilon;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->batch_norm_epsilon = value;
+                ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->batch_norm_epsilon = value;
             }
         }
 
@@ -7516,12 +7516,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->flags;
+                return ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*) __Instance)->flags;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->flags = value;
+                ((global::Intel.MklDnn.MkldnnBatchNormalizationDescT.__Internal*)__Instance)->flags = value;
             }
         }
     }
@@ -7533,37 +7533,37 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnPrimitiveKindT primitive_kind;
+            internal global::Intel.MklDnn.MkldnnPrimitiveKindT primitive_kind;
 
             [FieldOffset(4)]
-            internal global::mkldnn.MkldnnPropKindT prop_kind;
+            internal global::Intel.MklDnn.MkldnnPropKindT prop_kind;
 
             [FieldOffset(8)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal src_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal src_desc;
 
             [FieldOffset(704)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_src_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_src_desc;
 
             [FieldOffset(1400)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal weights_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal weights_desc;
 
             [FieldOffset(2096)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_weights_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_weights_desc;
 
             [FieldOffset(2792)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal bias_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal bias_desc;
 
             [FieldOffset(3488)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_bias_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_bias_desc;
 
             [FieldOffset(4184)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal dst_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal dst_desc;
 
             [FieldOffset(4880)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_dst_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_dst_desc;
 
             [FieldOffset(5576)]
-            internal global::mkldnn.MkldnnDataTypeT accum_data_type;
+            internal global::Intel.MklDnn.MkldnnDataTypeT accum_data_type;
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -7574,29 +7574,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnInnerProductDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnInnerProductDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnInnerProductDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnInnerProductDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnInnerProductDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnInnerProductDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnInnerProductDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnInnerProductDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnInnerProductDescT __CreateInstance(global::mkldnn.MkldnnInnerProductDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnInnerProductDescT __CreateInstance(global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnInnerProductDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnInnerProductDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnInnerProductDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnInnerProductDescT.__Internal));
-            *(global::mkldnn.MkldnnInnerProductDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnInnerProductDescT(global::mkldnn.MkldnnInnerProductDescT.__Internal native, bool skipVTables = false)
+        private MkldnnInnerProductDescT(global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -7612,17 +7612,17 @@ namespace mkldnn
 
         public MkldnnInnerProductDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnInnerProductDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnInnerProductDescT(global::mkldnn.MkldnnInnerProductDescT _0)
+        public MkldnnInnerProductDescT(global::Intel.MklDnn.MkldnnInnerProductDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnInnerProductDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnInnerProductDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -7634,169 +7634,169 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnInnerProductDescT __dummy;
+            global::Intel.MklDnn.MkldnnInnerProductDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnPrimitiveKindT PrimitiveKind
+        public global::Intel.MklDnn.MkldnnPrimitiveKindT PrimitiveKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->primitive_kind;
+                return ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->primitive_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->primitive_kind = value;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->primitive_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnPropKindT PropKind
+        public global::Intel.MklDnn.MkldnnPropKindT PropKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->prop_kind;
+                return ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->prop_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->prop_kind = value;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->prop_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT SrcDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT SrcDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->src_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->src_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->src_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->src_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffSrcDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffSrcDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->diff_src_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->diff_src_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->diff_src_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->diff_src_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT WeightsDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT WeightsDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->weights_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->weights_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->weights_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->weights_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffWeightsDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffWeightsDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->diff_weights_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->diff_weights_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->diff_weights_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->diff_weights_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT BiasDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT BiasDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->bias_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->bias_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->bias_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->bias_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffBiasDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffBiasDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->diff_bias_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->diff_bias_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->diff_bias_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->diff_bias_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DstDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DstDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->dst_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->dst_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->dst_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->dst_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDstDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDstDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->diff_dst_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->diff_dst_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->diff_dst_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->diff_dst_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnDataTypeT AccumDataType
+        public global::Intel.MklDnn.MkldnnDataTypeT AccumDataType
         {
             get
             {
-                return ((global::mkldnn.MkldnnInnerProductDescT.__Internal*) __Instance)->accum_data_type;
+                return ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*) __Instance)->accum_data_type;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnInnerProductDescT.__Internal*)__Instance)->accum_data_type = value;
+                ((global::Intel.MklDnn.MkldnnInnerProductDescT.__Internal*)__Instance)->accum_data_type = value;
             }
         }
     }
@@ -7808,88 +7808,88 @@ namespace mkldnn
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::mkldnn.MkldnnPrimitiveKindT primitive_kind;
+            internal global::Intel.MklDnn.MkldnnPrimitiveKindT primitive_kind;
 
             [FieldOffset(4)]
-            internal global::mkldnn.MkldnnPropKindT prop_kind;
+            internal global::Intel.MklDnn.MkldnnPropKindT prop_kind;
 
             [FieldOffset(8)]
-            internal global::mkldnn.MkldnnAlgKindT cell_kind;
+            internal global::Intel.MklDnn.MkldnnAlgKindT cell_kind;
 
             [FieldOffset(12)]
-            internal global::mkldnn.MkldnnRnnDirectionT direction;
+            internal global::Intel.MklDnn.MkldnnRnnDirectionT direction;
 
             [FieldOffset(16)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal src_layer_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal src_layer_desc;
 
             [FieldOffset(712)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal src_iter_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal src_iter_desc;
 
             [FieldOffset(1408)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal src_iter_c_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal src_iter_c_desc;
 
             [FieldOffset(2104)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal weights_layer_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal weights_layer_desc;
 
             [FieldOffset(2800)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal weights_iter_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal weights_iter_desc;
 
             [FieldOffset(3496)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal bias_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal bias_desc;
 
             [FieldOffset(4192)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal dst_layer_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal dst_layer_desc;
 
             [FieldOffset(4888)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal dst_iter_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal dst_iter_desc;
 
             [FieldOffset(5584)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal dst_iter_c_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal dst_iter_c_desc;
 
             [FieldOffset(6280)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal placeholder_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal placeholder_desc;
 
             [FieldOffset(6976)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal placeholder2_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal placeholder2_desc;
 
             [FieldOffset(7672)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_src_layer_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_src_layer_desc;
 
             [FieldOffset(8368)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_src_iter_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_src_iter_desc;
 
             [FieldOffset(9064)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_src_iter_c_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_src_iter_c_desc;
 
             [FieldOffset(9760)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_weights_layer_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_weights_layer_desc;
 
             [FieldOffset(10456)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_weights_iter_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_weights_iter_desc;
 
             [FieldOffset(11152)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_bias_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_bias_desc;
 
             [FieldOffset(11848)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_dst_layer_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_dst_layer_desc;
 
             [FieldOffset(12544)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_dst_iter_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_dst_iter_desc;
 
             [FieldOffset(13240)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_dst_iter_c_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_dst_iter_c_desc;
 
             [FieldOffset(13936)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_placeholder_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_placeholder_desc;
 
             [FieldOffset(14632)]
-            internal global::mkldnn.MkldnnMemoryDescT.__Internal diff_placeholder2_desc;
+            internal global::Intel.MklDnn.MkldnnMemoryDescT.__Internal diff_placeholder2_desc;
 
             [FieldOffset(15328)]
             internal uint flags;
 
             [FieldOffset(15332)]
-            internal global::mkldnn.MkldnnAlgKindT activation_kind;
+            internal global::Intel.MklDnn.MkldnnAlgKindT activation_kind;
 
             [FieldOffset(15336)]
             internal float alpha;
@@ -7906,29 +7906,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnRnnDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnRnnDescT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnRnnDescT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnRnnDescT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnRnnDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnRnnDescT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnRnnDescT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnRnnDescT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnRnnDescT __CreateInstance(global::mkldnn.MkldnnRnnDescT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnRnnDescT __CreateInstance(global::Intel.MklDnn.MkldnnRnnDescT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnRnnDescT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnRnnDescT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnRnnDescT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnRnnDescT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnRnnDescT.__Internal));
-            *(global::mkldnn.MkldnnRnnDescT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnRnnDescT.__Internal));
+            *(global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnRnnDescT(global::mkldnn.MkldnnRnnDescT.__Internal native, bool skipVTables = false)
+        private MkldnnRnnDescT(global::Intel.MklDnn.MkldnnRnnDescT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -7944,17 +7944,17 @@ namespace mkldnn
 
         public MkldnnRnnDescT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnRnnDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnRnnDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnRnnDescT(global::mkldnn.MkldnnRnnDescT _0)
+        public MkldnnRnnDescT(global::Intel.MklDnn.MkldnnRnnDescT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnRnnDescT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnRnnDescT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance) = *((global::mkldnn.MkldnnRnnDescT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -7966,392 +7966,392 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnRnnDescT __dummy;
+            global::Intel.MklDnn.MkldnnRnnDescT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::mkldnn.MkldnnPrimitiveKindT PrimitiveKind
+        public global::Intel.MklDnn.MkldnnPrimitiveKindT PrimitiveKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->primitive_kind;
+                return ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->primitive_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->primitive_kind = value;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->primitive_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnPropKindT PropKind
+        public global::Intel.MklDnn.MkldnnPropKindT PropKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->prop_kind;
+                return ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->prop_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->prop_kind = value;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->prop_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnAlgKindT CellKind
+        public global::Intel.MklDnn.MkldnnAlgKindT CellKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->cell_kind;
+                return ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->cell_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->cell_kind = value;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->cell_kind = value;
             }
         }
 
-        public global::mkldnn.MkldnnRnnDirectionT Direction
+        public global::Intel.MklDnn.MkldnnRnnDirectionT Direction
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->direction;
+                return ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->direction;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->direction = value;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->direction = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT SrcLayerDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT SrcLayerDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->src_layer_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->src_layer_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->src_layer_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->src_layer_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT SrcIterDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT SrcIterDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->src_iter_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->src_iter_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->src_iter_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->src_iter_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT SrcIterCDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT SrcIterCDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->src_iter_c_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->src_iter_c_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->src_iter_c_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->src_iter_c_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT WeightsLayerDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT WeightsLayerDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->weights_layer_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->weights_layer_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->weights_layer_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->weights_layer_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT WeightsIterDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT WeightsIterDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->weights_iter_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->weights_iter_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->weights_iter_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->weights_iter_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT BiasDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT BiasDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->bias_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->bias_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->bias_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->bias_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DstLayerDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DstLayerDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->dst_layer_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->dst_layer_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->dst_layer_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->dst_layer_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DstIterDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DstIterDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->dst_iter_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->dst_iter_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->dst_iter_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->dst_iter_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DstIterCDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DstIterCDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->dst_iter_c_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->dst_iter_c_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->dst_iter_c_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->dst_iter_c_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT PlaceholderDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT PlaceholderDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->placeholder_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->placeholder_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->placeholder_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->placeholder_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT Placeholder2Desc
+        public global::Intel.MklDnn.MkldnnMemoryDescT Placeholder2Desc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->placeholder2_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->placeholder2_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->placeholder2_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->placeholder2_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffSrcLayerDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffSrcLayerDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_src_layer_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_src_layer_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_src_layer_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_src_layer_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffSrcIterDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffSrcIterDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_src_iter_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_src_iter_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_src_iter_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_src_iter_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffSrcIterCDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffSrcIterCDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_src_iter_c_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_src_iter_c_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_src_iter_c_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_src_iter_c_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffWeightsLayerDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffWeightsLayerDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_weights_layer_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_weights_layer_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_weights_layer_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_weights_layer_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffWeightsIterDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffWeightsIterDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_weights_iter_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_weights_iter_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_weights_iter_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_weights_iter_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffBiasDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffBiasDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_bias_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_bias_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_bias_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_bias_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDstLayerDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDstLayerDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_dst_layer_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_dst_layer_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_dst_layer_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_dst_layer_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDstIterDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDstIterDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_dst_iter_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_dst_iter_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_dst_iter_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_dst_iter_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffDstIterCDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffDstIterCDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_dst_iter_c_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_dst_iter_c_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_dst_iter_c_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_dst_iter_c_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffPlaceholderDesc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffPlaceholderDesc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_placeholder_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_placeholder_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_placeholder_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_placeholder_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
-        public global::mkldnn.MkldnnMemoryDescT DiffPlaceholder2Desc
+        public global::Intel.MklDnn.MkldnnMemoryDescT DiffPlaceholder2Desc
         {
             get
             {
-                return global::mkldnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_placeholder2_desc));
+                return global::Intel.MklDnn.MkldnnMemoryDescT.__CreateInstance(new global::System.IntPtr(&((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->diff_placeholder2_desc));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_placeholder2_desc = *(global::mkldnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->diff_placeholder2_desc = *(global::Intel.MklDnn.MkldnnMemoryDescT.__Internal*) value.__Instance;
             }
         }
 
@@ -8359,25 +8359,25 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->flags;
+                return ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->flags;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->flags = value;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->flags = value;
             }
         }
 
-        public global::mkldnn.MkldnnAlgKindT ActivationKind
+        public global::Intel.MklDnn.MkldnnAlgKindT ActivationKind
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->activation_kind;
+                return ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->activation_kind;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->activation_kind = value;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->activation_kind = value;
             }
         }
 
@@ -8385,12 +8385,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->alpha;
+                return ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->alpha;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->alpha = value;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->alpha = value;
             }
         }
 
@@ -8398,12 +8398,12 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnRnnDescT.__Internal*) __Instance)->beta;
+                return ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*) __Instance)->beta;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnRnnDescT.__Internal*)__Instance)->beta = value;
+                ((global::Intel.MklDnn.MkldnnRnnDescT.__Internal*)__Instance)->beta = value;
             }
         }
     }
@@ -8434,29 +8434,29 @@ namespace mkldnn
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnExecArgT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::mkldnn.MkldnnExecArgT>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnExecArgT> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::Intel.MklDnn.MkldnnExecArgT>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::mkldnn.MkldnnExecArgT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnExecArgT __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnExecArgT(native.ToPointer(), skipVTables);
+            return new global::Intel.MklDnn.MkldnnExecArgT(native.ToPointer(), skipVTables);
         }
 
-        internal static global::mkldnn.MkldnnExecArgT __CreateInstance(global::mkldnn.MkldnnExecArgT.__Internal native, bool skipVTables = false)
+        internal static global::Intel.MklDnn.MkldnnExecArgT __CreateInstance(global::Intel.MklDnn.MkldnnExecArgT.__Internal native, bool skipVTables = false)
         {
-            return new global::mkldnn.MkldnnExecArgT(native, skipVTables);
+            return new global::Intel.MklDnn.MkldnnExecArgT(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::mkldnn.MkldnnExecArgT.__Internal native)
+        private static void* __CopyValue(global::Intel.MklDnn.MkldnnExecArgT.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnExecArgT.__Internal));
-            *(global::mkldnn.MkldnnExecArgT.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnExecArgT.__Internal));
+            *(global::Intel.MklDnn.MkldnnExecArgT.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private MkldnnExecArgT(global::mkldnn.MkldnnExecArgT.__Internal native, bool skipVTables = false)
+        private MkldnnExecArgT(global::Intel.MklDnn.MkldnnExecArgT.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -8472,17 +8472,17 @@ namespace mkldnn
 
         public MkldnnExecArgT()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnExecArgT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnExecArgT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public MkldnnExecArgT(global::mkldnn.MkldnnExecArgT _0)
+        public MkldnnExecArgT(global::Intel.MklDnn.MkldnnExecArgT _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::mkldnn.MkldnnExecArgT.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::Intel.MklDnn.MkldnnExecArgT.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::mkldnn.MkldnnExecArgT.__Internal*) __Instance) = *((global::mkldnn.MkldnnExecArgT.__Internal*) _0.__Instance);
+            *((global::Intel.MklDnn.MkldnnExecArgT.__Internal*) __Instance) = *((global::Intel.MklDnn.MkldnnExecArgT.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -8494,7 +8494,7 @@ namespace mkldnn
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::mkldnn.MkldnnExecArgT __dummy;
+            global::Intel.MklDnn.MkldnnExecArgT __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -8505,30 +8505,30 @@ namespace mkldnn
         {
             get
             {
-                return ((global::mkldnn.MkldnnExecArgT.__Internal*) __Instance)->arg;
+                return ((global::Intel.MklDnn.MkldnnExecArgT.__Internal*) __Instance)->arg;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnExecArgT.__Internal*)__Instance)->arg = value;
+                ((global::Intel.MklDnn.MkldnnExecArgT.__Internal*)__Instance)->arg = value;
             }
         }
 
-        public global::mkldnn.MkldnnMemory Memory
+        public global::Intel.MklDnn.MkldnnMemory Memory
         {
             get
             {
-                global::mkldnn.MkldnnMemory __result0;
-                if (((global::mkldnn.MkldnnExecArgT.__Internal*) __Instance)->memory == IntPtr.Zero) __result0 = null;
-                else if (global::mkldnn.MkldnnMemory.NativeToManagedMap.ContainsKey(((global::mkldnn.MkldnnExecArgT.__Internal*) __Instance)->memory))
-                    __result0 = (global::mkldnn.MkldnnMemory) global::mkldnn.MkldnnMemory.NativeToManagedMap[((global::mkldnn.MkldnnExecArgT.__Internal*) __Instance)->memory];
-                else __result0 = global::mkldnn.MkldnnMemory.__CreateInstance(((global::mkldnn.MkldnnExecArgT.__Internal*) __Instance)->memory);
+                global::Intel.MklDnn.MkldnnMemory __result0;
+                if (((global::Intel.MklDnn.MkldnnExecArgT.__Internal*) __Instance)->memory == IntPtr.Zero) __result0 = null;
+                else if (global::Intel.MklDnn.MkldnnMemory.NativeToManagedMap.ContainsKey(((global::Intel.MklDnn.MkldnnExecArgT.__Internal*) __Instance)->memory))
+                    __result0 = (global::Intel.MklDnn.MkldnnMemory) global::Intel.MklDnn.MkldnnMemory.NativeToManagedMap[((global::Intel.MklDnn.MkldnnExecArgT.__Internal*) __Instance)->memory];
+                else __result0 = global::Intel.MklDnn.MkldnnMemory.__CreateInstance(((global::Intel.MklDnn.MkldnnExecArgT.__Internal*) __Instance)->memory);
                 return __result0;
             }
 
             set
             {
-                ((global::mkldnn.MkldnnExecArgT.__Internal*)__Instance)->memory = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::Intel.MklDnn.MkldnnExecArgT.__Internal*)__Instance)->memory = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
     }
@@ -8540,57 +8540,57 @@ namespace mkldnn
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_status2str")]
-            internal static extern global::System.IntPtr MkldnnStatus2str(global::mkldnn.MkldnnStatusT v);
+            internal static extern global::System.IntPtr MkldnnStatus2str(global::Intel.MklDnn.MkldnnStatusT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_dt2str")]
-            internal static extern global::System.IntPtr MkldnnDt2str(global::mkldnn.MkldnnDataTypeT v);
+            internal static extern global::System.IntPtr MkldnnDt2str(global::Intel.MklDnn.MkldnnDataTypeT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_fmt_kind2str")]
-            internal static extern global::System.IntPtr MkldnnFmtKind2str(global::mkldnn.MkldnnFormatKindT v);
+            internal static extern global::System.IntPtr MkldnnFmtKind2str(global::Intel.MklDnn.MkldnnFormatKindT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_fmt_tag2str")]
-            internal static extern global::System.IntPtr MkldnnFmtTag2str(global::mkldnn.MkldnnFormatTagT v);
+            internal static extern global::System.IntPtr MkldnnFmtTag2str(global::Intel.MklDnn.MkldnnFormatTagT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_prop_kind2str")]
-            internal static extern global::System.IntPtr MkldnnPropKind2str(global::mkldnn.MkldnnPropKindT v);
+            internal static extern global::System.IntPtr MkldnnPropKind2str(global::Intel.MklDnn.MkldnnPropKindT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_prim_kind2str")]
-            internal static extern global::System.IntPtr MkldnnPrimKind2str(global::mkldnn.MkldnnPrimitiveKindT v);
+            internal static extern global::System.IntPtr MkldnnPrimKind2str(global::Intel.MklDnn.MkldnnPrimitiveKindT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_alg_kind2str")]
-            internal static extern global::System.IntPtr MkldnnAlgKind2str(global::mkldnn.MkldnnAlgKindT v);
+            internal static extern global::System.IntPtr MkldnnAlgKind2str(global::Intel.MklDnn.MkldnnAlgKindT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_rnn_flags2str")]
-            internal static extern global::System.IntPtr MkldnnRnnFlags2str(global::mkldnn.MkldnnRnnFlagsT v);
+            internal static extern global::System.IntPtr MkldnnRnnFlags2str(global::Intel.MklDnn.MkldnnRnnFlagsT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_rnn_direction2str")]
-            internal static extern global::System.IntPtr MkldnnRnnDirection2str(global::mkldnn.MkldnnRnnDirectionT v);
+            internal static extern global::System.IntPtr MkldnnRnnDirection2str(global::Intel.MklDnn.MkldnnRnnDirectionT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_engine_kind2str")]
-            internal static extern global::System.IntPtr MkldnnEngineKind2str(global::mkldnn.MkldnnEngineKindT v);
+            internal static extern global::System.IntPtr MkldnnEngineKind2str(global::Intel.MklDnn.MkldnnEngineKindT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="mkldnn_scratchpad_mode2str")]
-            internal static extern global::System.IntPtr MkldnnScratchpadMode2str(global::mkldnn.MkldnnScratchpadModeT v);
+            internal static extern global::System.IntPtr MkldnnScratchpadMode2str(global::Intel.MklDnn.MkldnnScratchpadModeT v);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("mkldnn", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -8603,67 +8603,67 @@ namespace mkldnn
             internal static extern int MkldnnMd2dimStr(sbyte* dim_str, ulong dim_str_len, global::System.IntPtr md);
         }
 
-        public static string MkldnnStatus2str(global::mkldnn.MkldnnStatusT v)
+        public static string MkldnnStatus2str(global::Intel.MklDnn.MkldnnStatusT v)
         {
             var __ret = __Internal.MkldnnStatus2str(v);
             return Marshal.PtrToStringAnsi(__ret);
         }
 
-        public static string MkldnnDt2str(global::mkldnn.MkldnnDataTypeT v)
+        public static string MkldnnDt2str(global::Intel.MklDnn.MkldnnDataTypeT v)
         {
             var __ret = __Internal.MkldnnDt2str(v);
             return Marshal.PtrToStringAnsi(__ret);
         }
 
-        public static string MkldnnFmtKind2str(global::mkldnn.MkldnnFormatKindT v)
+        public static string MkldnnFmtKind2str(global::Intel.MklDnn.MkldnnFormatKindT v)
         {
             var __ret = __Internal.MkldnnFmtKind2str(v);
             return Marshal.PtrToStringAnsi(__ret);
         }
 
-        public static string MkldnnFmtTag2str(global::mkldnn.MkldnnFormatTagT v)
+        public static string MkldnnFmtTag2str(global::Intel.MklDnn.MkldnnFormatTagT v)
         {
             var __ret = __Internal.MkldnnFmtTag2str(v);
             return Marshal.PtrToStringAnsi(__ret);
         }
 
-        public static string MkldnnPropKind2str(global::mkldnn.MkldnnPropKindT v)
+        public static string MkldnnPropKind2str(global::Intel.MklDnn.MkldnnPropKindT v)
         {
             var __ret = __Internal.MkldnnPropKind2str(v);
             return Marshal.PtrToStringAnsi(__ret);
         }
 
-        public static string MkldnnPrimKind2str(global::mkldnn.MkldnnPrimitiveKindT v)
+        public static string MkldnnPrimKind2str(global::Intel.MklDnn.MkldnnPrimitiveKindT v)
         {
             var __ret = __Internal.MkldnnPrimKind2str(v);
             return Marshal.PtrToStringAnsi(__ret);
         }
 
-        public static string MkldnnAlgKind2str(global::mkldnn.MkldnnAlgKindT v)
+        public static string MkldnnAlgKind2str(global::Intel.MklDnn.MkldnnAlgKindT v)
         {
             var __ret = __Internal.MkldnnAlgKind2str(v);
             return Marshal.PtrToStringAnsi(__ret);
         }
 
-        public static string MkldnnRnnFlags2str(global::mkldnn.MkldnnRnnFlagsT v)
+        public static string MkldnnRnnFlags2str(global::Intel.MklDnn.MkldnnRnnFlagsT v)
         {
             var __ret = __Internal.MkldnnRnnFlags2str(v);
             return Marshal.PtrToStringAnsi(__ret);
         }
 
-        public static string MkldnnRnnDirection2str(global::mkldnn.MkldnnRnnDirectionT v)
+        public static string MkldnnRnnDirection2str(global::Intel.MklDnn.MkldnnRnnDirectionT v)
         {
             var __ret = __Internal.MkldnnRnnDirection2str(v);
             return Marshal.PtrToStringAnsi(__ret);
         }
 
-        public static string MkldnnEngineKind2str(global::mkldnn.MkldnnEngineKindT v)
+        public static string MkldnnEngineKind2str(global::Intel.MklDnn.MkldnnEngineKindT v)
         {
             var __ret = __Internal.MkldnnEngineKind2str(v);
             return Marshal.PtrToStringAnsi(__ret);
         }
 
-        public static string MkldnnScratchpadMode2str(global::mkldnn.MkldnnScratchpadModeT v)
+        public static string MkldnnScratchpadMode2str(global::Intel.MklDnn.MkldnnScratchpadModeT v)
         {
             var __ret = __Internal.MkldnnScratchpadMode2str(v);
             return Marshal.PtrToStringAnsi(__ret);
@@ -8681,7 +8681,7 @@ namespace mkldnn
 /// <para>- fmt      -- extended format string (format_kind specific)</para>
 /// <para>- extra    -- shows extra fields (underspecified)</para>
 /// </remarks>
-        public static int MkldnnMd2fmtStr(sbyte* fmt_str, ulong fmt_str_len, global::mkldnn.MkldnnMemoryDescT md)
+        public static int MkldnnMd2fmtStr(sbyte* fmt_str, ulong fmt_str_len, global::Intel.MklDnn.MkldnnMemoryDescT md)
         {
             var __arg2 = ReferenceEquals(md, null) ? global::System.IntPtr.Zero : md.__Instance;
             var __ret = __Internal.MkldnnMd2fmtStr(fmt_str, fmt_str_len, __arg2);
@@ -8690,7 +8690,7 @@ namespace mkldnn
 
         /// <summary>Forms a dimension string for a given memory descriptor.</summary>
 /// <remarks>The format is defined as: 'dim0xdim1x...xdimN</remarks>
-        public static int MkldnnMd2dimStr(sbyte* dim_str, ulong dim_str_len, global::mkldnn.MkldnnMemoryDescT md)
+        public static int MkldnnMd2dimStr(sbyte* dim_str, ulong dim_str_len, global::Intel.MklDnn.MkldnnMemoryDescT md)
         {
             var __arg2 = ReferenceEquals(md, null) ? global::System.IntPtr.Zero : md.__Instance;
             var __ret = __Internal.MkldnnMd2dimStr(dim_str, dim_str_len, __arg2);
