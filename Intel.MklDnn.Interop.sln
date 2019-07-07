@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{366475B6-2
 		rename.ps1 = rename.ps1
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGenCppSharp", "src\CodeGenCppSharp\CodeGenCppSharp.csproj", "{00ED593C-47D7-4604-BB5B-B62CB92DECE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{FA68B2A0-E7AF-41B6-A3C1-9FADEAEAACC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA68B2A0-E7AF-41B6-A3C1-9FADEAEAACC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA68B2A0-E7AF-41B6-A3C1-9FADEAEAACC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00ED593C-47D7-4604-BB5B-B62CB92DECE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00ED593C-47D7-4604-BB5B-B62CB92DECE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00ED593C-47D7-4604-BB5B-B62CB92DECE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00ED593C-47D7-4604-BB5B-B62CB92DECE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
