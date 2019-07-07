@@ -2,7 +2,7 @@
   <PropertyGroup>
     <!--https://github.com/Microsoft/msbuild/issues/1603-->
     <!--https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2019-->
-    <BaseIntermediateOutputPath>$(SolutionDir)/build/obj/$(MSBuildProjectName)_$(Configuration)/$(TargetFramework)/</BaseIntermediateOutputPath>
-    <OutDir>$(SolutionDir)/build/$(MSBuildProjectName)_$(Configuration)/$(TargetFramework)/</OutDir>
+    <BaseIntermediateOutputPath>$(SolutionDir)build/obj/$(MSBuildProjectName)/</BaseIntermediateOutputPath>
+    <OutDir>$(SolutionDir)build/$(MSBuildProjectName)_$(Configuration)/$(TargetFramework)/</OutDir>
   </PropertyGroup>
 </Project>

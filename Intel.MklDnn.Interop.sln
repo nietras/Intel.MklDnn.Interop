@@ -1,14 +1,14 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intel.MklDnn.Interop", "src\Intel.MklDnn.Interop\Intel.MklDnn.Interop.csproj", "{FAE0ADA3-E8DE-45ED-81CB-931672EB9E7D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intel.MklDnn.Interop.Tests", "tests\Intel.MklDnn.Interop.Tests\Intel.MklDnn.Interop.Tests.csproj", "{91D41E49-33AF-4E00-B37F-4460AA28CE12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.CodeGen.MklDnn", "src\Intel.CodeGen.MklDnn\Intel.CodeGen.MklDnn.csproj", "{87711DFE-E87A-4466-BD1A-485F6EAD100E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intel.CodeGen.MklDnn", "src\Intel.CodeGen.MklDnn\Intel.CodeGen.MklDnn.csproj", "{87711DFE-E87A-4466-BD1A-485F6EAD100E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.CodeGen.MklDnn.Tests", "tests\Intel.CodeGen.MklDnn.Tests\Intel.CodeGen.MklDnn.Tests.csproj", "{FA68B2A0-E7AF-41B6-A3C1-9FADEAEAACC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intel.CodeGen.MklDnn.Tests", "tests\Intel.CodeGen.MklDnn.Tests\Intel.CodeGen.MklDnn.Tests.csproj", "{FA68B2A0-E7AF-41B6-A3C1-9FADEAEAACC7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "headers", "headers", "{ECA183A9-27FF-43D2-9235-D77214DBD19D}"
 	ProjectSection(SolutionItems) = preProject
